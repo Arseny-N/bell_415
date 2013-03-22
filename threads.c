@@ -57,7 +57,7 @@ static inline void serve_rq(struct request *rq)
 //print_timers();
 	
 	/* More RT's could be added if needed */
-	print_timers();
+
 	switch(rq->type) {
 	case RT_ADD_TIMER:
 		
