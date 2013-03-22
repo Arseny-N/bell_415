@@ -1,5 +1,5 @@
 #include <string.h>
-#include <signal.h> /* sigval */
+#include <signal.h>
 
 #include "threads.h"
 #include "timers.h"
