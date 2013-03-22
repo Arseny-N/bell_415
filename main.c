@@ -102,7 +102,10 @@ int main ( int argc, char * argv [] )
 	sigset_t block_set;
 
 	srandom(0);
-
+	if(become_daemon(0)) {
+		err_print("become_daemon");
+		wrn_print("Running not demonized");
+	
 	if(sigfillset(&block_set) == -1) 
 		err_print("sigfillset");	
 	if(sigprocmask( SIG_SETMASK, &block_set, &old_sigset ) == -1 ) 
