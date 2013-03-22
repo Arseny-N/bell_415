@@ -13,17 +13,6 @@ struct timers timers = {
 
 struct timers *last = &timers;
 
-#ifdef PERTIMER_MUTEX
-
-pthread_mutex_t last_mutex = PTHREAD_MUTEX_INITIALIZER;
-
-#endif
-
-#ifdef BIG_MUTEX
-
-pthread_mutex_t big_mutex = PTHREAD_MUTEX_INITIALIZER; /* TODO: recursive */ 
-
-#endif
 /*
   Scratch:
 time_t __get_midnight( time_t when )
@@ -49,23 +38,82 @@ time_t get_interval( time_t when )
 }
 */
 
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
+/* Thanks to Mikael Kerrisk */
+#define BD_MAX_CLOSE  256
+#define BD_NO_UMASK0               0x1
+#define BD_NO_CHDIR                0x2
+#define BD_NO_CLOSE_FILES          0x4
+#define BD_NO_REOPEN_STD_FDS       0x8
+
+int become_daemon ( int flags )
+{
+	int maxfd, fd;
+	
+	switch ( fork () ) {		
+	case -1: return -1;
+	case  0: break;
+	default: _exit (EXIT_SUCCESS);
+	}
+	if ( setsid () == -1 )
+		return -1;
+	
+	switch ( fork () ) {		
+	case -1: return -1;
+	case  0: break;
+	default: _exit (EXIT_SUCCESS);
+	}
+  
+	if ( !( flags & BD_NO_UMASK0 ) )
+		umask (0);
+	if ( !( flags & BD_NO_CHDIR ) )
+		chdir ( "/" );
+	if ( !( flags & BD_NO_CLOSE_FILES ) ) {
+		maxfd = sysconf (_SC_OPEN_MAX );
+		if ( maxfd == -1 )
+			maxfd = BD_MAX_CLOSE;
+		
+		for ( fd = 0; fd < maxfd; ++fd )
+			close (fd);
+	}
+	if ( !(flags & BD_NO_REOPEN_STD_FDS ) )
+	{
+		close ( STDIN_FILENO );
+		fd = open ( "/dev/null", O_RDWR );
+		if ( fd != STDIN_FILENO ) 
+			return -1;
+		if ( dup2 ( STDIN_FILENO, STDOUT_FILENO ) != STDOUT_FILENO ) 
+			return -1;
+		if ( dup2 ( STDIN_FILENO, STDERR_FILENO ) != STDERR_FILENO ) 
+			return -1;
+	}
+  return 0;
+}
+
+
+
+sigset_t old_sigset;
 
 int main ( int argc, char * argv [] )
 {
 	sigset_t block_set;
 
+	srandom(0);
+
 	if(sigfillset(&block_set) == -1) 
-	  err_print("sigfillset");	
-	if(sigprocmask( SIG_SETMASK, &block_set, NULL ) == -1 ) 
-	  err_print( "sigprocmask" );
-	
+		err_print("sigfillset");	
+	if(sigprocmask( SIG_SETMASK, &block_set, &old_sigset ) == -1 ) 
+		err_print( "sigprocmask" );	
+
 	if(start_sig_thread() == -1)  {			      
 		/* TODO: On error must cancel sig_thread */
-		err_print("start_sigthread");	
+		wrn_print("start_sigthread");	
 		wrn_print("no sig handleing");
-	}
-	
+	}	
+		
 	/* 
 	 * if( start_reader_thread() == -1 ) { 
 	 * 	err_print("start_reader_thread"); 
@@ -73,6 +121,6 @@ int main ( int argc, char * argv [] )
 	 * } 
 	 */
 	
-	reader_thread(NULL);
+	reader(0);
 	exit(EXIT_SUCCESS);
 }

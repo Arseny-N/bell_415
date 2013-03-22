@@ -18,7 +18,7 @@ generic.o: generic.c generic.h head.h
 	$(CC) $(CC_FALGS) -c -o generic.o generic.c
 
 error.o: error.c error.h head.h
-	$(CC) $(CC_FALGS) -c -o error.o error.c
+	$(CC) $(CC_FALGS) -c -o error.o error.c -lpthread
 
 .PHONY: clean
 

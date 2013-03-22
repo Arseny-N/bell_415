@@ -9,9 +9,9 @@
 #ifndef __HEAD_H__
 #define __HEAD_H__
 
-#define NO_MUTEX
+
 #define TERMINATE_ON_ERR
-#define _DEBUG
+//#define _DEBUG
 
 
 #define TS_NONE       0x0   /* Bug if found in initialized function */
@@ -34,8 +34,9 @@
 #ifndef unlikely
 # define unlikely(op) (op)
 #endif
-
+extern sigset_t old_sigset;
 /* TODO:
+ *     Deamon
  */
 #include <signal.h>
 struct timers {
@@ -43,10 +44,6 @@ struct timers {
 	time_t inter;           /* Informative */
 #define MAX_DESCR 16
 	char descr[MAX_DESCR];  /* char. description */
-	
-# ifdef PERTIMER_MUTEX
-	pthread_mutex_t mutex;
-# endif
 	timer_t timerid;
 
 	struct sigevent sigevent;
@@ -58,88 +55,5 @@ struct timers {
 };
 extern struct timers timers;
 extern struct timers *last; /* = &timers; */
-#include <sys/types.h>
 
-
-#include <pthread.h>
-#include "error.h"
-# ifdef NO_MUTEX
-inline static void big_lock(void) {return;}
-inline static void big_unlock(void) {return;}
-inline static void last_unlock(void) {return;}
-inline static void last_lock(void) {return;}
-inline static void tunlock(struct timers *timer) {return;}
-inline static void tlock(struct timers *timer) {return;}
-#endif
-# ifdef PERTIMER_MUTEX
-
-extern pthread_mutex_t last_mutex;
-
-inline static void big_lock(void) {return;}
-inline static void big_unlock(void) {return;}
-inline static void tlock(struct timers *timer) 
-{
-	int e = pthread_mutex_lock ( &timer->mutex );
-	if(e) {
-		nerr_print( e, "pthread_mutex_lock %s", timer-> descr);
-		t_err(timer);
-	}
-		
-}
-inline static void tunlock(struct timers *timer) 
-{
-	int e = pthread_mutex_unlock ( &timer->mutex );
-	if(e) {
-		nerr_print( e, "pthread_mutex_unlock %s", timer->descr);
-		t_err(timer);
-	}
-
-}
-inline static void last_lock(void) 
-{
-	int e = pthread_mutex_lock ( &last_mutex );
-	if(e) {
-		nerr_print( e, "pthread_mutex_lock last_mutex");
-	}
-
-}
-inline static void last_unlock(void) 
-{
-	int e = pthread_mutex_unlock ( &last_mutex );
-	if(e) {
-		nerr_print( e, "pthread_mutex_unlock last_mutex");
-	}
-
-}
-
-
-# endif
-
-# ifdef BIG_MUTEX
-extern pthread_mutex_t big_mutex;
-
-inline static void last_unlock(void) {return;}
-inline static void last_lock(void) {return;}
-inline static void tunlock(struct timers *timer) {return;}
-inline static void tlock(struct timers *timer) {return;}
-
-inline static void big_lock(void) 
-{
-	int e = pthread_mutex_lock ( &big_mutex );
-	if(e) {
-		nerr_print( e, "pthread_mutex_lock big_mutex");
-		t_err(timer);
-	}
-		
-}
-inline static void big_unlock(void) 
-{
-	int e = pthread_mutex_unlock ( &big_mutex );
-	if(e) {
-		nerr_print( e, "pthread_mutex_unlock big_mutex");
-		t_err(timer);
-	}
-
-}
-# endif
 #endif

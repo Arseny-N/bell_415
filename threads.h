@@ -1,11 +1,11 @@
 #include <pthread.h>
 #include "error.h"
-/**/
 
-void *reader_thread(void *non_used);              /* Get request from gui, run _sever_thread */
-void *_server_thread(void *vrq);                  /* Serve requests from gui */
 
-void restorer_thread(union sigval sigval_self);  /* Ring the bell, perform cleanup */
+void reader(int f);              /* Get request from gui, run _sever_thread */
+
+
+void restorer_thread(union sigval sigval_self);  /* Ring the bell, perform cleanup if need */
 void *sig_thread(void *not_used);                /* Handle signals */
 
 /* Just for fun :-) */
@@ -22,5 +22,5 @@ void *sig_thread(void *not_used);                /* Handle signals */
 	}								\
 	
 __mk_start_th(sig);
-__mk_start_th(reader);
+//__mk_start_th(reader);
 

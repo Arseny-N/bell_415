@@ -1,5 +1,6 @@
 #include <stdarg.h>
-
+//#include <sys/types.h>
+#include <pthread.h>
 #include "head.h"
 #include "error.h"
 #include "ename.h"
@@ -47,9 +48,9 @@ static inline char *__get_ename( int err )
 	err = __valid_err(err);
 	return ename[err] != NULL ? ename[err] : ename[0] ;
 }
-static inline void __print(char *fmt, va_list *va)
+static inline void __print(FILE *s,char *fmt, va_list *va)
 {
-	vfprintf(stderr, fmt, *va);
+	vfprintf(s, fmt, *va);
 }
 void err_print(char *fmt, ... )
 {
@@ -62,7 +63,7 @@ void err_print(char *fmt, ... )
 	
 
 	va_start(va, fmt);	
-	__print(fmt_buf, &va);
+	__print(stderr,fmt_buf, &va);
 	va_end(va);
 	fflush(stderr);
 	fflush(stdout);
@@ -79,7 +80,7 @@ void nerr_print(int err, char *fmt, ... )
 		 strerror(err),__get_ename(err),fmt);
 	
 	va_start(va, fmt);	
-	__print(fmt_buf, &va);
+	__print(stderr,fmt_buf, &va);
 	va_end(va);
 	fflush(stderr);
 	fflush(stdout);
@@ -95,7 +96,7 @@ void wrn_print(char *fmt, ... )
 	snprintf(fmt_buf, MAX_PBUF,"Warning:%s\n",fmt);
 	
 	va_start(va, fmt);	
-	__print(fmt_buf, &va);
+	__print(stderr,fmt_buf, &va);
 	va_end(va);
 	fflush(stderr);
 	fflush(stdout);
@@ -103,16 +104,16 @@ void wrn_print(char *fmt, ... )
 	terminate_if_need_wrn();
 }
 #ifdef _DEBUG
-#warning Warning: debug mode on may cause excessive verbosity
+//#warning Warning: debug mode on may cause excessive verbosity
 void _dbg_print(char *fmt, ... )
 {
 	va_list va;
 	char fmt_buf[MAX_PBUF];
 
-	snprintf(fmt_buf, MAX_PBUF,"%s\n",fmt);
+	snprintf(fmt_buf, MAX_PBUF,"Debug %s\n",fmt);
 	
 	va_start(va, fmt);	
-	__print(fmt_buf, &va);
+	__print(stdout,fmt_buf, &va);
 	va_end(va);
 	fflush(stderr);
 	fflush(stdout);

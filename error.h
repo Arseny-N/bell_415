@@ -13,7 +13,7 @@ void wrn_print( char *fmt,...) __attribute__ ((format (printf, 1, 2)));
 
 void _dbg_print( char *fmt,...) __attribute__ ((format (printf, 1, 2)));
 
-#define dbg_print(fmt,...) _dbg_print("Debug: %s: %ld: "fmt,__FUNCTION__,(long)__LINE__, ##__VA_ARGS__)
+#define dbg_print(fmt,...) _dbg_print("[%ld] %s: "fmt,(long)__LINE__,__FUNCTION__, ##__VA_ARGS__)
 
 void terminate (void) __attribute__ ((noreturn));
 

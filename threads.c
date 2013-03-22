@@ -8,49 +8,52 @@
 #include "error.h"
 
 #include <string.h>
-
-static inline void thread_sigmask_to_proc ( void )
+extern sigset_t old_sigset;
+static inline void set_sigmask( sigset_t *s )
 {
-	sigset_t set;
-	if(pthread_sigmask( SIG_SETMASK, NULL, &set ) == -1 ) 
-		err_print( "thread_sigmask" );
-	if(sigprocmask( SIG_SETMASK, &set, NULL ) == -1 ) 
-		err_print( "sigprocmask" );
+
+	if(pthread_sigmask( SIG_SETMASK, s, NULL ) == -1 ) 
+		err_print( "thread_sigmask" );	
 }
 
 void *sig_thread(void *not_used)
 {
-	sigset_t nempty;
+	sigset_t set;
 	siginfo_t info;
 	int sig;
-	if(sigfillset(&nempty) == -1 ) {
+
+	if(sigfillset(&set) == -1 ) {
 		err_print ("sigwaitinfo");
 	}
+
 	for(;;) {
-		switch ( sig = sigwaitinfo(&nempty, &info) ) {
+	
+		switch ( sig = sigwaitinfo(&set, &info) ) {
 		case -1:
 			err_print ("sigwaitinfo");
 			/* set the old mask */
-			thread_sigmask_to_proc();
+			set_sigmask(&old_sigset);
 			_dbg_print("sig_thread exiting");
 			return;
 		default:
-			dbg_print("Recived %s signal", strsignal(sig));
-			terminate();
+			printf("Recived %s signal(%d)", strsignal(sig), sig);
+fflush(stdout);
+			set_sigmask(&old_sigset);
+			raise(sig);
+			set_sigmask(&set);
+			
 			continue;
 		}
 	}
 }
-
-void * _server_thread(void *vrq)
+static inline void serve_rq(struct request *rq)
 {
-	struct request *rq = (struct request*) vrq;
 	struct timer_add_rq *a_rq;
 	struct timer_del_rq *r_rq;
 	struct timers *timer;
-	void *rt = NULL;
+
 	
-	big_lock();
+
 	dbg_print("unleashed");
 
 	print_timers();
@@ -64,7 +67,7 @@ void * _server_thread(void *vrq)
 		
 		if( timer == NULL ) {
 			wrn_print("timer_create %s", a_rq->descr);
-			goto err;
+			goto lock;
 		}
 		if ( timer_arm ( timer, a_rq->inter,a_rq->corr ) == -1 ) {
 			wrn_print("timer_arm %s", a_rq->descr);
@@ -102,62 +105,34 @@ void * _server_thread(void *vrq)
 err_disarm:
 	timer_disarm (timer);
 err:
-	timer_destroy (timer);
-	rt = NULL;
+	timer_destroy (timer);       
 lock:
-	big_unlock();
+
 	dbg_print("terminated");
-	return rt;
-}
-
-#ifndef NO_MUTEX
-static inline void serve_rq(struct request *rq)
-{
-	void *p = malloc(sizeof(*rq));
-	pthread_t dummy;
-	if(p == NULL) {
-		err_print( "malloc" );
-		return;
-	}
-	memcpy (p, rq, sizeof(*rq));	
-	int e = pthread_create( &dummy, NULL, _server_thread, p);
-	if(e) {
-		nerr_print( e, "pthread_create" );
-		return;
-	}
-	
 
 }
-#else
-static inline void serve_rq(struct request *rq)
-{
-	_server_thread(rq);
-}
-#endif
-void *reader_thread(void *non_used) 
+
+void reader(int f) 
 {	
-	
+
 	for( ;; ) {				
-		void * buf = generic_read();
+		void * buf = method.read();
 		if ( buf == NULL ) {
 		        wrn_print( "generic_read returned NULL" );
 			continue;
 		}
-		struct request *rq = decode_buf(buf);
+		struct request *rq = method.decode(buf);
 		if ( rq == NULL ) {
 			wrn_print( "decode_string returned NULL" );
 			continue;			
 		}
 		serve_rq (rq);
-		destroy_rq (rq);
+		method.destroy (rq);
 	}
 	
 }
 
-void restorer_thread(union sigval sigval_self)
-{
-	struct timers *self = (struct timers *) sigval_self.sival_ptr;	
-	ring_the_bell();
-	
-	
+void restorer_thread(union sigval void_sigval)
+{	
+	ring_the_bell();       	
 }

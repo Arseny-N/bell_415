@@ -1,5 +1,6 @@
 #include "head.h"
 #include <unistd.h>
+
 struct request {
 	int type;
 	void *stuff;
@@ -33,11 +34,33 @@ struct request non_null_del_rq = {
   .type = RT_DEL_TIMER,
   .stuff = &timer_del_rq,
 };
-int cnt = 0;
-void *generic_read(void) { dbg_print("dummy");return non_null; }
+#include <ctype.h>
+char rand_char(void)
+{
+	char c;
+	do {		
+		 c = random();
+	} while ( !isalnum(c) );
+	return c;	
+}
+#define is_good_inter(t) ( t > 0 && t <= 10 )
+time_t rand_inter(void)
+{
+	time_t t;
+	do {
+		t = random();
+	} while ( !is_good_inter(t) );
+	return t;
+}
+
+bool cnt = 0;
+void *void_read(void) 
+{
+	return non_null; 
+}
+
 struct request *decode_buf(void *p) 
 { 
-	dbg_print("dummy"); 
 	if(cnt)
 		return &non_null_del_rq;
 	return &non_null_add_rq; 
@@ -45,11 +68,23 @@ struct request *decode_buf(void *p)
 void destroy_rq ( struct request *rq ) 
 {
 	if(!cnt) {		
-		cnt++;		
-		timer_del_rq.descr[2] ++;
+		cnt = 1;		
+		timer_del_rq.descr[2] = rand_char();
 	} else {
-		timer_add_rq.descr[2] ++;
-		/* sleep(1); */
-		cnt --;
+		timer_add_rq.descr[2] = rand_char();
+		timer_add_rq.inter = rand_inter();
+		/* sleep(rand_inter());   */
+		cnt = 0;
 	}
 }
+struct method {
+	void *(*read) (void);                               /* Read a non NULL buf  */
+	struct request *(*decode)(void *p);                 /* Make from this buf a rq structure */
+	void (*destroy) ( struct request *rq );             /* Destroy this structure */
+
+} method = { 
+	.read = void_read,
+	.destroy = destroy_rq,
+	.decode = decode_buf,
+};
+

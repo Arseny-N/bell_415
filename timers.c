@@ -20,20 +20,15 @@
  *
  */
 inline static void __append_to_list(struct timers *timer)
-{	
-	last_lock();
-	
+{		
 	last -> next = timer;
 	last = last -> next;
-	/* last -> next = NULL; */
-
-	last_unlock();
-	
+	/* last -> next = NULL; */		
 }
 inline static void __remove_from_list(struct timers *timer)
 {	
 	struct timers *p;
-	last_lock();
+	
 
 	p = &timers;
 	while(p) {		
@@ -50,7 +45,7 @@ inline static void __remove_from_list(struct timers *timer)
 	if(timer == last)
 		last = p;
 
-	last_unlock();
+	
 	
 }
 void print_timers(void) 
@@ -75,21 +70,20 @@ static inline struct timers *__timer_find(char *descr)
 	p = &timers;
 	while(p != NULL) {		
 		/* dbg_print("(%s) (%s)",descr, p->descr); */
-		if(p->descr)
-			if( strncmp(p->descr, descr, MAX_DESCR) == 0) {			
+		if( p->descr && descr )
+			if( strncmp(p->descr, descr, MAX_DESCR) == 0) 	       
 				return p;
-			}		
 		p = p->next;
 	}
-	/* dbg_print("Not found"); */
+	dbg_print("Not found"); 
 	return NULL;
 }
 struct timers *timer_find(char *descr)
 {
 	struct timers *timer;
-	last_lock();
+	
 	timer = __timer_find(descr);
-	last_unlock();
+	
 	return timer;
 }
 static struct timers *get_free_timer(void)
@@ -136,19 +130,15 @@ struct timers *timer_make(char *descr)
 		wrn_print( "get_free_timer %s",descr);
 		return NULL;
 	}
-#ifdef PERTIMER_MUTEX
-	if ( pthread_mutex_init ( &timer -> mutex, NULL ) == -1 ) {
-		err_print ( "pthread_mutex_init %d", descr);
-		timer->state = TS_ERROR;
-	}
-#endif
-	tlock(timer);
+
 	sev = &timer->sigevent;
 	
 	sev->sigev_notify = SIGEV_THREAD;
 	sev->sigev_notify_function = restorer_thread;
 	sev->sigev_notify_attributes = NULL;
-	sev->sigev_value.sival_ptr = timer;
+	/* sev->sigev_value.sival_ptr = timer; 
+	 * then need mutexes
+	 */
 
 	memcpy(timer->descr, descr, MAX_DESCR);
 	timer->descr[MAX_DESCR-1] = '\0';
@@ -157,38 +147,30 @@ struct timers *timer_make(char *descr)
 			  &timer->sigevent, &timer->timerid) == -1 ) {
 		err_print( "timer_create" );
 		t_err(timer);
-		tunlock(timer);
 		return NULL;
 	}
 	timer->state = TS_DISARMED;
-	tunlock(timer);
+
 		/* dbg_print("making %s timer", descr); */
 	return timer;
 }
 int timer_destroy(struct timers *timer)
 {
 	char descr[MAX_DESCR];
-	tlock(timer);
+
 	dbg_print("destroying %s timer", descr);
 	memcpy(descr,timer->descr, MAX_DESCR);
 	if(timer->state & TS_ARMED) {
 		wrn_print("Destroying armed timer, operation cancelled");
-		tunlock(timer);
 		return -1;				
 	}
 	timer->state = TS_NONE;
 	if(timer_delete(timer->timerid) == -1) {
 		err_print("timer_delete %s",timer->descr);
 		t_err(timer);
-		tunlock(timer);
 		return -1;
 	}
-#ifdef PERTIMER_MUTEX
-	pthread_mutex_t *p = &timer->mutex;	
-	int e = pthread_mutex_unlock(p);
-	if(e) 
-		nerr_print( e,"pthread_mutex_unlock %s", descr);		
-#endif
+
 
 	free_timer(timer);
 
@@ -203,7 +185,7 @@ int timer_arm(struct timers *timer, time_t inter, time_t corr)
 {
 	struct itimerspec ts;	
 	
-	tlock(timer);       
+
 
 	timer->inter = inter;
 	ts_h24(ts.it_interval);	
@@ -216,17 +198,16 @@ int timer_arm(struct timers *timer, time_t inter, time_t corr)
 	if (timer_settime( timer->timerid, 0, &ts ,NULL) == -1 ) {
 		err_print( "timer_settime" );
 		t_err(timer);		
-		tunlock(timer);
 		return -1;
 	}			       
 	timer->state = TS_ARMED;
-	tunlock(timer);
+
 	return 0;
 }
 int timer_disarm(struct timers *timer)
 {
 	struct itimerspec ts;
-	tlock(timer);
+
 	dbg_print("disarming %s",timer->descr);
 	ts_h0(ts.it_interval);
 	ts_h0(ts.it_value);
@@ -234,12 +215,11 @@ int timer_disarm(struct timers *timer)
 	if (timer_settime( timer->timerid, 0, &ts ,NULL) == -1 ) {
 		err_print( "timer_settime" );
 		t_err(timer);		
-		tunlock(timer);
 		return -1;
 		
 	}
 	timer->state = TS_DISARMED;
 
-	tunlock(timer);
+
 	return 0;
 }
