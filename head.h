@@ -34,7 +34,7 @@
 #ifndef unlikely
 # define unlikely(op) (op)
 #endif
-extern sigset_t old_sigset;
+
 /* TODO:
  *     Deamon
  */
