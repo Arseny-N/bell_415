@@ -20,6 +20,7 @@
 
 #define TS_ERROR      0x8   /* Errors occured */
 
+#define _DEBUG
 #define t_err(t)  t->state &= TS_ERROR; 
 #define is_err(t) (t->state & TS_ERROR)
 #define h0 (time_t) 0.0       

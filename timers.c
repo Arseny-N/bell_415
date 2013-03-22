@@ -110,6 +110,9 @@ static void free_timer(struct timers *timer)
 		return;
 	}
 	if( timer == &timers ) {		
+		memset(timer->descr,0,MAX_DESCR);
+		timer->timerid = 0;
+		
 		return;
 	}
 	__remove_from_list (timer);
@@ -119,12 +122,8 @@ struct timers *timer_make(char *descr)
 {
 	struct timers *timer;
 	struct sigevent *sev;
-	dbg_print("making %s timer", descr);
-	timer = timer_find(descr);
-	if(timer) {
-		wrn_print("timer %s already present", descr);
-		return NULL;
-	}
+
+
 	timer = get_free_timer();  
 	if(timer == NULL || is_err(timer)) {
 		wrn_print( "get_free_timer %s",descr);
@@ -151,14 +150,14 @@ struct timers *timer_make(char *descr)
 	}
 	timer->state = TS_DISARMED;
 
-		/* dbg_print("making %s timer", descr); */
+	dbg_print("making %s %ld timer", descr,timer->timerid); 
 	return timer;
 }
 int timer_destroy(struct timers *timer)
 {
 	char descr[MAX_DESCR];
 
-	dbg_print("destroying %s timer", descr);
+	dbg_print("destroying %s %ld timer", descr,timer->timerid);
 	memcpy(descr,timer->descr, MAX_DESCR);
 	if(timer->state & TS_ARMED) {
 		wrn_print("Destroying armed timer, operation cancelled");
@@ -181,22 +180,27 @@ int timer_destroy(struct timers *timer)
  *
  * arm the timer using interval(inter) as default.
  */
-int timer_arm(struct timers *timer, time_t inter, time_t corr)
+int timer_arm(struct timers *timer, time_t inter)
 {
 	struct itimerspec ts;	
 	
-
+	if ( inter <= (time_t) 0 ) {
+		wrn_print ("Couldnt set zero or less to timer");
+		return -1;
+	}
 
 	timer->inter = inter;
 	ts_h24(ts.it_interval);	
-	
-	ts.it_value.tv_sec = inter - corr;
+
+		
+	ts.it_value.tv_sec = inter;
 	ts.it_value.tv_nsec = 0;
 
-	dbg_print("arming %s inter %f; corr %f",timer->descr, inter, corr);
+	dbg_print("arming %s %ld inter %d",timer->descr, timer->timerid,inter);
 	
 	if (timer_settime( timer->timerid, 0, &ts ,NULL) == -1 ) {
-		err_print( "timer_settime" );
+
+		err_print( "timer_settime %s %g", timer->descr, ts.it_value.tv_sec );
 		t_err(timer);		
 		return -1;
 	}			       
@@ -208,12 +212,13 @@ int timer_disarm(struct timers *timer)
 {
 	struct itimerspec ts;
 
-	dbg_print("disarming %s",timer->descr);
+	dbg_print("disarming %s %d",timer->descr,timer->timerid);
 	ts_h0(ts.it_interval);
 	ts_h0(ts.it_value);
 
 	if (timer_settime( timer->timerid, 0, &ts ,NULL) == -1 ) {
-		err_print( "timer_settime" );
+		err_print( "timer_settime %s %d %d %d %d", timer->descr, ts.it_interval.tv_sec, ts.it_interval.tv_nsec,
+			   ts.it_value.tv_sec,ts.it_value.tv_nsec);
 		t_err(timer);		
 		return -1;
 		
@@ -221,5 +226,49 @@ int timer_disarm(struct timers *timer)
 	timer->state = TS_DISARMED;
 
 
+	return 0;
+}
+
+int mk_timer(char *descr, time_t inter)
+{
+	struct timers *timer;
+	timer = timer_find(descr);
+	if( timer != NULL) {
+		wrn_print("timer %s already present", descr);
+		return -1;
+	}
+	timer = timer_make(descr);		
+	if( timer == NULL ) {
+		wrn_print("timer_create %s",descr);
+		return -1;
+	}
+
+	if ( timer_arm ( timer, inter ) == -1 ) {
+		wrn_print("timer_arm %s", descr);
+		timer_destroy (timer);
+		return -1;
+	}
+	return 0;
+}
+int rm_timer(char *descr)
+{
+	struct timers *timer;		
+	dbg_print("deliting %s",descr);
+	timer = timer_find(descr);		
+				
+	if( timer == NULL ) {
+		wrn_print("no such timer %s",descr);
+		return -1;
+	}
+	dbg_print("disarming %s", timer->descr);
+	if ( timer_disarm (timer) == -1 ) {
+		wrn_print("timer_disarm %s", descr);
+		return -1;
+	}
+	
+	if ( timer_destroy (timer) == -1 ) {
+		wrn_print("timer_destroy %s",descr);
+		return -1;
+	}		
 	return 0;
 }
