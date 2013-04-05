@@ -45,7 +45,7 @@ function edit_tt($name)
 function clone_tt($name)
 {
 	global $shown_tt;
-	$shown_tt = get_tt_from_name($_GET['clone']);
+	$shown_tt = get_tt_from_name($name);
 	$rearm = is_armed($shown_tt);
 		
 	$shown_tt['name'] = uniq_name($shown_tt['name'],'_clone');	
@@ -59,28 +59,28 @@ function clone_tt($name)
 function arm_tt($name)
 {
 	global $shown_tt;
-	$shown_tt = get_tt_from_name($_GET['arm']);	
+	$shown_tt = get_tt_from_name($name);	
 	if(is_armed($shown_tt)){
 		err_box("Can't arm already armed time table", "user");
 	}
 	tt_arm($shown_tt['id']);
-	$shown_tt = get_tt_from_name($_GET['arm']);	
+	$shown_tt = get_tt_from_name($name);	
 	daemon_arm($shown_tt);
 }
 function add_tt($name)
 {
 	global $shown_tt, $edit_flag;
-	$shown_tt = get_tt_from_name($_GET['add']);
+	$shown_tt = get_tt_from_name($name);
 		
 	$edit_flag = true;
 	append_ring_tt($shown_tt['id']);
 	
-	$shown_tt = get_tt_from_name($_GET['add']);
+	$shown_tt = get_tt_from_name($name);
 }
 function drop_tt($name)
 {
 	global $shown_tt;
-	$shown_tt = get_tt_from_name($_GET['drop']);
+	$shown_tt = get_tt_from_name($name);
 	if( is_armed($shown_tt)) {
 		err_box('Can\'t drop armed time table.');
 	}
@@ -89,7 +89,7 @@ function drop_tt($name)
 }
 function del_tt($name)
 {
-	global $shown_tt;
+	global $shown_tt, $edit_flag;
 	$shown_tt = get_tt_from_name($name);
 	$edit_flag = true;
 	del_ring_tt_entry($shown_tt['id']);
@@ -163,10 +163,10 @@ function is_shown($tt)
 
 
 print_head('style2.css');
-//err_box();
+
 load_lib('mysql');
 connect_to_mysql("test_1");
-err_box("USER FAULT", "user");
+
 process_buttons();
 echo '<body dir="ltr">';
 main_box_open();
