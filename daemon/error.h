@@ -10,6 +10,7 @@
 void terminate (void) __attribute__ ((noreturn));
 
 #ifdef TERMINATE_ON_ERR
+# warning TERMINATE_ON_ERR defined
 static inline void terminate_if_need_err (void)
 {
 	terminate();
@@ -21,6 +22,7 @@ static inline void terminate_if_need_err (void)
 }
 #endif
 #ifdef TERMINATE_ON_WRN
+# warning TERMINATE_ON_WRN defined
 static inline void terminate_if_need_wrn (void)
 {
 	terminate();
@@ -32,9 +34,12 @@ static inline void terminate_if_need_wrn (void)
 }
 #endif
 
-void _err_print_no_exit(char *fmt, ... ) __attribute__ ((format (printf, 1, 2)));   
-void _nerr_print_no_exit(int err,char *fmt, ... ) __attribute__ ((format (printf, 2, 3)));  
-void _wrn_print_no_exit(char *fmt, ... ) __attribute__ ((format (printf, 1, 2)));                
+void _err_print_no_exit(char *fmt, ... ) 
+  __attribute__ ((format (printf, 1, 2)));   
+void _nerr_print_no_exit(int err,char *fmt, ... ) 
+  __attribute__ ((format (printf, 2, 3)));  
+void _wrn_print_no_exit(char *fmt, ... ) 
+  __attribute__ ((format (printf, 1, 2)));                
 
 #ifdef _DEBUG
 # define err_print_no_exit(fmt,...) _err_print_no_exit("[%s]: "fmt,__FUNCTION__,##__VA_ARGS__)
@@ -69,7 +74,7 @@ void _wrn_print_no_exit(char *fmt, ... ) __attribute__ ((format (printf, 1, 2)))
 #define wrn_print(fmt, ... )					\
 	do {							\
 		wrn_print_no_exit(fmt, ##__VA_ARGS__);		\
-		terminate_if_need_err();			\
+		terminate_if_need_wrn();			\
 	} while(0);					
 
 

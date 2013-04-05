@@ -3,9 +3,14 @@
 #include <string.h>
 #include <signal.h>
 
-#include "head.h"
-#include "error.h"
+#include "journal.h"
 #include "threads.h"
+#include "timers.h"
+#include "error.h"
+#include "head.h"
+
+
+
 struct timers *timers = NULL;
 struct timers *last = NULL;
 
@@ -82,19 +87,30 @@ int become_daemon ( int flags )
 
 
 sigset_t old_sigset;
-#include <locale.h>
+
+char *jfiles[] = { "jfiles/jfile0",
+		   "jfiles/jfile1",
+		   "jfiles/jfile2",
+		   "jfiles/jfile3",
+		   NULL,};
+bool need_daemon = 0;
+char *startup_file = "./jfiles/jfile3";
 int main ( int argc, char * argv [] )
 {
 	sigset_t block_set;
 
         /* TODO: commad line options */
 
-	//setlocale(LC_ALL,"POSIX");
-	srandom(0);
-	//if(become_daemon(0)) {
-	//	err_print("become_daemon");
-	//	wrn_print("Running not demonized");
-	//}
+	journal_open(4,jfiles);
+	
+	if(startup_file)
+		journal_read(startup_file);
+	print_timers();
+	if(need_daemon)
+		if(become_daemon(0)) {
+			err_print("become_daemon");
+			wrn_print("Running not demonized");
+		}
 	if(sigfillset(&block_set) == -1) 
 		err_print("sigfillset");	
 	if(sigprocmask( SIG_SETMASK, &block_set, &old_sigset ) == -1 ) 
@@ -114,5 +130,6 @@ int main ( int argc, char * argv [] )
 	 */
 	
 	reader(0);
+	journal_close();
 	exit(EXIT_SUCCESS);
 }

@@ -1,7 +1,9 @@
 CC_FLAGS := -O2 -g  -Wall
 CC := gcc
 
-obj = timers.o threads.o bell_ring.o generic.o error.o protocol.o inter.o
+obj = timers.o threads.o bell_ring.o generic.o \
+      error.o protocol.o inter.o journal.o
+
 main: $(obj)
 	$(CC) $(CC_FLAGS) -o run $(obj) -lrt -lpthread main.c
 
@@ -30,12 +32,20 @@ protocol.o: protocol.h protocol.c
 inter.o: inter.h inter.c
 	$(CC) $(CC_FLAGS) -c -o inter.o inter.c 	
 
-.PHONY: clean decoder inter_calc
+
+
+journal.o: journal.h journal.c
+	$(CC) $(CC_FLAGS) -c -o journal.o journal.c 	
+
+.PHONY: clean decoder inter_calc jmanager
 
 decoder: protocol.o error.o decoder.c protocol.c protocol.h
 	$(CC) $(CC_FLAGS) -o decoder decoder.c error.o protocol.o 
 inter_calc: inter.o error.o decoder.c inter.c inter.h inter_calc.c
 	$(CC) $(CC_FLAGS) -o inter_calc inter_calc.c error.o inter.o 
+jreader: journal.h journal.c journal.o jreader.c
+	$(CC) $(CC_FLAGS) -o jreader jreader.c error.o #journal.o timers.o threads.o generic.o
+
 clean:
 	rm -vf $(obj)
 #	rm -vf run

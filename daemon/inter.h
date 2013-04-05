@@ -10,10 +10,13 @@ time_t _get_inter( time_t md,time_t now );
 time_t _only_hours(time_t t );
 char *_stime(time_t *t);
 time_t __get_midnight( time_t when );
+
+
 static inline void __zero_out_unneed( struct tm *tm )
 {
 	struct tm saved_tm;
-	
+
+	saved_tm.tm_sec = tm->tm_sec;
 	saved_tm.tm_min = tm->tm_min;
 	saved_tm.tm_hour = tm->tm_hour;
 	
@@ -33,6 +36,7 @@ static inline void __zero_out_unneed( struct tm *tm )
 # else
 	tm->__tm_gmtoff = 0;            /* Seconds east of UTC.  */
 # endif
+	tm->tm_sec = saved_tm.tm_sec;
 	tm->tm_min = saved_tm.tm_min;
 	tm->tm_hour = saved_tm.tm_hour;
 }

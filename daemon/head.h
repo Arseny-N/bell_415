@@ -44,8 +44,6 @@
 #include <signal.h>
 struct timers {
 	int state;	
-
-  //	time_t inter;           /* Informative */
         time_t md_inter;        /* Mid Night interval */
 
 #define MAX_DESCR 16
@@ -53,10 +51,7 @@ struct timers {
 	timer_t timerid;
 
 	struct sigevent sigevent;
-	struct timers *next;
-	
-	/* struct timers *prev; */
-	
+	struct timers *next;		
 };
 #define for_each_timer(p) for ( p = timers; p ; p = p->next )
 extern struct timers *timers;

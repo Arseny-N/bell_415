@@ -17,4 +17,4 @@ int rm_all_timers(void);
 int  mk_timers_set_rq(	struct timer_set_rq *s_rq ); 
 
 void print_timers(void);
-
+void print_timer(struct timers *p);

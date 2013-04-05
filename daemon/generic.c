@@ -12,7 +12,7 @@ void *read_rq(void)
 /* return fgets( buf, BUF_SIZE, stream); */
 	if(once) {
 		once = 0;
-		sprintf(buf,"S a1.7:00 a2.8:00 ME.18:19 a4.22:54");
+		sprintf(buf,"S a1.4:00 a2.8:00 ME.18:51 a4.22:54");
 		return buf;  
 	}
 	sleep(1000);

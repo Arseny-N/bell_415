@@ -30,46 +30,57 @@ inline static void __append_to_list(struct timers *timer)
 		return;
 	}
 	
-	last -> next = timer;
-	last = last -> next;
+	last->next = timer;
+	last = last->next;
+	timer->next = NULL;
 	/* last -> next = NULL; */		
 }
 inline static void __remove_from_list(struct timers *timer)
 {	
-	struct timers *p;
+	if(timers == timer) {
+		timers = timers->next;		
+		if(timer == last) 
+			last = NULL;		
+		return;		
+	}
 	
-	p = timers;
-	
+	struct timers *p;	
+	p = timers;		
+
 	while(p) {		
 		if (p->next == timer || p->next == last)
 			break;
 		p = p->next;
 	}	
-	
+		
 	if(p == NULL)
 		return;
+
 	
 	p->next = timer->next;
 
-	if(timer == last)
+	if(timer == last) 
 		last = p;
-
-	
-	
+		       	
+}
+void print_timer(struct timers *p)
+{
+	printf("%s %s    %s    %lld    %p\n",
+	       (p->state == TS_NONE)?     "none    ":
+	       (p->state == TS_ARMED)?    "armed   ":
+	       (p->state == TS_DISARMED)? "disarmed":
+	       "error   ",
+	       p->state & TS_ERROR ? "y": "n", p->descr, 
+	       (long long)p->md_inter, p->next);
 }
 void print_timers(void) 
 {
 	struct timers *p;
 	p = timers;
-	printf("state   err  descr md_inter \n");
-                   /* "none   ""y    " */
+	printf("state   err  descr md_inter next\n");
+
 	while(p) {
-		printf("%s %s    %s    %lld \n",
-			   (p->state == TS_NONE)?     "none    ":
-			   (p->state == TS_ARMED)?    "armed   ":
-			   (p->state == TS_DISARMED)? "disarmed":
-			                              "error   ",
-		       p->state & TS_ERROR ? "y": "n", p->descr, (long long)p->md_inter);
+		print_timer(p);
 		p = p->next;
 	}
 }
@@ -127,7 +138,9 @@ static void free_timer(struct timers *timer)
 		wrn_print("freeng in use timer, operation refused");
 		return;
 	}
+
 	__remove_from_list (timer);
+
 	free (timer);		
 }
 /* End List Functions */
@@ -174,7 +187,7 @@ int timer_destroy(struct timers *timer)
 {
 	char descr[MAX_DESCR];
 
-	dbg_print("destroying %s %ld timer", descr,(long)timer->timerid);
+	dbg_print("destroying %s %ld timer", timer->descr,(long)timer->timerid);
 	
 	memcpy(descr,timer->descr, MAX_DESCR);
 
@@ -184,13 +197,14 @@ int timer_destroy(struct timers *timer)
 	}
 	timer->state = TS_NONE;
 	if(timer_delete(timer->timerid) == -1) {
-		err_print("timer_delete %s",descr);
+		err_print("timer_delete %s (%ld)",descr,(long)timer->timerid);
 		t_err(timer);
 		return -1;
 	}
 
 
 	free_timer(timer);
+
 	return 0;
 
 }
@@ -283,22 +297,29 @@ int timer_mk_md(char *descr, time_t md_inter)
 static int _rm_timer(struct timers *timer)
 {
 
-	dbg_print("disarming %s", timer->descr);
+
+	//dbg_print("removing %s", timer->descr);
+
 	if ( timer_disarm (timer) == -1 ) {
 		wrn_print("timer_disarm %s",  timer->descr);		
 	}
-	
+
 	if ( timer_destroy (timer) == -1 ) {
 		wrn_print("timer_destroy %s", timer->descr);
 	}		
+
 	return 0;
 }
 
 int rm_all_timers(void) 
 {
 	struct timers *next,*p = timers;
+		
         while(p) {
+		
+		
 		next = p->next;
+
 		if(_rm_timer(p) == -1)
 			return -1;
 		p = next;

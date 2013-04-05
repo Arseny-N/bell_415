@@ -1,4 +1,5 @@
 #include <string.h>
+#include <string.h>
 #include <signal.h>
 
 #include "threads.h"
@@ -6,8 +7,9 @@
 #include "generic.h"
 #include "bell_ring.h"
 #include "error.h"
+#include "journal.h"
 
-#include <string.h>
+
 extern sigset_t old_sigset;
 static inline void set_sigmask( sigset_t *s )
 {
@@ -88,8 +90,11 @@ void reader(int f)
 			wrn_print( "decode_string returned NULL" );
 			break;
 		}
-
+		
 		serve_rq (rq);
+
+		journal_write();
+
 		method.destroy (rq);
 		print_timers();
 	}
