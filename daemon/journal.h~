@@ -1,0 +1,13 @@
+
+struct journal_list {
+        int id;
+	enum {J_NONE, J_OPENED, J_BROKEN }state;
+	int fd;
+	struct journal_list * next;
+} *j_list = NULL;
+int max_id = 0;
+
+struct timer_jentry {
+	long hash;	
+	struct timers timer;
+};

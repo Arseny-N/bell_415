@@ -1,0 +1,56 @@
+//#define _XOPEN_SOURCE
+
+#include <ctype.h>
+#include <time.h>
+#include "head.h"
+#include "error.h"
+#include "inter.h"
+
+const char *format = "%H:%M:%S | %d %m %y";
+static time_t time_str_decode(char* ts)
+{
+	struct tm tm;
+	if(strptime(ts,format,&tm) == -1) {
+		err_print("strptime %s",ts);
+	}       
+	return mktime(&tm);
+}
+int main(int argc, char * argv[])
+{
+	if(argv[1] == NULL) {
+                wrn_print("Usage: %s {c|i}%s",argv[0],format);
+		exit(EXIT_FAILURE);
+	}
+
+	int ind = 1;
+	time_t inter_md, curr;
+	time(&curr);
+
+              while(tolower(*argv[ind])) {
+		switch(tolower(*argv[ind])) {
+		case 'c':
+			curr = time_str_decode(&argv[ind][1]);
+		case 'i':
+			inter_md = time_str_decode(&argv[ind][1]);
+		default :
+			err_print("Usage: %s {c|i}time_string invalid %c",
+					  argv[0], *argv[ind]);
+			continue;			
+		}
+ind += 1;
+	}
+	time_t inter = _get_inter(inter_md, curr);
+	
+	printf( "md_inter: %s\n"
+		"curr    : %s\n"
+		"inter   : %s\n",
+		_stime(&inter_md),
+		_stime(&curr),
+		_stime(&inter));
+
+		
+
+		
+		
+	return 0;
+}

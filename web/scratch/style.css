@@ -1,0 +1,44 @@
+td.bg {
+	background-color : #ffffff;
+	
+	padding-right: 15px;
+	padding-left: 15px;
+	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	border-right: 4px solid #392FD9;
+	border-top: 4px solid #392FD9;
+	border-bottom: 4px solid #392FD9;
+}
+table.main {
+	width:100%;
+	border-collapse: collapse;
+}
+td.entry {
+	border: 1px solid rgb(0, 0, 0);
+	padding-right: 15px;	
+	padding-left: 15px;	
+}
+tr.entry {
+	background-color : #eeeeee;
+	
+}
+div.entry {
+
+	
+	border-top: 4px solid #392FD9;
+	background-color : #392FD9;
+	text-color: #000000;
+	margin: 0px;
+}
+body { 
+    background : #ffffff;
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px;
+   /* padding-right: 15%;*/
+/*    padding-left: 15%; */
+    
+}
