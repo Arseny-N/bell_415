@@ -13,7 +13,8 @@ static inline void cmd_defaults(struct cmdline *cmd,char *self)
 	
 	cmd->log_out = cmd->log_err = "/dev/null";
 	
-	cmd->err_fp = cmd->out_fp = NULL;
+	cmd->err_fp = stderr;
+	cmd->out_fp = stdout;
 	  
 	cmd->short_ring = "00:00:07";
 	cmd->long_ring = "00:00:06";
