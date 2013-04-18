@@ -1,6 +1,7 @@
 #!/bin/bash
 
 pid_file="/tmp/pid_file"
+logdir="/var/log/bell"
 
 case "$1" in
     "kill" )
@@ -13,7 +14,7 @@ case "$1" in
 	kill -s SIGHUP $( cat "$pid_file" )
 	;;
     "up")
-	$PWD/run --dump_config --log_err $PWD/run-err.log --log_out $PWD/run-dbg.log --ring_prog $PWD/ringer
+	/sbin/run --dump_config --log_err $logdir/run-err.log --log_out $logdir/run-dbg.log --ring_prog /sbin/ringer
 	;;
     * )
 	echo "Unknown action $1"

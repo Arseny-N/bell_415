@@ -6,7 +6,7 @@ CC := gcc
 
 obj = timers.o threads.o error.o time.o mysql.o cmd.o mysql_error.o
 
-main: $(obj) ringer.c
+main: $(obj) ringer.c ename
 	$(CC) $(CC_FLAGS) -o run $(obj) \
 	-lrt -lpthread `mysql_config --cflags --libs` main.c
 	$(CC) $(CC_FLAGS) -o ringer ringer.c 
@@ -30,9 +30,23 @@ mysql_error.o: mysql_error.c
 
 cmd.o: cmd.h cmd.c
 	$(CC) $(OBJ_CC_FLAGS) -c -o cmd.o cmd.c 
+ename: mk-ename.sh
+	./mk-ename.sh > ename.h
 
-
-.PHONY: clean 
+.PHONY: clean install uninstall
 clean:
 	rm -vf $(obj)
 
+install: 
+	cp run /sbin/run
+	cp dcontrol /sbin/dcontrol
+	cp ringer /sbin/ringer
+
+	mkdir /var/log/bell
+
+uninstall:
+	rm -vf /sbin/run
+	rm -vf /sbin/dcontrol
+	rm -vf /sbin/ringer
+
+	rm -vf /tmp/pid_file

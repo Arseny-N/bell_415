@@ -140,15 +140,7 @@ void rexec(void)
 } 
 void fork_exec(char *cmd)
 {
-	if(!cmd)
-		return;
-#define GREEN "\033[32m"
-#define NONE "\033[0m"	
-	int ret;
-	
-	fflush(stderr);
-	fflush(stdout);
-	dbg_print("forc_exec "GREEN"%s"NONE,cmd );
+	int ret;		
 
 	switch(fork()) {
 	case -1:
@@ -183,7 +175,7 @@ int main_loop()
 		terminate();
 	}
 
-	if(arm_24h_sig() == -1) {                                   /* <- BUGS */
+	if(arm_24h_sig() == -1) {                                  
 		wrn_print("failed to arm 24h \"killer timer\"");
 		terminate();
 	}	
