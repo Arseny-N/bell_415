@@ -4,7 +4,7 @@ include_once 'pages/links.php';
 function stdf_error_echo($err)
 {
 	echo $err .' :<br>';
-	echo $php_errormsg.'<br>';	
+	echo $php_errormsg.'<br>';
 }
 function user_error_echo($err)
 {
@@ -27,9 +27,9 @@ function err_box($err = NULL,$source = NULL)
 	sub_box_open('class="err_box"',NULL,'width="45px" ');
 	echo 
 	'
-	<table><tr>
-		<td><img src="img/red-cross.png"></td>
-		<td>
+	<table><tr>'.
+		//<td><img src="img/red-cross.png"></td>
+		'<td>
 	';
 	switch(strtolower($source)) {
 		case 'mysql':

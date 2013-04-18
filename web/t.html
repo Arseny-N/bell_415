@@ -2,17 +2,178 @@
 <head>
   <meta charset="UTF-8"/>
   <link type="text/css" rel="stylesheet" href="style2.css">
-</head>
-			<table class="inboxer"width="45px" >
-			<tr><td class="err_box">			
-			
-	<table><tr>
-		<td><img src="img/red-cross.png"></td>
-		<td>
-	Consult the help page:<br>USER FAULT<br>
+</head>Post: array(0) {
+}
+<br>Get:  array(0) {
+}
+<br><body dir="ltr"><table class="main_box"><tr><td class="main_box"><form action="test.php" type="get">
+			<table class="inboxer">
+			<tr><td class="bg">			
+					
+				<table class="main">				
+					<tr>
+					<div class="table_heads">
+							<td align="center" class="entry">Profile</td><td align="left" class="entry" colspan="2">da_clone(armed)</td>				</td>
+			</div>
 		</td>
-	</tr></table>
-	
+	</tr>
+	<tr>
+		<td align="center" class="entry">n</td>
+		<td align="center" class="entry">Lesson</td>
+		<td align="center" class="entry">Time</td>
+	</tr>		<tr class="entry">
+<td align="center" class="entry">0</td>
+<td align="center" class="entry" rowspan="2">1</td><td align="center" class="entry">08:24:00</td></tr>
+<tr class="entry">
+<td align="center" class="entry">1</td>
+<td align="center" class="entry">08:25:00</td></tr>
+<tr class="entry">
+<td align="center" class="entry">2</td>
+<td align="center" class="entry" rowspan="2">2</td><td align="center" class="entry">08:25:01</td></tr>
+<tr class="entry">
+<td align="center" class="entry">3</td>
+<td align="center" class="entry">08:35:00</td></tr>
+<tr class="entry">
+<td align="center" class="entry">4</td>
+<td align="center" class="entry" rowspan="2">3</td><td align="center" class="entry">09:10:00</td></tr>
+<tr class="entry">
+<td align="center" class="entry">5</td>
+<td align="center" class="entry">10:05:00</td></tr>
+ </table>
 		</td></tr>
 		</table>
 		
+			<table class="inboxer">
+			<tr><td class="buttons" align="center">			
+						  
+			  <button type="submit" name="edit"  value=3>edit</button>		
+			  <button type="submit" name="clone" value=3>clone</button>					  
+			  <button type="submit" name="drop"  value=3>drop</button>
+			  <button type="submit" name="arm"   value=3>arm</button>			  
+			  
+			  
+		</td></tr>
+		</table>
+		</form>
+			<table class="inboxer">
+			<tr><td class="bg">			
+			
+			<table class="main">
+				<tr><td align="center" class="entry" colspan="4"><div calss="table_heads">All Profiles</div></td></tr>
+				<tr><td align="center" class="entry">Name</td><td align="center" class="entry">First Lesson</td><td align="center" class="entry">Armed</td><td align="center" class="entry">Action</td></tr><tr class="entry"><td align="center" class="entry">da</td>
+<td align="center" class="entry">08:25:00-08:25:01</td>
+<td align="center" class="entry">no</td>
+
+		<form action="test.php" type="post">
+			<td align="center" class="entry">
+				<button type="submit" name="show" value=1>show</button>
+			</td>
+		</form></tr><tr class="entry"><td align="center" class="entry">da_clone</td>
+<td align="center" class="entry">08:25:00-08:25:01</td>
+<td align="center" class="entry">yes</td>
+
+		<form action="test.php" type="post">
+			<td align="center" class="entry">
+				<button type="submit" name="show" value=3>show</button>
+			</td>
+		</form></tr></table>
+		</td></tr>
+		</table>
+		
+			<table class="inboxer">
+			<tr><td class="bg">			
+			
+			<table class="main">
+				<tr><td align="center" class="entry" colspan="4"><div calss="table_heads">Rules</div></td></tr>
+				<tr><td align="center" class="entry">Activation Day</td><td align="center" class="entry">Profile Descr</td><td align="center" class="entry">Select</td><td align="center" class="entry">Action</td></tr><tr class="entry"><td align="center" class="entry">Monday</td>
+<td align="center" class="entry">da_clone</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=1>submit</button>
+			</td>
+			
+		</form></tr><tr class="entry"><td align="center" class="entry">Tuesday</td>
+<td align="center" class="entry">da_clone</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=2>submit</button>
+			</td>
+			
+		</form></tr><tr class="entry"><td align="center" class="entry">Wensday</td>
+<td align="center" class="entry">da</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=3>submit</button>
+			</td>
+			
+		</form></tr><tr class="entry"><td align="center" class="entry">Thiday</td>
+<td align="center" class="entry">da</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=4>submit</button>
+			</td>
+			
+		</form></tr><tr class="entry"><td align="center" class="entry">Firsday</td>
+<td align="center" class="entry">da</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=5>submit</button>
+			</td>
+			
+		</form></tr><tr class="entry"><td align="center" class="entry">Sunday</td>
+<td align="center" class="entry">da</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=6>submit</button>
+			</td>
+			
+		</form></tr><tr class="entry"><td align="center" class="entry">Saturday</td>
+<td align="center" class="entry">da_clone</td>
+<form action="test.php" type="get">
+			<td align="center" class="entry"><select size="2" name="select_elem"><option>da</option><option>da_clone</option></select>	</td>
+			<td align="center" class="entry">
+				<button type="submit" name="rule_submit" value=7>submit</button>
+			</td>
+			
+		</form></tr></table>
+		</td></tr>
+		</table>
+		
+			<table class="inboxer">
+			<tr><td class="bg">			
+			<table>
+		<tr>
+			<td>
+				<form action="test.php" type="post">			
+					<button type="submit" name="ov_blank" value="blank">New</button>			
+				</form>
+			</td>
+		</tr>
+		</table>
+			<table class="main">
+				<tr><td align="center" class="entry" colspan="3"><div calss="table_heads">Overrides</div></td></tr>
+				<tr><td align="center" class="entry">Activation Day</td><td align="center" class="entry">Profile Descr</td><td align="center" class="entry">Actions</td></tr><tr class="entry"><td align="center" class="entry">2012-12-21</td>
+<td align="center" class="entry">da</td>
+
+		<form action="test.php" type="post">
+			<td align="center" class="entry">
+				<button type="submit" name="ov_drop" value=1>drop</button>
+			</td>
+		</form></tr><tr class="entry"><td align="center" class="entry">2013-07-05</td>
+<td align="center" class="entry"></td>
+
+		<form action="test.php" type="post">
+			<td align="center" class="entry">
+				<button type="submit" name="ov_drop" value=12>drop</button>
+			</td>
+		</form></tr></table>
+		</td></tr>
+		</table>
+		</td></tr></table></body>
+

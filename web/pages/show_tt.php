@@ -1,134 +1,111 @@
 <?php
+include_once 'site.php';
+function form_open($s=NULL)
+{
+		global $argv;
+		echo '<form action="'.$argv[0].'" method="post">';		
+		if($s) {
+			echo $s;
+			echo '</form>';
+		}
+}
+function form_close()
+{
+		echo '</form>';
+}
 function print_buttons()
 {
-	global $shown_tt, $edit_flag;
-	
+	global $shown_tt, $edit_flag;	
 	if(!$edit_flag) { 
 		echo '			  
-			  <button type="submit" name="edit"  value='. $shown_tt['name'].'>edit</button>		
-			  <button type="submit" name="clone" value='. $shown_tt['name'].'>clone</button>					  
-			  <button type="submit" name="drop"  value='. $shown_tt['name'].'>drop</button>
-			  <button type="submit" name="arm"   value='. $shown_tt['name'].'>arm</button>			  
+			  <button type="submit" name="edit"  value='. $shown_tt['id'].'>edit</button>		
+			  <button type="submit" name="clone" value='. $shown_tt['id'].'>clone</button>					  
+			  <button type="submit" name="drop"  value='. $shown_tt['id'].'>drop</button>
+			  <button type="submit" name="arm"   value='. $shown_tt['id'].'>arm</button>			  
 			  
 			  ';
 	} else { 
 		echo '
-			  <button type="submit" name="add" value='. $shown_tt['name'].'>add</button>
-			  <button type="submit" name="submit" value='. $shown_tt['name'].'>submit</button>		
-			  <button type="submit" name="del" value='. $shown_tt['name'].'>del</button>			  
+			  <button type="submit" name="add" value='. $shown_tt['id'].'>add</button>
+			  <button type="submit" name="submit" value='. $shown_tt['id'].'>submit</button>		
+			  <button type="submit" name="del" value='. $shown_tt['id'].'>del</button>			  
 			  ';
 	}
-	echo '</form>'; /* Opened in print_shown_tt*/
+	
 
 }
-function print_tt_list()
+
+function print_profiles_list()
 {
-	global $main_tt_name;
-	global $argv;
-	echo <<<_EOB_
-			<table class="main">
-				<tr><td align="center" class="entry" colspan="4"><div calss="table_heads">All Profiles</div></td></tr>
-				<tr>
-					<td align="center" class="entry">Name</td>
-					<td align="center" class="entry">First Lesson</td>
-					<td align="center" class="entry">Armed</td>
-					<td align="center" class="entry">Action</td>
-				</tr>
-_EOB_;
-	$ind = 0;
-	$once = true;
 	
-	$query = "SELECT * FROM " . $main_tt_name; 
-	$result = mysql_query($query) or die(mysql_error());
-		
-	while ( $entry = mysql_fetch_array($result)) {	
-		if( is_shown($entry) && $once) {
-			$once = false;		
-			echo '<tr class="shown_entry">';
-		} else {
-			echo '<tr class="entry">';
-		}
-		$ring = _get_ring_tt($entry['id']);
-		echo '<td align="center" class="entry">' . $entry['name'] . '</td>' . "\n";
-		echo '<td align="center" class="entry">' . $ring[1] . '-' .  $ring[2] . '</td>' . "\n";	
-		echo '<td align="center" class="entry">' . (is_armed($entry)? 'yes' : 'no') . '</td>' . "\n";
-		echo '
-		<form action="'.$argv[0].'" type="get">
-			<td align="center" class="entry">
-				<button type="submit" name="show" value='.$entry['name'].'>show</button>
-			</td>
-		</form>';
-		
-		echo '</tr>';
-		$ind++;
-	}			
-	echo <<< _EOB_
-			</table>
+	table_open('All Profiles', ["Name","First Lesson","Armed","Action"]);
+		form_open();
+			print_profiles();			
+		form_close();
+	table_close();
 	
-_EOB_;
 }
 function print_shown_tt()
 {
-	global $argv;
-	global $edit_flag;
-	global $shown_tt;
-	echo '
-		<form action="'.$argv[0].'" $type="post">
-			
-				<table class="main">				
-					<tr>
-					<div class="table_heads">
-							<td align="center" class="entry">Profile</td>';
-
-						
-						
-	if (!$edit_flag) {
-		echo '<td align="left" class="entry" colspan="2">' . $shown_tt['name'] .
-			 '('.( is_armed($shown_tt) ? "armed" : "not armed").')'. '</td>';									
-	} else {
-		echo '<td align="left" class="entry" colspan="2">
-			  <input type="text" name="new_name" 
-			 placeholder="' . $shown_tt['name'] . '" />' . '</td>';
-	}
-	echo <<<_EOB_
-				</td>
-			</div>
-		</td>
-	</tr>
-	<tr>
-		<td align="center" class="entry">n</td>
-		<td align="center" class="entry">Lesson</td>
-		<td align="center" class="entry">Time</td>
-	</tr>		
-_EOB_;
-	_print_shown_tt($shown_tt['tt']);
-	echo <<< _EOB_
-		</table>
+	global $edit_flag, $shown_tt;
+	form_open();	
 	
-_EOB_;
+	echo '<table><tr>';				
+									
+	if (!$edit_flag) {
+		echo '<td>' . $shown_tt['name'] . '</td>';
+	} else {
+		echo '<td><input type="text" name="new_name" placeholder="' . $shown_tt['name'] . '" />' . '</td>';
+	}
+	echo '</tr></table>';
+	
+		table_open('Profile',['n','Lesson','Time','Duration']);
+			print_rings($shown_tt['id']);
+		table_close();
+	form_close();
+	
 }
-function _print_shown_tt($tt)
+
+function print_rules_list()
+{	
+	table_open('Rules',["Activation Day","Profile Descr","Select","Action"]);
+		form_open();	
+			print_rules();		
+		form_close();
+	table_close();
+		
+}
+
+function print_new_ov_box()
+{	
+	form_open();
+	echo '<tr><td align="left" class="entry">
+		  <input type="text" name="ov_date"/>
+		  </td></tr>';
+	echo '<tr><tr>';
+	select_profile_elem();
+	echo '</td></tr>';
+	echo '<tr><td><button type="submit" name="new_ov" value="blank">Submit</button></td></tr>';
+	form_close();
+	return 0;
+}
+function print_overrides_list()
 {
-	global $edit_flag;
-	$ring = $tt;
-	$size = count($ring);
-	for( $i = 0; $i < $size; $i ++ ) {				
-		echo '<tr class="entry">' . "\n" ;						
-		echo '<td align="center" class="entry">' . $i . '</td>' . "\n" ;
-					
-		if(($i%2) == 0) {
-			echo '<td align="center" class="entry" rowspan="2">' . ($i/2+1) . '</td>';
-		} 	
-						
-		echo '<td align="center" class="entry">';
-							
-		if(!$edit_flag) {
-			echo $ring[$i+1]; 						
-		} else {
-			echo '<input type="text" name="' . $i . '" placeholder="' . $ring[$i+1] . '" />';
-		}
-					
-			echo '</td></tr>' . "\n" ;
-		}				
+	global $new_ov_flag,$argv;
+	
+	echo '<table>';
+	if($new_ov_flag) {		
+		print_new_ov_box();
+	} else {
+		form_open();
+			echo '<tr><td><button type="submit" name="ov_blank" value="blank">New</button></td></tr>';
+		form_close();
+	}
+	echo'</table>';
+	table_open('Overrides',["Activation Day","Profile Descr","Actions"]);	
+		form_open();
+			print_overrides();		 
+		form_close();
+	table_close();
 }
 ?>

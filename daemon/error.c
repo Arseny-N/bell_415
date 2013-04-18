@@ -1,9 +1,10 @@
 #include <stdarg.h>
-//#include <sys/types.h>
-#include <pthread.h>
+
 #include "head.h"
 #include "error.h"
 #include "ename.h"
+#include "cmd.h"
+
 
 #define __valid_err(err) (err > 0 && err < MAX_ERR) ? err : 0; 
 
@@ -31,7 +32,14 @@ static inline char *__get_ename( int err )
 }
 static inline void __print(FILE *s,char *fmt, va_list *va)
 {
+	if(!s)
+		return;
 	vfprintf(s, fmt, *va);
+}
+static inline void flush_streams(void)
+{       
+  ////	fflush(cmd.err_fp);
+  //	fflush(cmd.out_fp);
 }
 void _err_print_no_exit(char *fmt, ... )
 {
@@ -44,10 +52,10 @@ void _err_print_no_exit(char *fmt, ... )
 	
 
 	va_start(va, fmt);	
-	__print(stderr,fmt_buf, &va);
+	__print( cmd.err_fp ,fmt_buf, &va);
 	va_end(va);
-	fflush(stderr);
-	fflush(stdout);
+	
+	flush_streams();
 }
 
 void _nerr_print_no_exit(int err, char *fmt, ... )
@@ -60,10 +68,11 @@ void _nerr_print_no_exit(int err, char *fmt, ... )
 		 strerror(err),__get_ename(err),fmt);
 	
 	va_start(va, fmt);	
-	__print(stderr,fmt_buf, &va);
+	__print(cmd.err_fp,fmt_buf, &va);
 	va_end(va);
-	fflush(stderr);
-	fflush(stdout);
+
+	flush_streams();
+
 }
 void _wrn_print_no_exit(char *fmt, ... )
 {
@@ -74,12 +83,14 @@ void _wrn_print_no_exit(char *fmt, ... )
 	snprintf(fmt_buf, MAX_PBUF,"Warning:%s\n",fmt);
 	
 	va_start(va, fmt);	
-	__print(stderr,fmt_buf, &va);
+	__print(cmd.err_fp,fmt_buf, &va);
 	va_end(va);
-	fflush(stderr);
-	fflush(stdout);
+
+	flush_streams();
+
 	
 }
+
 #ifdef _DEBUG
 //#warning Warning: debug mode on may cause excessive verbosity
 void _dbg_print(char *fmt, ... )
@@ -90,10 +101,10 @@ void _dbg_print(char *fmt, ... )
 	snprintf(fmt_buf, MAX_PBUF,"Debug %s\n",fmt);
 	
 	va_start(va, fmt);	
-	__print(stdout,fmt_buf, &va);
+	__print(cmd.out_fp,fmt_buf, &va);
 	va_end(va);
-	fflush(stderr);
-	fflush(stdout);
+
+	flush_streams();
 }
 #else
 void _dbg_print(char *fmt, ... )

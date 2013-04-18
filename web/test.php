@@ -11,7 +11,7 @@ include_once 'daemon_op.php';
 
 $shown_tt = NULL;
 $edit_flag = false;
-
+$new_ov_flag = false;
 
 /* load_lib: Thanks to a guy from the php forum :-)*/
 function load_lib($n, $f = null) {
@@ -25,126 +25,129 @@ function uniq_name($name, $postfix)
 {	
 	do {
 			$name .= $postfix;
-	} while ( _get_id_from_name($name) != NULL );
+	} while ( get_profile_by_name($name) );
 	return $name;
 }
 
 
 function show_tt($name)
 {
-		global $shown_tt;
-		$shown_tt = get_tt_from_name($name);
+	global $shown_tt;
+	$shown_tt = get_profile($name);		
 }
 
 function edit_tt($name)
 {
 	global $shown_tt, $edit_flag;
 	$edit_flag = true;
-	$shown_tt = get_tt_from_name($name);		
+	$shown_tt = get_profile($name);		
 }
 function clone_tt($name)
 {
 	global $shown_tt;
-	$shown_tt = get_tt_from_name($name);
-	$rearm = is_armed($shown_tt);
-		
-	$shown_tt['name'] = uniq_name($shown_tt['name'],'_clone');	
+	$shown_tt = get_profile($name);	
+			
+	$uname = uniq_name($shown_tt['name'],'_clone');		
+	clone_profile($shown_tt['id'], $uname);	
 	
-	create_tt_from_arr($shown_tt);
-	if($rearm) {						
-		tt_arm($shown_tt['id']);
-	}
-	$shown_tt = get_tt_from_name($shown_tt['name']);						
+	$shown_tt = get_profile($uname);						
 }
 function arm_tt($name)
 {
 	global $shown_tt;
-	$shown_tt = get_tt_from_name($name);	
-	if(is_armed($shown_tt)){
-		err_box("Can't arm already armed time table", "user");
-	}
-	tt_arm($shown_tt['id']);
-	$shown_tt = get_tt_from_name($name);	
-	daemon_arm($shown_tt);
+	$shown_tt = get_profile($name);		
+	arm_profile($shown_tt['id']);
+	$shown_tt = get_profile($name);		
 }
 function add_tt($name)
 {
 	global $shown_tt, $edit_flag;
-	$shown_tt = get_tt_from_name($name);
+	$shown_tt = get_profile($name);
 		
 	$edit_flag = true;
-	append_ring_tt($shown_tt['id']);
+	add_ring($shown_tt['id'],"0:0") or err_box('Unfilled rings.','user');
 	
-	$shown_tt = get_tt_from_name($name);
+	$shown_tt = get_profile($name);
 }
 function drop_tt($name)
 {
 	global $shown_tt;
-	$shown_tt = get_tt_from_name($name);
-	if( is_armed($shown_tt)) {
-		err_box('Can\'t drop armed time table.');
-	}
-	drop_table($shown_tt);
+	$shown_tt = get_profile($name);
+	drop_profile($shown_tt['id']) or err_box('Can\'t drop armed time table.','user');
 	$shown_tt = NULL;
 }
 function del_tt($name)
 {
 	global $shown_tt, $edit_flag;
-	$shown_tt = get_tt_from_name($name);
+	$shown_tt = get_profile($name);
 	$edit_flag = true;
-	del_ring_tt_entry($shown_tt['id']);
-		
-	$shown_tt = get_tt_from_name($name);
+	del_ring($shown_tt['id']);		
 }
-function submit_tt($name)
+function submit_tt($name,$new_name)
 {
 	global $shown_tt, $edit_flag;
-	$shown_tt = get_tt_from_name($name);
-	$size = count($_GET);			
-	$need = false;
-	for( $i = 0; $i < $size; $i ++ ) {			
-		$shown_tt['tt'][$i+1] = $_GET[$i];	
-		$need = true;
+	$shown_tt = get_profile($name);
+	//var_dump($shown_tt);
+	$ids = get_ids($shown_tt['id']);	
+	
+	foreach ( $ids as $id ) {	
+		
+		if($_REQUEST[$id['id']] != "" ) {			
+			update_ring($id['id'],$_REQUEST[$id['id']]);		
+		}
 	}
-	if ($need) {
-		change_ring_tt($shown_tt['id'],$shown_tt['tt']);
-	}
-	$shown_tt = get_tt_from_name($name);
-	if ($_GET['new_name'] !=  "") {
-		change_tt_name($shown_tt['id'],$_GET['new_name']);
-		$shown_tt = get_tt_from_name($_GET['new_name']);
+	
+	if ($new_name !=  "") {
+		update_profile_name($shown_tt['id'],$new_name);
+		$shown_tt = get_profile($new_name);
 	}
 }
 function process_buttons()
 {
-	global $shown_tt, $edit_flag;
+	global $shown_tt, $edit_flag, $new_ov_flag;
 	
+	$new_ov_flag = false;
 	$edit_flag = false;
 	$shown_tt = NULL;
 	
-	if(isset($_GET['show'])) {
-		show_tt($_GET['show']);
+	if(isset($_REQUEST['show'])) {
+		show_tt($_REQUEST['show']);
 	}
-	if(isset($_GET['edit'])) {
-		edit_tt($_GET['edit']);
+	if(isset($_REQUEST['add_rule'])) {
+		add_rule($_REQUEST['add_rule']);
 	}
-	if(isset($_GET['clone'])) {
-		clone_tt($_GET['clone']);
+	if(isset($_REQUEST['edit'])) {
+		edit_tt($_REQUEST['edit']);
 	}
-	if(isset($_GET['arm'])) {
-		arm_tt($_GET['arm']);		
+	if(isset($_REQUEST['clone'])) {
+		clone_tt($_REQUEST['clone']);
 	}
-	if(isset($_GET['add'])) {
-		add_tt($_GET['add']);
+	if(isset($_REQUEST['arm'])) {
+		arm_tt($_REQUEST['arm']);		
 	}
-	if(isset($_GET['drop'])) {
-		drop_tt($_GET['drop']);
+	if(isset($_REQUEST['add'])) {
+		add_tt($_REQUEST['add']);
 	}
-	if(isset($_GET['del'])) {
-		del_tt($_GET['del']);
+	if(isset($_REQUEST['drop'])) {
+		drop_tt($_REQUEST['drop']);
 	}
-	if(isset($_GET['submit'])) {
-		submit_tt($_GET['submit']);
+	if(isset($_REQUEST['del'])) {
+		del_tt($_REQUEST['del']);
+	}
+	if(isset($_REQUEST['submit'])) {
+		submit_tt($_REQUEST['submit'],$_REQUEST['new_name']);
+	}
+	if(isset($_REQUEST['rule_submit']) && isset($_REQUEST['select_elem'])) {
+		update_rule($_REQUEST['rule_submit'], $_REQUEST['select_elem']);
+	}
+	if(isset($_REQUEST['ov_blank'])) {
+		$new_ov_flag = true;
+	}
+	if(isset($_REQUEST['new_ov'])) {
+		add_override($_REQUEST['select_elem'],$_REQUEST['ov_date']);
+	}
+	if(isset($_REQUEST['ov_drop'])) {
+		drop_override($_REQUEST['ov_drop']);
 	}
 	return $shown_tt;
 }
@@ -164,75 +167,47 @@ function is_shown($tt)
 
 print_head('style2.css');
 
+echo 'Post: ' ;var_dump($_POST); echo '<br>'; 
+echo 'Get:  '; var_dump($_GET);  echo '<br>'; 
+	
 load_lib('mysql');
-connect_to_mysql("test_1");
+connect_to_mysql("test_2");
 
 process_buttons();
 echo '<body dir="ltr">';
 main_box_open();
 
-if( $shown_tt != NULL )	{
-	sub_box_open('class="bg"');
+if( $shown_tt == NULL )	
+	$shown_tt = get_armed_profile();
 	
-		print_shown_tt();
-		
+	echo '<form action="'.$argv[0].'" method="post">';	
+	sub_box_open('class="bg"');	
+		print_shown_tt();		
 	sub_box_close();
 
-	sub_box_open('class="buttons" align="center"');
-	
-		print_buttons();
-		
+	sub_box_open('class="buttons" align="center"');	
+		print_buttons();		
 	sub_box_close();
-}
+	echo '</form>';
+
+
 	sub_box_open('class="bg"');
+		print_profiles_list();	
+	sub_box_close();
 	
-		print_tt_list();
-		
+	sub_box_open('class="bg"');			
+		print_rules_list();	
+	sub_box_close();
+	
+	sub_box_open('class="bg"');	
+		print_overrides_list();	
 	sub_box_close();
 
 main_box_close();
 
 print_banner();
 echo '</body>';
-//$query = "SELECT * FROM main_table WHERE id=MAX('id')";
-//$result = mysql_query($query);	
-			
-//while($row = mysql_fetch_array($result)){
-	//echo $row['name']. " - ". $row['armed'] ." ". $row['id'];
-	//echo "<br />";
-//}
-		/*
-			
 
-			//$result = mysql_query("UPDATE example SET age='22' WHERE name='Samdra Mellowman'") 
-			//or die(mysql_error());  
-			echo "Running... ";
-			//$n = "mysql";
-			//$f = NULL;
-			//echo "You " . (extension_loaded($n)?"":"don\'t") . "need to load".(((PHP_SHLIB_SUFFIX === 'dll') ? 'php_' : '') . ($f ? $f : $n) . '.' . PHP_SHLIB_SUFFIX);
-			load_lib('mysql');
-			echo "Running... ";
-			connect_to_mysql("test");
-			
-			$query = "SELECT * FROM main_table"; 
-	 
-			$result = mysql_query($query);
-	
-			
-			while($row = mysql_fetch_array($result)){
-				echo $row['name']. " - ". $row['armed'] ." ". $row['id'];
-				echo "<br />";
-			}
-			// store the record of the "example" table into $row
-			//$row = mysql_fetch_array( $result );
-			// Print out the contents of the entry 
-
-			//echo "Name: ".$row['name'];
-			//echo " Age: ".$row['age'];
-								
-
-	echo "Table Created!\n"
-	*/
 ?>
 
 

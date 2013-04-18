@@ -2,7 +2,7 @@
 
 rm $0
 
-./style2
+php "print_funcs.php"
 
 echo "
 

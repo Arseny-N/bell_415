@@ -1,107 +1,238 @@
 #include <string.h>
 #include <string.h>
 #include <signal.h>
+#include <wait.h>
 
 #include "threads.h"
 #include "timers.h"
-#include "generic.h"
-#include "bell_ring.h"
+#include "time.h"  /* for Debugging */
+
+#include "mysql.h"
 #include "error.h"
-#include "journal.h"
+#include "cmd.h"
+#include "head.h"
 
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
-extern sigset_t old_sigset;
-static inline void set_sigmask( sigset_t *s )
+/* Thanks to Mikael Kerrisk */
+static inline int lockReg ( int fd, int cmd, int type, int whence, 
+		     int start, off_t len )
 {
-
-	if(pthread_sigmask( SIG_SETMASK, s, NULL ) == -1 ) 
-		err_print( "thread_sigmask" );	
+	struct flock fl;
+	
+	fl.l_type = type;
+	fl.l_whence = whence;
+	fl.l_start = start;
+	fl.l_len = len;
+	
+	return fcntl ( fd, cmd, &fl );
 }
 
-void *sig_thread(void *not_used)
-{
-	sigset_t set;
-	siginfo_t info;
-	int sig;
 
+static int lock_region ( int fd, int type, int whence, int start, off_t len )
+{
+	return lockReg ( fd, F_SETLK, type, whence, start, len );
+}			  
+int create_pid_file (const char * pidFile)
+{
+	char buf [BUF_SIZE];
+  
+	int fd = open ( pidFile, O_RDWR | O_CREAT | O_CLOEXEC, 
+			S_IRUSR | S_IWUSR );
+	if ( fd == -1 ) {
+		err_print("open");
+		return -1;
+	} 
+		
+	if ( lock_region ( fd, F_WRLCK, SEEK_SET, 0, 0 ) == -1 ) {
+		if ( errno == EAGAIN || errno == EACCES )
+			return -2;		
+		else {
+		        err_print("lock_region");
+			return -1;		
+		}
+	}
+	if ( ftruncate ( fd, 0 ) == -1 ) {
+		err_print("ftrucate");
+		return -1;
+	}
+	snprintf ( buf, BUF_SIZE, "%ld\n", (long) getpid () );
+	if ( write ( fd, buf, strlen (buf) ) != strlen (buf) ) {
+		err_print("write");
+		return -1;
+	}
+  
+	return fd;
+}
+int become_daemon ( int flags )
+{
+	int maxfd, fd;
+	
+	switch ( fork () ) {		
+	case -1: err_print("fork");return -1;
+	case  0: break;
+	default: _exit (EXIT_SUCCESS);
+	}
+	if ( setsid () == -1 ) {
+		err_print("setsid");
+		return -1;
+	}
+	
+	switch ( fork () ) {		
+	case -1: err_print("fork");return -1;
+	case  0: break;
+	default: _exit (EXIT_SUCCESS);
+	}
+	
+	if ( !( flags & BD_NO_UMASK0 ) )
+		umask (0);
+
+	if ( !( flags & BD_NO_CHDIR ) ) 
+		if( chdir ( "/" ) == -1 ) {
+			err_print("chdir");
+			return -1;
+		}
+	
+	if ( !( flags & BD_NO_CLOSE_FILES ) ) {
+		maxfd = sysconf (_SC_OPEN_MAX );
+		if ( maxfd == -1 )
+			maxfd = BD_MAX_CLOSE;
+		
+		for ( fd = 0; fd < maxfd; ++fd )
+			close (fd);
+	}
+	if ( !(flags & BD_NO_REOPEN_STD_FDS ) )
+	{
+		close ( STDIN_FILENO );
+		fd = open ( "/dev/null", O_RDWR );
+		if ( fd != STDIN_FILENO ) {		
+			err_print("open");
+			return -1;
+		}
+		truncate(cmd.log_out, 0);		
+		cmd.err_fp = fopen(cmd.log_err,"a");
+		
+		if ( !cmd.err_fp ) {		
+			err_print("fopen");
+			return -1;
+		}
+		truncate(optarg, 0);
+		cmd.out_fp = fopen(cmd.log_out,"a");		
+		if ( !cmd.out_fp ) {		
+			err_print("fopen");
+			return -1;
+		}		
+		
+	}
+	
+	return 0;
+}
+
+void rexec(void)
+{
+	dbg_print("execv(path:\'%s\',args:%p)",cmd.path,cmd.args);
+	execv(cmd.path, cmd.args);
+	
+	err_print("execv");
+	terminate();
+} 
+void fork_exec(char *cmd)
+{
+	if(!cmd)
+		return;
+#define GREEN "\033[32m"
+#define NONE "\033[0m"	
+	int ret;
+	
+	fflush(stderr);
+	fflush(stdout);
+	dbg_print("forc_exec "GREEN"%s"NONE,cmd );
+
+	switch(fork()) {
+	case -1:
+		err_print("fork");
+		return;
+	case 0:
+		ret = system(cmd);		
+		if(ret == -1) {
+			err_print("system");
+			terminate();
+		}
+		exit(EXIT_SUCCESS);
+	}
+}
+void ring(char *d)
+{
+	static char buf[BUF_SIZE];	
+	snprintf(buf, BUF_SIZE, "%s %s", cmd.ring_prog, d);	
+	fork_exec(buf);
+}
+static inline void zombie_assasin(void)
+{
+	if(waitpid(-1, NULL, WNOHANG) == -1) {
+		err_print("waitpid");
+	}
+}
+
+int main_loop() 
+{	
+	if( arm_main_timers() == -1) {
+		wrn_print("failed to arm ring timers");
+		terminate();
+	}
+
+	if(arm_24h_sig() == -1) {                                   /* <- BUGS */
+		wrn_print("failed to arm 24h \"killer timer\"");
+		terminate();
+	}	
+	sigset_t set;
+	
 	if(sigfillset(&set) == -1 ) {
 		err_print ("sigwaitinfo");
+		return -1;
 	}
+	siginfo_t info;
+	char *custom_dur;
 
-	for(;;) {
-	
-		switch ( sig = sigwaitinfo(&set, &info) ) {
-		case -1:
-			err_print ("sigwaitinfo");
-			/* set the old mask */
-			set_sigmask(&old_sigset);
-			_dbg_print("sig_thread exiting");
-			return NULL;
-		default:
-			printf("Recived %s signal(%d)", strsignal(sig), sig);
-                        fflush(stdout);
-			set_sigmask(&old_sigset);
-			raise(sig);
-			set_sigmask(&set);
-			
-			continue;
-		}
-	}
-}
-static inline void serve_rq(struct request *rq)
-{
-  //	struct timer_set_rq *s_rq;
+	for( ;; ) {	
+		int sig = sigwaitinfo(&set, &info);
 
-	dbg_print("unleashed");
+		dbg_print("FETCHED %s SIGNAL(%ld)",strsignal(sig),(long)sig);
 
-	
-	
-	/* More RT's could be added if needed */
-
-	switch(rq->type) {
-
-	case RT_SET_TIMERS:
-		rm_all_timers();
-		mk_timers_set_rq((struct timer_set_rq *)rq->stuff);
-		break;
-
-	default:
-		wrn_print("Unknown rq type %d",rq->type);
-		break;
-	}
-
-	dbg_print("terminated");
-
-}
-
-void reader(int f) 
-{	
-
-	method.init();
-	for( ;; ) {				
-		void *buf = method.read();
-		if ( buf == NULL ) {
-		        wrn_print( "generic_read returned NULL" );
-			break;
-		}
-
-		struct request *rq = method.decode(buf);
-		if ( rq == NULL ) {
-			wrn_print( "decode_string returned NULL" );
-			break;
+		if(IS_EXIT_SIG(sig)) {
+			exit(EXIT_SUCCESS);
 		}
 		
-		serve_rq (rq);
+		if(sig == SIG_RING_CUSTOM) {
+			custom_dur = get_duration(&info);
+			ring(custom_dur);
+			continue;
+		}
+		switch(sig) {
+		case -1:
+			if(errno != EAGAIN) {
+				err_print("sigwaitinfo");		
+				break;
+			}
+		case SIG_REXEC:
+			rexec();
+			break;	
 
-		journal_write();
+		case SIG_RING_SHORT:
+			ring(cmd.short_ring);
+			break;
+		case SIG_RING_LONG:
+			ring(cmd.long_ring);
+			break;
 
-		method.destroy (rq);
-		print_timers();
-	}
-	method.on_exit();	
+
+		case SIGCHLD:
+			zombie_assasin();
+			break;
+		}
+	}	
 }
 
-void restorer_thread(union sigval void_sigval)
-{	
-	ring_the_bell();       	
-}
+

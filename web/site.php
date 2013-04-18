@@ -1,6 +1,23 @@
 <?php
 $sub_box_opened = false;
 $main_box_opened = false;
+function table_open($head,$cols)
+{
+	$numcols = count($cols);
+	echo '
+			<table class="main">
+				<tr><td align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</div></td></tr>
+				<tr>';
+	$i = 0;
+	while ($numcols > $i)  {
+		echo '<td align="center" class="entry">'.$cols[$i++].'</td>';
+	}
+	echo '</tr>';		
+}
+function table_close()
+{
+	echo '</table>';
+}
 function sub_box_open($td_args=NULL,$tr_args=NULL,$table_args=NULL)
 {
 	global $sub_box_opened;
@@ -26,8 +43,8 @@ function sub_box_close()
 }
 function print_banner()
 {
-	echo '<br><div class="banner" align="left">With Great Power 
-										 Comes Great Responsibility </div>';
+	//echo '<br><div class="banner" align="left">With Great Power 
+		//								 Comes Great Responsibility </div>';
 }
 function main_box_open()
 {

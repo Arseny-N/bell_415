@@ -12,10 +12,10 @@ include_once 'error.php';
 $deamon_fifo = "/tmp/fifo";
 function send_daemon_rq($rq)
 {
-	/*
+	
 	$fd = @fopen($daemon_fifo, "w") or err_box("fopen ".$daemon_fifo, "stdf");
 	@fwrite($fd, $rq) or err_box("fwrite ".$daemon_fifo, "stdf");
-	*/
+	
 	return true;
 }
 function daemon_arm($shown_tt)

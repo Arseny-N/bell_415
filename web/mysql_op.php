@@ -1,164 +1,228 @@
 <?php
+include_once 'print_funcs.php';
 	/*
-	 * Time Table entry:
-	 * 		name VCHAR(32)
-	 * 		armed BOOL
-	 * 		id INT NOT NULL AUTO_INCREMENT
-	 * 
-	 * 
-	 * Ring Time Table 
-	 *      num INT NOT NULL AUTO_INCREMENT
-	 * 	    ring_time TIME
+		
+profiles(
+	  id INT NOT NULL AUTO_INCREMENT, 
+	  PRIMARY KEY(id),
+	  name VARCHAR(30), 
+	  armed BOOL
+);
+rings (
+       id INT NOT NULL AUTO_INCREMENT, 
+       PRIMARY KEY(id), 
+       profile_id INT NOT NULL,
+       ring_time TIME
+);
+rules (
+       name VARCHAR(30), 
+       PRIMARY KEY(name),
+       profile_id INT NOT NULL,
+       rule_date DATE
+);
+
+overrides(
+       over_date DATE,
+       profile_id INT NOT NULL
+);
 	 */
-$sub_tt_prefix = "ring_time_table_";
-$main_tt_name = "main_table";
-function _drop_ring_tt($id)
-{
-	global $sub_tt_prefix;
-	$query = "DROP TABLE ".$sub_tt_prefix.$id;
-	mysql_query($query) or die(mysql_error(). '  ' . $query);
-}
-function drop_table($tt)
-{
-	global $main_tt_name;
-	
-	_drop_ring_tt($tt['id']);
-	
-	$query = "DELETE FROM ".$main_tt_name." WHERE id='".$tt['id']."'";
-	mysql_query($query) or die(mysql_error(). '  ' . $query);
-}
+
 
 function connect_to_mysql($db_name)
 {	
-	$link = mysql_connect("localhost","arseni",'1') or die ('Not connected: ' . mysql_error());	
-	return mysql_select_db($db_name, $link) or die('Can\'t use tset: ' . mysql_error());
-}
-function _get_ring_tt($id)
-{
-	global $sub_tt_prefix;
-	$query = "SELECT * FROM " . $sub_tt_prefix . $id; 
-	$result = mysql_query($query) or die(mysql_error());
-	while($row = mysql_fetch_array($result)){
-				 $arr[$row['ind']] = $row['ring_time'];				
-	}
-	return $arr;
-}
-function __insert_sub_tt($tname, $time)
-{
-	$query = "INSERT INTO ".$tname. " (ring_time) VALUES('".$time."')";
-	mysql_query($query)	or die($query." - ".mysql_error());  
-}
-function __update_sub_tt($tname, $ind, $time)
-{
-	$query = "UPDATE ".$tname." SET ring_time='".$time."' WHERE ind='".$ind."'";
-	mysql_query($query)	or die($query." - ".mysql_error());  
-}
-function _create_ring_tt($tt, $id)
-{
-	global $sub_tt_prefix;
-	$table = $sub_tt_prefix.$id;
-	$query ="CREATE TABLE ".$table."(ind INT NOT NULL AUTO_INCREMENT, PRIMARY KEY(ind), ring_time TIME)";
-	mysql_query($query)	or die($query." - ".mysql_error());  
-	
-	foreach($tt as $entry) {
-		__insert_sub_tt($table, $entry);
-	}
-	
+	$link = mysql_connect("localhost","arseni",'1') or err_box('mysql_connect', 'mysql');	
+	return mysql_select_db($db_name, $link) or err_box('select db '.$db_name, 'mysql');
 }
 
-function _get_id_from_name($name)
+function mk_query($query)
 {
-	global $main_tt_name;
-	$query = "SELECT * FROM " . $main_tt_name . " WHERE name='" . $name ."'"; 
-	
-	$result = mysql_query($query) or die($query." - ".mysql_error()); 
-	$row =  mysql_fetch_array($result);
-	
-	return $row['id'];
+	$result = mysql_query($query) or err_box($query,'mysql');
+	return $result;
 }
-function create_tt_from_arr($tt)
+function foreach_query($query,$printfunc,$arg=NULL) 
 {
-	global $main_tt_name;
-	$query = "INSERT INTO " . $main_tt_name . "(name, armed) 
-			  VALUES('".$tt['name']."','".$tt['armed']."')";
-	mysql_query($query)	or die(mysql_error());
-	$id = _get_id_from_name($tt['name']);
-	
-	_create_ring_tt($tt['tt'], $id);
-}
-function get_one_tt_entry()
-{
-	global $main_tt_name;
-	$query = "SELECT * FROM " . $main_tt_name; 
-	$result = mysql_query($query) or die(mysql_error());
-	$row =  mysql_fetch_array($result);
-}
-function get_tt_from_name($name)
-{
-	global $main_tt_name;
-	$query = "SELECT * FROM " . $main_tt_name . " WHERE name='" . $name . "'"; 
-	$result = mysql_query($query) or die(mysql_error() . $query );
-	$row =  mysql_fetch_array($result);
-	$row ['tt'] = _get_ring_tt($row['id']);
-	return $row;
-}
-function change_tt_name($id, $name)
-{
-	global $main_tt_name;
-	$query = "UPDATE ".$main_tt_name." SET name='".$name."' WHERE id='".$id."'";
-	mysql_query($query) or die(mysql_error());
-}
-function tt_arm($id)
-{
-	global $main_tt_name;
-	$query = "UPDATE ".$main_tt_name." SET armed='0'";
-	mysql_query($query) or die(mysql_error());
-	$query = "UPDATE ".$main_tt_name." SET armed='1' WHERE id='".$id."'";
-	mysql_query($query) or die(mysql_error());
-}
-
-function change_ring_tt($id, $tt)
-{
-	global $sub_tt_prefix;
-	$size = count($tt);
-	for($ind = 0; $ind < $size; $ind++ ) {
-		if($tt[$ind] != "") {
-			echo "Inserting: " . $tt[$ind] . "<br>";
-			__update_sub_tt($sub_tt_prefix.$id, $ind ,$tt[$ind]);
-		}
+	$result = mk_query($query);
+	while($row = mysql_fetch_array($result)) {
+		$printfunc ($row,$arg);
 	}
 }
-function echo_tt($tt)
+function get_query($query)
 {
-	echo ' ';
+	$result = mk_query($query);
+	$ret = NULL;
+	while($row = mysql_fetch_array($result)) {
+		$ret [] = $row;
+	}
+	return $ret;
 }
-function append_ring_tt($id)
+
+
+
+
+function print_rings($prof_id)
 {
-	global $sub_tt_prefix;
-	__insert_sub_tt($sub_tt_prefix.$id,'0:0:0');
+	return foreach_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' GROUP BY ring_time",'print_ring');
+}
+function print_profiles()
+{
+	return foreach_query('SELECT * FROM profiles','print_profile');
+}
+function print_rules()
+{
+	return foreach_query('SELECT * FROM rules','print_rule');
+}
+function print_overrides()
+{
+	return foreach_query('SELECT * FROM overrides GROUP BY over_date','print_override');
+	
 }
 
 
-function __get_max_ring_num($table)
+
+
+function get_ring($prof_id)
 {
-	global $sub_tt_prefix;
-	
-	$query = "SELECT MAX(ind) FROM " . $table;	
-	
-	$result = mysql_query($query) or die(mysql_error(). '  ' . $query);
-	$row = mysql_fetch_array($result);
-	var_dump($row);
-	return $row['MAX(ind)'];
+	return get_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' GROUP BY ring_time");
+}
+function get_ring_time($prof_id,$time)
+{
+	return get_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' HAVING ring_time='".$time."'");
+}
+function get_profile($prof_id)
+{
+	return get_query("SELECT * FROM profiles WHERE id='".$prof_id."'")[0];
+}
+function get_profile_by_name($name)
+{
+	return get_query("SELECT * FROM profiles WHERE name='".$name."'")[0];
+}
+function get_ids($prof_id)
+{
+	return get_query("SELECT id FROM rings WHERE profile_id='".$prof_id."'");
+}
+function get_profile_name_by_id($id)
+{
+	return get_profile($id)['name'];
+}
+function get_profile_id_by_name($name)
+{
+	return get_profile_by_name($name)['id'];
+}
+function get_armed_profile()
+{
+	var_dump($p = get_rule_profile_id_by_day(today()));
+	return get_profile($p);
+}
+function get_rule_profile_id_by_day($day)
+{
+	return get_query("SELECT profile_id FROM rules WHERE rule_day='".mk_day($day)."'")[0]['profile_id'];
 }
 
-function del_ring_tt_entry($id)
+
+
+function add_ring($prof_id,$time)
 {
-	global $sub_tt_prefix;
-	$table = $sub_tt_prefix.$id;
+	if(!get_ring_time($prof_id,$time)) {
+		return mk_query("INSERT INTO rings (ring_time,profile_id) VALUES('".$time."','".$prof_id."')");
+	}
+	return false;
+}
+function add_profile($name)
+{
+	return mk_query("INSERT INTO profiles (name,armed) VALUES('".$name."','0')");
+}
+function add_override($profn,$date)
+{	
 	
-	$max_id = __get_max_ring_num($table);
-	$query = "DELETE FROM ".$table." WHERE ind='".$max_id."'";
-	mysql_query($query) or die(mysql_error(). '  ' . $query);
+	return mk_query("INSERT INTO overrides (over_date,profile_id) 
+					 VALUES('".$date."','".get_profile_id_by_name($profn)."')");
+	return true;
+}
+
+function update_ring($ring_id,$time)
+{
+	return mk_query("UPDATE rings SET ring_time='".$time."' WHERE id='".$ring_id."'");
+}
+function update_profile_name($prof_id,$name)
+{
+	return mk_query("UPDATE profiles SET name='".$name."' WHERE id='".$prof_id."'");
+}
+function update_rule($rday, $profn)
+{
+	return mk_query("UPDATE rules SET profile_id='".get_profile_id_by_name($profn)."' WHERE rule_day='".mk_day($rday)."'");
+}
+
+
+
+function copy_ring_entry($entry, $new_id)
+{		
+	return add_ring($new_id,$entry['ring_time']);
+}
+
+
+
+
+function clone_rings($id,$new_id)
+{
+	return foreach_query("SELECT * FROM rings WHERE profile_id='".$id."'",'copy_ring_entry',$new_id);
+}
+function clone_profile($id,$new_name)
+{
+	add_profile($new_name);
+	$prof = get_profile_by_name($new_name);	
+	return clone_rings($id, $prof['id']);
+	
+}
+
+
+
+
+function cnt_profiles()
+{
+	return get_query("SELECT COUNT(*) FROM profiles")[0]['COUNT(*)'];
+}
+
+
+function mk_day($day)
+{
+	return $day;
+}
+function today()
+{
+	return mk_day(date('N'));
+}
+
+function arm_profile($id)
+{	
+	echo 'Today:' . today() .'Id'.$id;
+	return mk_query("UPDATE rules SET profile_id='".$id."' WHERE rule_day='".mk_day($rday)."'");
+}
+function is_armed_profile($id)
+{
+	return (get_rule_profile_id_by_day(today()) == $id);
+}
+
+
+
+
+function drop_profile($id)
+{
+	if(!is_armed_profile($id)) {
+		mk_query("DELETE FROM profiles WHERE id='".$id."'");
+		mk_query("DELETE FROM overrides WHERE profile_id='".$id."'");
+		mk_query("DELETE FROM rules WHERE profile_id='".$id."'");
+		return mk_query("DELETE FROM rings WHERE profile_id='".$id."'");
+	}
+	return false;
+}
+function drop_override($id)
+{
+	return mk_query("DELETE FROM overrides WHERE id='".$id."'");
+}
+function del_ring($prof_id)
+{
+	$id = get_query("SELECT MAX(id) FROM rings WHERE profile_id='".$prof_id."'")[0]['MAX(id)'];
+	return mk_query("DELETE FROM rings WHERE id='".$id."'");
 	
 }
 ?>

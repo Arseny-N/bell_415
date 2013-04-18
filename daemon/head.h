@@ -1,64 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-
-/* #ifdef __HEAD_H__ */
-/* # warning Warning: case of double inclusion, or accidental macro predefinition */
-/* #endif */
+#include <signal.h>
 
 #ifndef __HEAD_H__
-#define __HEAD_H__
-#define _XOPEN_SOURCE
+# define __HEAD_H__
 
+# define TERMINATE_ON_ERR
 
-#define TERMINATE_ON_ERR
-//#define _DEBUG
+# define _DEBUG
 
-
-#define TS_NONE       0x0   /* Bug if found in initialized function */
-#define TS_DISARMED   0x1   /* Timer set but not armed*/   
-#define TS_ARMED      0x2   /* Timer set but armed*/   
-
-#define TS_ERROR      0x8   /* Errors occured */
-
-#define _DEBUG
-#define t_err(t)  t->state &= TS_ERROR; 
-#define is_err(t) (t->state & TS_ERROR)
-#define h0 (time_t) 0.0       
-#define h24 (time_t) 24*60*60  /* A day */
+# define h0 (time_t) 0       
+# define h24 (time_t) 24*60*60  /* A day */
 //#define h24 (time_t) 20  /* Not A day */
-#define ts_h0(ts) do{ ts.tv_sec = h0; ts.tv_nsec = 0L; } while(0)
-#define ts_h24(ts) do{ ts.tv_sec = h24; ts.tv_nsec = 0L; } while(0) /* A timespec day */
 
-#ifndef likely
-# define likely(op) __builtin_expect(1,op)              /* doesnt work why ? */
-#endif
-#ifndef unlikely
-# define unlikely(op) (op)
-#endif
+# define ts_h0(ts) do{ ts.tv_sec = h0; ts.tv_nsec = 0L; } while(0)
+# define ts_h24(ts) do{ ts.tv_sec = h24; ts.tv_nsec = 0L; } while(0)
 
-/* TODO:
- *     Journal
- *     Log
- */
-#include <signal.h>
-struct timers {
-	int state;	
-        time_t md_inter;        /* Mid Night interval */
+# define __timezone_adj(t) (t -= timezone)
+# define IS_EXIT_SIG(sig) (sig == SIGTERM || sig == SIGQUIT || sig == SIGINT)
 
-#define MAX_DESCR 16
-	char descr[MAX_DESCR];  /* char. description */
-	timer_t timerid;
+# define BUF_SIZE   256
+# define MAX_QUERY  1024
+# define MAX_PROFID 16
 
-	struct sigevent sigevent;
-	struct timers *next;		
-};
-#define for_each_timer(p) for ( p = timers; p ; p = p->next )
-extern struct timers *timers;
-extern struct timers *last; /* = &timers; */
+# define PERMS 0777
+# define SIG_REXEC SIGHUP
+# define SIG_RING_SHORT  SIGUSR1
+# define SIG_RING_LONG  SIGUSR2
+# define SIG_RING_CUSTOM  SIGRTMIN
 
-#define min(a,b) (a>b?b:a)
-#define __timezone_adj(t) (t -= timezone)
-#define BUF_SIZE 256
-
+# define BD_MAX_CLOSE  256
+# define BD_NEED                     0x1	 
+# define BD_NO_UMASK0		    0x2	 
+# define BD_NO_CHDIR		    0x4	 
+# define BD_NO_CLOSE_FILES	    0x8	 
+# define BD_NO_REOPEN_STD_FDS	    0x10 
+/*
+#ifndef likely 
+#  define likely(x)      __builtin_expect(!!(x), 1)
+#  define unlikely(x)    __builtin_expect(!!(x), 0)
+# endif
+*/
 #endif
