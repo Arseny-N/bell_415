@@ -1,0 +1,4122 @@
+Mysql:
+	Host:	user: %s
+
+	  Db: 	pass: %s
+
+Debug [165] fresh_profile_id: override empty
+Debug [168] fresh_profile_id: rule fetched 1
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:00:00 (null)
+Debug [083] str_to_time: 00:00:00 => 1366142400 Wed Apr 17 00:00:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:58) time: (00:00:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:03:33 (null)
+Debug [083] str_to_time: 00:03:33 => 1366142613 Wed Apr 17 00:03:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:10) time: (00:03:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:05:27 (null)
+Debug [083] str_to_time: 00:05:27 => 1366142727 Wed Apr 17 00:05:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:30) time: (00:05:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:07:39 (null)
+Debug [083] str_to_time: 00:07:39 => 1366142859 Wed Apr 17 00:07:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (00:07:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:10:16 (null)
+Debug [083] str_to_time: 00:10:16 => 1366143016 Wed Apr 17 00:10:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:59) time: (00:10:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:12:38 (null)
+Debug [083] str_to_time: 00:12:38 => 1366143158 Wed Apr 17 00:12:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:23) time: (00:12:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:14:01 (null)
+Debug [083] str_to_time: 00:14:01 => 1366143241 Wed Apr 17 00:14:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:30) time: (00:14:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:15:51 (null)
+Debug [083] str_to_time: 00:15:51 => 1366143351 Wed Apr 17 00:15:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:18) time: (00:15:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:17:26 (null)
+Debug [083] str_to_time: 00:17:26 => 1366143446 Wed Apr 17 00:17:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:27) time: (00:17:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:21:11 (null)
+Debug [083] str_to_time: 00:21:11 => 1366143671 Wed Apr 17 00:21:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:28) time: (00:21:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:21:22 (null)
+Debug [083] str_to_time: 00:21:22 => 1366143682 Wed Apr 17 00:21:22 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:00) time: (00:21:22)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:21:26 (null)
+Debug [083] str_to_time: 00:21:26 => 1366143686 Wed Apr 17 00:21:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:56) time: (00:21:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:22:27 (null)
+Debug [083] str_to_time: 00:22:27 => 1366143747 Wed Apr 17 00:22:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:19) time: (00:22:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:24:03 (null)
+Debug [083] str_to_time: 00:24:03 => 1366143843 Wed Apr 17 00:24:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (00:24:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:25:07 (null)
+Debug [083] str_to_time: 00:25:07 => 1366143907 Wed Apr 17 00:25:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:58) time: (00:25:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:29:19 (null)
+Debug [083] str_to_time: 00:29:19 => 1366144159 Wed Apr 17 00:29:19 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:29) time: (00:29:19)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:33:19 (null)
+Debug [083] str_to_time: 00:33:19 => 1366144399 Wed Apr 17 00:33:19 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:34) time: (00:33:19)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:36:00 (null)
+Debug [083] str_to_time: 00:36:00 => 1366144560 Wed Apr 17 00:36:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:20) time: (00:36:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:37:46 (null)
+Debug [083] str_to_time: 00:37:46 => 1366144666 Wed Apr 17 00:37:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:16) time: (00:37:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:40:34 (null)
+Debug [083] str_to_time: 00:40:34 => 1366144834 Wed Apr 17 00:40:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:05) time: (00:40:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:44:02 (null)
+Debug [083] str_to_time: 00:44:02 => 1366145042 Wed Apr 17 00:44:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:12) time: (00:44:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:45:38 (null)
+Debug [083] str_to_time: 00:45:38 => 1366145138 Wed Apr 17 00:45:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:59) time: (00:45:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:47:21 (null)
+Debug [083] str_to_time: 00:47:21 => 1366145241 Wed Apr 17 00:47:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (00:47:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:48:58 (null)
+Debug [083] str_to_time: 00:48:58 => 1366145338 Wed Apr 17 00:48:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:29) time: (00:48:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:50:42 (null)
+Debug [083] str_to_time: 00:50:42 => 1366145442 Wed Apr 17 00:50:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:39) time: (00:50:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:53:51 (null)
+Debug [083] str_to_time: 00:53:51 => 1366145631 Wed Apr 17 00:53:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:10) time: (00:53:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:55:44 (null)
+Debug [083] str_to_time: 00:55:44 => 1366145744 Wed Apr 17 00:55:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:35) time: (00:55:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:56:05 (null)
+Debug [083] str_to_time: 00:56:05 => 1366145765 Wed Apr 17 00:56:05 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:02) time: (00:56:05)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->00:59:47 (null)
+Debug [083] str_to_time: 00:59:47 => 1366145987 Wed Apr 17 00:59:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:40) time: (00:59:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:03:59 (null)
+Debug [083] str_to_time: 01:03:59 => 1366146239 Wed Apr 17 01:03:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:10) time: (01:03:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:06:23 (null)
+Debug [083] str_to_time: 01:06:23 => 1366146383 Wed Apr 17 01:06:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:23) time: (01:06:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:09:40 (null)
+Debug [083] str_to_time: 01:09:40 => 1366146580 Wed Apr 17 01:09:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:44) time: (01:09:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:13:48 (null)
+Debug [083] str_to_time: 01:13:48 => 1366146828 Wed Apr 17 01:13:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:56) time: (01:13:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:15:27 (null)
+Debug [083] str_to_time: 01:15:27 => 1366146927 Wed Apr 17 01:15:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:01) time: (01:15:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:16:28 (null)
+Debug [083] str_to_time: 01:16:28 => 1366146988 Wed Apr 17 01:16:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:52) time: (01:16:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:20:35 (null)
+Debug [083] str_to_time: 01:20:35 => 1366147235 Wed Apr 17 01:20:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:56) time: (01:20:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:24:37 (null)
+Debug [083] str_to_time: 01:24:37 => 1366147477 Wed Apr 17 01:24:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:11) time: (01:24:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:28:30 (null)
+Debug [083] str_to_time: 01:28:30 => 1366147710 Wed Apr 17 01:28:30 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:13) time: (01:28:30)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:29:34 (null)
+Debug [083] str_to_time: 01:29:34 => 1366147774 Wed Apr 17 01:29:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:00) time: (01:29:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:33:13 (null)
+Debug [083] str_to_time: 01:33:13 => 1366147993 Wed Apr 17 01:33:13 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:49) time: (01:33:13)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:37:07 (null)
+Debug [083] str_to_time: 01:37:07 => 1366148227 Wed Apr 17 01:37:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:28) time: (01:37:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:40:14 (null)
+Debug [083] str_to_time: 01:40:14 => 1366148414 Wed Apr 17 01:40:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:01) time: (01:40:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:42:08 (null)
+Debug [083] str_to_time: 01:42:08 => 1366148528 Wed Apr 17 01:42:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:00) time: (01:42:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:44:48 (null)
+Debug [083] str_to_time: 01:44:48 => 1366148688 Wed Apr 17 01:44:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:46) time: (01:44:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:48:00 (null)
+Debug [083] str_to_time: 01:48:00 => 1366148880 Wed Apr 17 01:48:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:39) time: (01:48:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:51:52 (null)
+Debug [083] str_to_time: 01:51:52 => 1366149112 Wed Apr 17 01:51:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:57) time: (01:51:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:54:24 (null)
+Debug [083] str_to_time: 01:54:24 => 1366149264 Wed Apr 17 01:54:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:16) time: (01:54:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:56:14 (null)
+Debug [083] str_to_time: 01:56:14 => 1366149374 Wed Apr 17 01:56:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:03) time: (01:56:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:57:53 (null)
+Debug [083] str_to_time: 01:57:53 => 1366149473 Wed Apr 17 01:57:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (01:57:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->01:58:28 (null)
+Debug [083] str_to_time: 01:58:28 => 1366149508 Wed Apr 17 01:58:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:41) time: (01:58:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:02:36 (null)
+Debug [083] str_to_time: 02:02:36 => 1366149756 Wed Apr 17 02:02:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:02) time: (02:02:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:02:47 (null)
+Debug [083] str_to_time: 02:02:47 => 1366149767 Wed Apr 17 02:02:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:04) time: (02:02:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:03:38 (null)
+Debug [083] str_to_time: 02:03:38 => 1366149818 Wed Apr 17 02:03:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:55) time: (02:03:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:07:07 (null)
+Debug [083] str_to_time: 02:07:07 => 1366150027 Wed Apr 17 02:07:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:58) time: (02:07:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:07:27 (null)
+Debug [083] str_to_time: 02:07:27 => 1366150047 Wed Apr 17 02:07:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:50) time: (02:07:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:08:10 (null)
+Debug [083] str_to_time: 02:08:10 => 1366150090 Wed Apr 17 02:08:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:43) time: (02:08:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:12:10 (null)
+Debug [083] str_to_time: 02:12:10 => 1366150330 Wed Apr 17 02:12:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:47) time: (02:12:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:16:25 (null)
+Debug [083] str_to_time: 02:16:25 => 1366150585 Wed Apr 17 02:16:25 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:12) time: (02:16:25)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:19:59 (null)
+Debug [083] str_to_time: 02:19:59 => 1366150799 Wed Apr 17 02:19:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:25) time: (02:19:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:21:06 (null)
+Debug [083] str_to_time: 02:21:06 => 1366150866 Wed Apr 17 02:21:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:21) time: (02:21:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:23:37 (null)
+Debug [083] str_to_time: 02:23:37 => 1366151017 Wed Apr 17 02:23:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (02:23:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:24:10 (null)
+Debug [083] str_to_time: 02:24:10 => 1366151050 Wed Apr 17 02:24:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:03) time: (02:24:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:27:00 (null)
+Debug [083] str_to_time: 02:27:00 => 1366151220 Wed Apr 17 02:27:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:01) time: (02:27:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:31:09 (null)
+Debug [083] str_to_time: 02:31:09 => 1366151469 Wed Apr 17 02:31:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:33) time: (02:31:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:34:51 (null)
+Debug [083] str_to_time: 02:34:51 => 1366151691 Wed Apr 17 02:34:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:44) time: (02:34:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:37:37 (null)
+Debug [083] str_to_time: 02:37:37 => 1366151857 Wed Apr 17 02:37:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:20) time: (02:37:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:40:19 (null)
+Debug [083] str_to_time: 02:40:19 => 1366152019 Wed Apr 17 02:40:19 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:44) time: (02:40:19)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:43:15 (null)
+Debug [083] str_to_time: 02:43:15 => 1366152195 Wed Apr 17 02:43:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:14) time: (02:43:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:44:52 (null)
+Debug [083] str_to_time: 02:44:52 => 1366152292 Wed Apr 17 02:44:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:01) time: (02:44:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:45:51 (null)
+Debug [083] str_to_time: 02:45:51 => 1366152351 Wed Apr 17 02:45:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:55) time: (02:45:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:46:49 (null)
+Debug [083] str_to_time: 02:46:49 => 1366152409 Wed Apr 17 02:46:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:32) time: (02:46:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:50:00 (null)
+Debug [083] str_to_time: 02:50:00 => 1366152600 Wed Apr 17 02:50:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:58) time: (02:50:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:52:01 (null)
+Debug [083] str_to_time: 02:52:01 => 1366152721 Wed Apr 17 02:52:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:27) time: (02:52:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:55:56 (null)
+Debug [083] str_to_time: 02:55:56 => 1366152956 Wed Apr 17 02:55:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:26) time: (02:55:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->02:58:08 (null)
+Debug [083] str_to_time: 02:58:08 => 1366153088 Wed Apr 17 02:58:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:08) time: (02:58:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:00:32 (null)
+Debug [083] str_to_time: 03:00:32 => 1366153232 Wed Apr 17 03:00:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:03) time: (03:00:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:03:49 (null)
+Debug [083] str_to_time: 03:03:49 => 1366153429 Wed Apr 17 03:03:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:58) time: (03:03:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:06:08 (null)
+Debug [083] str_to_time: 03:06:08 => 1366153568 Wed Apr 17 03:06:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:58) time: (03:06:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:07:39 (null)
+Debug [083] str_to_time: 03:07:39 => 1366153659 Wed Apr 17 03:07:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:56) time: (03:07:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:08:06 (null)
+Debug [083] str_to_time: 03:08:06 => 1366153686 Wed Apr 17 03:08:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:54) time: (03:08:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:11:53 (null)
+Debug [083] str_to_time: 03:11:53 => 1366153913 Wed Apr 17 03:11:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:09) time: (03:11:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:15:28 (null)
+Debug [083] str_to_time: 03:15:28 => 1366154128 Wed Apr 17 03:15:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:35) time: (03:15:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:15:49 (null)
+Debug [083] str_to_time: 03:15:49 => 1366154149 Wed Apr 17 03:15:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:42) time: (03:15:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:16:55 (null)
+Debug [083] str_to_time: 03:16:55 => 1366154215 Wed Apr 17 03:16:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:59) time: (03:16:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:20:09 (null)
+Debug [083] str_to_time: 03:20:09 => 1366154409 Wed Apr 17 03:20:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:11) time: (03:20:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:24:14 (null)
+Debug [083] str_to_time: 03:24:14 => 1366154654 Wed Apr 17 03:24:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:53) time: (03:24:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:24:16 (null)
+Debug [083] str_to_time: 03:24:16 => 1366154656 Wed Apr 17 03:24:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:48) time: (03:24:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:26:51 (null)
+Debug [083] str_to_time: 03:26:51 => 1366154811 Wed Apr 17 03:26:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:52) time: (03:26:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:30:46 (null)
+Debug [083] str_to_time: 03:30:46 => 1366155046 Wed Apr 17 03:30:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:28) time: (03:30:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:32:33 (null)
+Debug [083] str_to_time: 03:32:33 => 1366155153 Wed Apr 17 03:32:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:39) time: (03:32:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:32:40 (null)
+Debug [083] str_to_time: 03:32:40 => 1366155160 Wed Apr 17 03:32:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:55) time: (03:32:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:32:49 (null)
+Debug [083] str_to_time: 03:32:49 => 1366155169 Wed Apr 17 03:32:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:23) time: (03:32:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:34:50 (null)
+Debug [083] str_to_time: 03:34:50 => 1366155290 Wed Apr 17 03:34:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:03) time: (03:34:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:36:15 (null)
+Debug [083] str_to_time: 03:36:15 => 1366155375 Wed Apr 17 03:36:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:28) time: (03:36:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:37:54 (null)
+Debug [083] str_to_time: 03:37:54 => 1366155474 Wed Apr 17 03:37:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:58) time: (03:37:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:38:08 (null)
+Debug [083] str_to_time: 03:38:08 => 1366155488 Wed Apr 17 03:38:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:35) time: (03:38:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:38:12 (null)
+Debug [083] str_to_time: 03:38:12 => 1366155492 Wed Apr 17 03:38:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:07) time: (03:38:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:42:16 (null)
+Debug [083] str_to_time: 03:42:16 => 1366155736 Wed Apr 17 03:42:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:39) time: (03:42:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:43:27 (null)
+Debug [083] str_to_time: 03:43:27 => 1366155807 Wed Apr 17 03:43:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:29) time: (03:43:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:44:28 (null)
+Debug [083] str_to_time: 03:44:28 => 1366155868 Wed Apr 17 03:44:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:30) time: (03:44:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:48:08 (null)
+Debug [083] str_to_time: 03:48:08 => 1366156088 Wed Apr 17 03:48:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:00) time: (03:48:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:50:22 (null)
+Debug [083] str_to_time: 03:50:22 => 1366156222 Wed Apr 17 03:50:22 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:22) time: (03:50:22)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:51:52 (null)
+Debug [083] str_to_time: 03:51:52 => 1366156312 Wed Apr 17 03:51:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:08) time: (03:51:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:54:36 (null)
+Debug [083] str_to_time: 03:54:36 => 1366156476 Wed Apr 17 03:54:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:11) time: (03:54:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:56:58 (null)
+Debug [083] str_to_time: 03:56:58 => 1366156618 Wed Apr 17 03:56:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:16) time: (03:56:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->03:58:20 (null)
+Debug [083] str_to_time: 03:58:20 => 1366156700 Wed Apr 17 03:58:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:14) time: (03:58:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:02:17 (null)
+Debug [083] str_to_time: 04:02:17 => 1366156937 Wed Apr 17 04:02:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:51) time: (04:02:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:02:37 (null)
+Debug [083] str_to_time: 04:02:37 => 1366156957 Wed Apr 17 04:02:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:40) time: (04:02:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:04:33 (null)
+Debug [083] str_to_time: 04:04:33 => 1366157073 Wed Apr 17 04:04:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (04:04:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:05:35 (null)
+Debug [083] str_to_time: 04:05:35 => 1366157135 Wed Apr 17 04:05:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:39) time: (04:05:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:06:14 (null)
+Debug [083] str_to_time: 04:06:14 => 1366157174 Wed Apr 17 04:06:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:54) time: (04:06:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:08:05 (null)
+Debug [083] str_to_time: 04:08:05 => 1366157285 Wed Apr 17 04:08:05 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:55) time: (04:08:05)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:09:28 (null)
+Debug [083] str_to_time: 04:09:28 => 1366157368 Wed Apr 17 04:09:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:06) time: (04:09:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:13:34 (null)
+Debug [083] str_to_time: 04:13:34 => 1366157614 Wed Apr 17 04:13:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:22) time: (04:13:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:15:47 (null)
+Debug [083] str_to_time: 04:15:47 => 1366157747 Wed Apr 17 04:15:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:14) time: (04:15:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:16:40 (null)
+Debug [083] str_to_time: 04:16:40 => 1366157800 Wed Apr 17 04:16:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:01) time: (04:16:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:19:02 (null)
+Debug [083] str_to_time: 04:19:02 => 1366157942 Wed Apr 17 04:19:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:41) time: (04:19:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:19:19 (null)
+Debug [083] str_to_time: 04:19:19 => 1366157959 Wed Apr 17 04:19:19 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:27) time: (04:19:19)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:23:03 (null)
+Debug [083] str_to_time: 04:23:03 => 1366158183 Wed Apr 17 04:23:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:34) time: (04:23:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:24:42 (null)
+Debug [083] str_to_time: 04:24:42 => 1366158282 Wed Apr 17 04:24:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:36) time: (04:24:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:25:50 (null)
+Debug [083] str_to_time: 04:25:50 => 1366158350 Wed Apr 17 04:25:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:23) time: (04:25:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:29:47 (null)
+Debug [083] str_to_time: 04:29:47 => 1366158587 Wed Apr 17 04:29:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:11) time: (04:29:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:31:05 (null)
+Debug [083] str_to_time: 04:31:05 => 1366158665 Wed Apr 17 04:31:05 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:32) time: (04:31:05)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:33:43 (null)
+Debug [083] str_to_time: 04:33:43 => 1366158823 Wed Apr 17 04:33:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:22) time: (04:33:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:37:47 (null)
+Debug [083] str_to_time: 04:37:47 => 1366159067 Wed Apr 17 04:37:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:26) time: (04:37:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:39:00 (null)
+Debug [083] str_to_time: 04:39:00 => 1366159140 Wed Apr 17 04:39:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:08) time: (04:39:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:42:18 (null)
+Debug [083] str_to_time: 04:42:18 => 1366159338 Wed Apr 17 04:42:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:51) time: (04:42:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:43:55 (null)
+Debug [083] str_to_time: 04:43:55 => 1366159435 Wed Apr 17 04:43:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:54) time: (04:43:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:47:14 (null)
+Debug [083] str_to_time: 04:47:14 => 1366159634 Wed Apr 17 04:47:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:13) time: (04:47:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:50:27 (null)
+Debug [083] str_to_time: 04:50:27 => 1366159827 Wed Apr 17 04:50:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:38) time: (04:50:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:52:30 (null)
+Debug [083] str_to_time: 04:52:30 => 1366159950 Wed Apr 17 04:52:30 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:13) time: (04:52:30)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:55:52 (null)
+Debug [083] str_to_time: 04:55:52 => 1366160152 Wed Apr 17 04:55:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:02) time: (04:55:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->04:58:11 (null)
+Debug [083] str_to_time: 04:58:11 => 1366160291 Wed Apr 17 04:58:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:17) time: (04:58:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:00:44 (null)
+Debug [083] str_to_time: 05:00:44 => 1366160444 Wed Apr 17 05:00:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:30) time: (05:00:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:01:44 (null)
+Debug [083] str_to_time: 05:01:44 => 1366160504 Wed Apr 17 05:01:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:36) time: (05:01:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:05:52 (null)
+Debug [083] str_to_time: 05:05:52 => 1366160752 Wed Apr 17 05:05:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:29) time: (05:05:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:07:07 (null)
+Debug [083] str_to_time: 05:07:07 => 1366160827 Wed Apr 17 05:07:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:13) time: (05:07:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:10:25 (null)
+Debug [083] str_to_time: 05:10:25 => 1366161025 Wed Apr 17 05:10:25 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:22) time: (05:10:25)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:12:02 (null)
+Debug [083] str_to_time: 05:12:02 => 1366161122 Wed Apr 17 05:12:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:39) time: (05:12:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:14:42 (null)
+Debug [083] str_to_time: 05:14:42 => 1366161282 Wed Apr 17 05:14:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:33) time: (05:14:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:15:30 (null)
+Debug [083] str_to_time: 05:15:30 => 1366161330 Wed Apr 17 05:15:30 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:52) time: (05:15:30)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:15:31 (null)
+Debug [083] str_to_time: 05:15:31 => 1366161331 Wed Apr 17 05:15:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:44) time: (05:15:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:16:17 (null)
+Debug [083] str_to_time: 05:16:17 => 1366161377 Wed Apr 17 05:16:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:00) time: (05:16:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:19:03 (null)
+Debug [083] str_to_time: 05:19:03 => 1366161543 Wed Apr 17 05:19:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:31) time: (05:19:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:19:52 (null)
+Debug [083] str_to_time: 05:19:52 => 1366161592 Wed Apr 17 05:19:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (05:19:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:24:02 (null)
+Debug [083] str_to_time: 05:24:02 => 1366161842 Wed Apr 17 05:24:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:58) time: (05:24:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:26:44 (null)
+Debug [083] str_to_time: 05:26:44 => 1366162004 Wed Apr 17 05:26:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (05:26:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:27:10 (null)
+Debug [083] str_to_time: 05:27:10 => 1366162030 Wed Apr 17 05:27:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:59) time: (05:27:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:30:58 (null)
+Debug [083] str_to_time: 05:30:58 => 1366162258 Wed Apr 17 05:30:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:40) time: (05:30:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:34:42 (null)
+Debug [083] str_to_time: 05:34:42 => 1366162482 Wed Apr 17 05:34:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:33) time: (05:34:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:37:01 (null)
+Debug [083] str_to_time: 05:37:01 => 1366162621 Wed Apr 17 05:37:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:58) time: (05:37:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:41:11 (null)
+Debug [083] str_to_time: 05:41:11 => 1366162871 Wed Apr 17 05:41:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:44) time: (05:41:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:45:08 (null)
+Debug [083] str_to_time: 05:45:08 => 1366163108 Wed Apr 17 05:45:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:25) time: (05:45:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:47:38 (null)
+Debug [083] str_to_time: 05:47:38 => 1366163258 Wed Apr 17 05:47:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:33) time: (05:47:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:49:43 (null)
+Debug [083] str_to_time: 05:49:43 => 1366163383 Wed Apr 17 05:49:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:56) time: (05:49:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:51:17 (null)
+Debug [083] str_to_time: 05:51:17 => 1366163477 Wed Apr 17 05:51:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:57) time: (05:51:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:55:26 (null)
+Debug [083] str_to_time: 05:55:26 => 1366163726 Wed Apr 17 05:55:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (05:55:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->05:58:59 (null)
+Debug [083] str_to_time: 05:58:59 => 1366163939 Wed Apr 17 05:58:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:21) time: (05:58:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:01:42 (null)
+Debug [083] str_to_time: 06:01:42 => 1366164102 Wed Apr 17 06:01:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:40) time: (06:01:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:05:13 (null)
+Debug [083] str_to_time: 06:05:13 => 1366164313 Wed Apr 17 06:05:13 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:21) time: (06:05:13)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:09:28 (null)
+Debug [083] str_to_time: 06:09:28 => 1366164568 Wed Apr 17 06:09:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:50) time: (06:09:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:10:23 (null)
+Debug [083] str_to_time: 06:10:23 => 1366164623 Wed Apr 17 06:10:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:52) time: (06:10:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:11:56 (null)
+Debug [083] str_to_time: 06:11:56 => 1366164716 Wed Apr 17 06:11:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:14) time: (06:11:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:15:56 (null)
+Debug [083] str_to_time: 06:15:56 => 1366164956 Wed Apr 17 06:15:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:53) time: (06:15:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:19:16 (null)
+Debug [083] str_to_time: 06:19:16 => 1366165156 Wed Apr 17 06:19:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:22) time: (06:19:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:20:08 (null)
+Debug [083] str_to_time: 06:20:08 => 1366165208 Wed Apr 17 06:20:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:55) time: (06:20:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:23:55 (null)
+Debug [083] str_to_time: 06:23:55 => 1366165435 Wed Apr 17 06:23:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:33) time: (06:23:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:27:02 (null)
+Debug [083] str_to_time: 06:27:02 => 1366165622 Wed Apr 17 06:27:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:54) time: (06:27:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:27:16 (null)
+Debug [083] str_to_time: 06:27:16 => 1366165636 Wed Apr 17 06:27:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:13) time: (06:27:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:28:10 (null)
+Debug [083] str_to_time: 06:28:10 => 1366165690 Wed Apr 17 06:28:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:11) time: (06:28:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:30:39 (null)
+Debug [083] str_to_time: 06:30:39 => 1366165839 Wed Apr 17 06:30:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:11) time: (06:30:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:32:27 (null)
+Debug [083] str_to_time: 06:32:27 => 1366165947 Wed Apr 17 06:32:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:30) time: (06:32:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:34:16 (null)
+Debug [083] str_to_time: 06:34:16 => 1366166056 Wed Apr 17 06:34:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:36) time: (06:34:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:35:04 (null)
+Debug [083] str_to_time: 06:35:04 => 1366166104 Wed Apr 17 06:35:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:38) time: (06:35:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:37:32 (null)
+Debug [083] str_to_time: 06:37:32 => 1366166252 Wed Apr 17 06:37:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:12) time: (06:37:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:40:50 (null)
+Debug [083] str_to_time: 06:40:50 => 1366166450 Wed Apr 17 06:40:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:51) time: (06:40:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:42:11 (null)
+Debug [083] str_to_time: 06:42:11 => 1366166531 Wed Apr 17 06:42:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:32) time: (06:42:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:45:44 (null)
+Debug [083] str_to_time: 06:45:44 => 1366166744 Wed Apr 17 06:45:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:32) time: (06:45:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:46:11 (null)
+Debug [083] str_to_time: 06:46:11 => 1366166771 Wed Apr 17 06:46:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:13) time: (06:46:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:48:33 (null)
+Debug [083] str_to_time: 06:48:33 => 1366166913 Wed Apr 17 06:48:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:38) time: (06:48:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:50:42 (null)
+Debug [083] str_to_time: 06:50:42 => 1366167042 Wed Apr 17 06:50:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:46) time: (06:50:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:51:11 (null)
+Debug [083] str_to_time: 06:51:11 => 1366167071 Wed Apr 17 06:51:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:36) time: (06:51:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:54:42 (null)
+Debug [083] str_to_time: 06:54:42 => 1366167282 Wed Apr 17 06:54:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:33) time: (06:54:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:56:28 (null)
+Debug [083] str_to_time: 06:56:28 => 1366167388 Wed Apr 17 06:56:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:37) time: (06:56:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->06:59:52 (null)
+Debug [083] str_to_time: 06:59:52 => 1366167592 Wed Apr 17 06:59:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:13) time: (06:59:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:01:18 (null)
+Debug [083] str_to_time: 07:01:18 => 1366167678 Wed Apr 17 07:01:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:38) time: (07:01:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:04:48 (null)
+Debug [083] str_to_time: 07:04:48 => 1366167888 Wed Apr 17 07:04:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:52) time: (07:04:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:08:20 (null)
+Debug [083] str_to_time: 07:08:20 => 1366168100 Wed Apr 17 07:08:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:26) time: (07:08:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:08:54 (null)
+Debug [083] str_to_time: 07:08:54 => 1366168134 Wed Apr 17 07:08:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:51) time: (07:08:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:12:31 (null)
+Debug [083] str_to_time: 07:12:31 => 1366168351 Wed Apr 17 07:12:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:51) time: (07:12:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:12:50 (null)
+Debug [083] str_to_time: 07:12:50 => 1366168370 Wed Apr 17 07:12:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:10) time: (07:12:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:14:43 (null)
+Debug [083] str_to_time: 07:14:43 => 1366168483 Wed Apr 17 07:14:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:30) time: (07:14:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:16:35 (null)
+Debug [083] str_to_time: 07:16:35 => 1366168595 Wed Apr 17 07:16:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:52) time: (07:16:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:20:00 (null)
+Debug [083] str_to_time: 07:20:00 => 1366168800 Wed Apr 17 07:20:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:52) time: (07:20:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:24:03 (null)
+Debug [083] str_to_time: 07:24:03 => 1366169043 Wed Apr 17 07:24:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:12) time: (07:24:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:25:39 (null)
+Debug [083] str_to_time: 07:25:39 => 1366169139 Wed Apr 17 07:25:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (07:25:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:28:54 (null)
+Debug [083] str_to_time: 07:28:54 => 1366169334 Wed Apr 17 07:28:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:56) time: (07:28:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:30:05 (null)
+Debug [083] str_to_time: 07:30:05 => 1366169405 Wed Apr 17 07:30:05 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:11) time: (07:30:05)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:31:37 (null)
+Debug [083] str_to_time: 07:31:37 => 1366169497 Wed Apr 17 07:31:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:19) time: (07:31:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:34:16 (null)
+Debug [083] str_to_time: 07:34:16 => 1366169656 Wed Apr 17 07:34:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:53) time: (07:34:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:34:47 (null)
+Debug [083] str_to_time: 07:34:47 => 1366169687 Wed Apr 17 07:34:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:34) time: (07:34:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:35:49 (null)
+Debug [083] str_to_time: 07:35:49 => 1366169749 Wed Apr 17 07:35:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:12) time: (07:35:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:37:52 (null)
+Debug [083] str_to_time: 07:37:52 => 1366169872 Wed Apr 17 07:37:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:40) time: (07:37:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:39:17 (null)
+Debug [083] str_to_time: 07:39:17 => 1366169957 Wed Apr 17 07:39:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:42) time: (07:39:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:40:56 (null)
+Debug [083] str_to_time: 07:40:56 => 1366170056 Wed Apr 17 07:40:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:25) time: (07:40:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:42:40 (null)
+Debug [083] str_to_time: 07:42:40 => 1366170160 Wed Apr 17 07:42:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:45) time: (07:42:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:44:52 (null)
+Debug [083] str_to_time: 07:44:52 => 1366170292 Wed Apr 17 07:44:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:09) time: (07:44:52)
+
+Debug [069] push_timer_from_row: Signal long
+Debug [023] push_timer_from_string: ->07:46:05 (null)
+Debug [083] str_to_time: 07:46:05 => 1366170365 Wed Apr 17 07:46:05 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:06) time: (07:46:05)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:49:24 (null)
+Debug [083] str_to_time: 07:49:24 => 1366170564 Wed Apr 17 07:49:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:47) time: (07:49:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:50:06 (null)
+Debug [083] str_to_time: 07:50:06 => 1366170606 Wed Apr 17 07:50:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:08) time: (07:50:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:51:06 (null)
+Debug [083] str_to_time: 07:51:06 => 1366170666 Wed Apr 17 07:51:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:41) time: (07:51:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:55:14 (null)
+Debug [083] str_to_time: 07:55:14 => 1366170914 Wed Apr 17 07:55:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:17) time: (07:55:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:58:39 (null)
+Debug [083] str_to_time: 07:58:39 => 1366171119 Wed Apr 17 07:58:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:19) time: (07:58:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->07:59:16 (null)
+Debug [083] str_to_time: 07:59:16 => 1366171156 Wed Apr 17 07:59:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:27) time: (07:59:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:01:22 (null)
+Debug [083] str_to_time: 08:01:22 => 1366171282 Wed Apr 17 08:01:22 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (08:01:22)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:03:07 (null)
+Debug [083] str_to_time: 08:03:07 => 1366171387 Wed Apr 17 08:03:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:16) time: (08:03:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:03:43 (null)
+Debug [083] str_to_time: 08:03:43 => 1366171423 Wed Apr 17 08:03:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:14) time: (08:03:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:07:47 (null)
+Debug [083] str_to_time: 08:07:47 => 1366171667 Wed Apr 17 08:07:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:18) time: (08:07:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:09:52 (null)
+Debug [083] str_to_time: 08:09:52 => 1366171792 Wed Apr 17 08:09:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:39) time: (08:09:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:13:47 (null)
+Debug [083] str_to_time: 08:13:47 => 1366172027 Wed Apr 17 08:13:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:24) time: (08:13:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:15:09 (null)
+Debug [083] str_to_time: 08:15:09 => 1366172109 Wed Apr 17 08:15:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:22) time: (08:15:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:17:34 (null)
+Debug [083] str_to_time: 08:17:34 => 1366172254 Wed Apr 17 08:17:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:16) time: (08:17:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:18:20 (null)
+Debug [083] str_to_time: 08:18:20 => 1366172300 Wed Apr 17 08:18:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:55) time: (08:18:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:21:11 (null)
+Debug [083] str_to_time: 08:21:11 => 1366172471 Wed Apr 17 08:21:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (08:21:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:25:00 (null)
+Debug [083] str_to_time: 08:25:00 => 1366172700 Wed Apr 17 08:25:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:37) time: (08:25:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:26:57 (null)
+Debug [083] str_to_time: 08:26:57 => 1366172817 Wed Apr 17 08:26:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:48) time: (08:26:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:30:47 (null)
+Debug [083] str_to_time: 08:30:47 => 1366173047 Wed Apr 17 08:30:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:46) time: (08:30:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:34:11 (null)
+Debug [083] str_to_time: 08:34:11 => 1366173251 Wed Apr 17 08:34:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:31) time: (08:34:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:38:00 (null)
+Debug [083] str_to_time: 08:38:00 => 1366173480 Wed Apr 17 08:38:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:20) time: (08:38:00)
+
+Debug [069] push_timer_from_row: Signal short
+Debug [023] push_timer_from_string: ->08:40:38 (null)
+Debug [083] str_to_time: 08:40:38 => 1366173638 Wed Apr 17 08:40:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:07) time: (08:40:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:41:38 (null)
+Debug [083] str_to_time: 08:41:38 => 1366173698 Wed Apr 17 08:41:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:13) time: (08:41:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:44:36 (null)
+Debug [083] str_to_time: 08:44:36 => 1366173876 Wed Apr 17 08:44:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:53) time: (08:44:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:47:06 (null)
+Debug [083] str_to_time: 08:47:06 => 1366174026 Wed Apr 17 08:47:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:40) time: (08:47:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:50:41 (null)
+Debug [083] str_to_time: 08:50:41 => 1366174241 Wed Apr 17 08:50:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:06) time: (08:50:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:51:21 (null)
+Debug [083] str_to_time: 08:51:21 => 1366174281 Wed Apr 17 08:51:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:17) time: (08:51:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:54:47 (null)
+Debug [083] str_to_time: 08:54:47 => 1366174487 Wed Apr 17 08:54:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:41) time: (08:54:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:56:01 (null)
+Debug [083] str_to_time: 08:56:01 => 1366174561 Wed Apr 17 08:56:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:01) time: (08:56:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:56:29 (null)
+Debug [083] str_to_time: 08:56:29 => 1366174589 Wed Apr 17 08:56:29 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:12) time: (08:56:29)
+
+Debug [069] push_timer_from_row: Signal long
+Debug [023] push_timer_from_string: ->08:57:09 (null)
+Debug [083] str_to_time: 08:57:09 => 1366174629 Wed Apr 17 08:57:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:06) time: (08:57:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:58:27 (null)
+Debug [083] str_to_time: 08:58:27 => 1366174707 Wed Apr 17 08:58:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:21) time: (08:58:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->08:59:51 (null)
+Debug [083] str_to_time: 08:59:51 => 1366174791 Wed Apr 17 08:59:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:08) time: (08:59:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:03:55 (null)
+Debug [083] str_to_time: 09:03:55 => 1366175035 Wed Apr 17 09:03:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:42) time: (09:03:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:07:18 (null)
+Debug [083] str_to_time: 09:07:18 => 1366175238 Wed Apr 17 09:07:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:03) time: (09:07:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:10:18 (null)
+Debug [083] str_to_time: 09:10:18 => 1366175418 Wed Apr 17 09:10:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:43) time: (09:10:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:11:54 (null)
+Debug [083] str_to_time: 09:11:54 => 1366175514 Wed Apr 17 09:11:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:02) time: (09:11:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:13:38 (null)
+Debug [083] str_to_time: 09:13:38 => 1366175618 Wed Apr 17 09:13:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:48) time: (09:13:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:15:48 (null)
+Debug [083] str_to_time: 09:15:48 => 1366175748 Wed Apr 17 09:15:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:47) time: (09:15:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:20:03 (null)
+Debug [083] str_to_time: 09:20:03 => 1366176003 Wed Apr 17 09:20:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:47) time: (09:20:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:22:16 (null)
+Debug [083] str_to_time: 09:22:16 => 1366176136 Wed Apr 17 09:22:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:49) time: (09:22:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:23:15 (null)
+Debug [083] str_to_time: 09:23:15 => 1366176195 Wed Apr 17 09:23:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:31) time: (09:23:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:24:20 (null)
+Debug [083] str_to_time: 09:24:20 => 1366176260 Wed Apr 17 09:24:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:09) time: (09:24:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:26:39 (null)
+Debug [083] str_to_time: 09:26:39 => 1366176399 Wed Apr 17 09:26:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:07) time: (09:26:39)
+
+Debug [069] push_timer_from_row: Signal short
+Debug [023] push_timer_from_string: ->09:29:16 (null)
+Debug [083] str_to_time: 09:29:16 => 1366176556 Wed Apr 17 09:29:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:07) time: (09:29:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:32:17 (null)
+Debug [083] str_to_time: 09:32:17 => 1366176737 Wed Apr 17 09:32:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:46) time: (09:32:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:36:09 (null)
+Debug [083] str_to_time: 09:36:09 => 1366176969 Wed Apr 17 09:36:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:15) time: (09:36:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:39:09 (null)
+Debug [083] str_to_time: 09:39:09 => 1366177149 Wed Apr 17 09:39:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:17) time: (09:39:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:41:27 (null)
+Debug [083] str_to_time: 09:41:27 => 1366177287 Wed Apr 17 09:41:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:42) time: (09:41:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:44:18 (null)
+Debug [083] str_to_time: 09:44:18 => 1366177458 Wed Apr 17 09:44:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:45) time: (09:44:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:48:10 (null)
+Debug [083] str_to_time: 09:48:10 => 1366177690 Wed Apr 17 09:48:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:42) time: (09:48:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:50:20 (null)
+Debug [083] str_to_time: 09:50:20 => 1366177820 Wed Apr 17 09:50:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:27) time: (09:50:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:52:53 (null)
+Debug [083] str_to_time: 09:52:53 => 1366177973 Wed Apr 17 09:52:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:23) time: (09:52:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:55:39 (null)
+Debug [083] str_to_time: 09:55:39 => 1366178139 Wed Apr 17 09:55:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:08) time: (09:55:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:57:51 (null)
+Debug [083] str_to_time: 09:57:51 => 1366178271 Wed Apr 17 09:57:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:06) time: (09:57:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->09:58:00 (null)
+Debug [083] str_to_time: 09:58:00 => 1366178280 Wed Apr 17 09:58:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:48) time: (09:58:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:02:12 (null)
+Debug [083] str_to_time: 10:02:12 => 1366178532 Wed Apr 17 10:02:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:22) time: (10:02:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:04:54 (null)
+Debug [083] str_to_time: 10:04:54 => 1366178694 Wed Apr 17 10:04:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:48) time: (10:04:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:05:32 (null)
+Debug [083] str_to_time: 10:05:32 => 1366178732 Wed Apr 17 10:05:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:48) time: (10:05:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:07:22 (null)
+Debug [083] str_to_time: 10:07:22 => 1366178842 Wed Apr 17 10:07:22 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:22) time: (10:07:22)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:10:26 (null)
+Debug [083] str_to_time: 10:10:26 => 1366179026 Wed Apr 17 10:10:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:47) time: (10:10:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:11:56 (null)
+Debug [083] str_to_time: 10:11:56 => 1366179116 Wed Apr 17 10:11:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:02) time: (10:11:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:12:40 (null)
+Debug [083] str_to_time: 10:12:40 => 1366179160 Wed Apr 17 10:12:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:05) time: (10:12:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:12:55 (null)
+Debug [083] str_to_time: 10:12:55 => 1366179175 Wed Apr 17 10:12:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:11) time: (10:12:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:15:39 (null)
+Debug [083] str_to_time: 10:15:39 => 1366179339 Wed Apr 17 10:15:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:08) time: (10:15:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:18:52 (null)
+Debug [083] str_to_time: 10:18:52 => 1366179532 Wed Apr 17 10:18:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:49) time: (10:18:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:19:32 (null)
+Debug [083] str_to_time: 10:19:32 => 1366179572 Wed Apr 17 10:19:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:29) time: (10:19:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:19:54 (null)
+Debug [083] str_to_time: 10:19:54 => 1366179594 Wed Apr 17 10:19:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:33) time: (10:19:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:22:43 (null)
+Debug [083] str_to_time: 10:22:43 => 1366179763 Wed Apr 17 10:22:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:35) time: (10:22:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:23:47 (null)
+Debug [083] str_to_time: 10:23:47 => 1366179827 Wed Apr 17 10:23:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:57) time: (10:23:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:24:21 (null)
+Debug [083] str_to_time: 10:24:21 => 1366179861 Wed Apr 17 10:24:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (10:24:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:25:02 (null)
+Debug [083] str_to_time: 10:25:02 => 1366179902 Wed Apr 17 10:25:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:44) time: (10:25:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:26:11 (null)
+Debug [083] str_to_time: 10:26:11 => 1366179971 Wed Apr 17 10:26:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:37) time: (10:26:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:30:04 (null)
+Debug [083] str_to_time: 10:30:04 => 1366180204 Wed Apr 17 10:30:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:20) time: (10:30:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:32:21 (null)
+Debug [083] str_to_time: 10:32:21 => 1366180341 Wed Apr 17 10:32:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:05) time: (10:32:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:36:36 (null)
+Debug [083] str_to_time: 10:36:36 => 1366180596 Wed Apr 17 10:36:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:00) time: (10:36:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:37:29 (null)
+Debug [083] str_to_time: 10:37:29 => 1366180649 Wed Apr 17 10:37:29 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:55) time: (10:37:29)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:38:12 (null)
+Debug [083] str_to_time: 10:38:12 => 1366180692 Wed Apr 17 10:38:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (10:38:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:40:11 (null)
+Debug [083] str_to_time: 10:40:11 => 1366180811 Wed Apr 17 10:40:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:30) time: (10:40:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:42:09 (null)
+Debug [083] str_to_time: 10:42:09 => 1366180929 Wed Apr 17 10:42:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:36) time: (10:42:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:46:14 (null)
+Debug [083] str_to_time: 10:46:14 => 1366181174 Wed Apr 17 10:46:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:27) time: (10:46:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:46:45 (null)
+Debug [083] str_to_time: 10:46:45 => 1366181205 Wed Apr 17 10:46:45 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:04) time: (10:46:45)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:46:46 (null)
+Debug [083] str_to_time: 10:46:46 => 1366181206 Wed Apr 17 10:46:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:54) time: (10:46:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:48:14 (null)
+Debug [083] str_to_time: 10:48:14 => 1366181294 Wed Apr 17 10:48:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:29) time: (10:48:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:50:08 (null)
+Debug [083] str_to_time: 10:50:08 => 1366181408 Wed Apr 17 10:50:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:21) time: (10:50:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:50:31 (null)
+Debug [083] str_to_time: 10:50:31 => 1366181431 Wed Apr 17 10:50:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:43) time: (10:50:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:53:45 (null)
+Debug [083] str_to_time: 10:53:45 => 1366181625 Wed Apr 17 10:53:45 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:43) time: (10:53:45)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->10:56:43 (null)
+Debug [083] str_to_time: 10:56:43 => 1366181803 Wed Apr 17 10:56:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:01) time: (10:56:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:00:54 (null)
+Debug [083] str_to_time: 11:00:54 => 1366182054 Wed Apr 17 11:00:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:29) time: (11:00:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:05:04 (null)
+Debug [083] str_to_time: 11:05:04 => 1366182304 Wed Apr 17 11:05:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:53) time: (11:05:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:07:48 (null)
+Debug [083] str_to_time: 11:07:48 => 1366182468 Wed Apr 17 11:07:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:05) time: (11:07:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:08:28 (null)
+Debug [083] str_to_time: 11:08:28 => 1366182508 Wed Apr 17 11:08:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:49) time: (11:08:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:12:33 (null)
+Debug [083] str_to_time: 11:12:33 => 1366182753 Wed Apr 17 11:12:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:10) time: (11:12:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:14:31 (null)
+Debug [083] str_to_time: 11:14:31 => 1366182871 Wed Apr 17 11:14:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:57) time: (11:14:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:16:02 (null)
+Debug [083] str_to_time: 11:16:02 => 1366182962 Wed Apr 17 11:16:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:37) time: (11:16:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:18:04 (null)
+Debug [083] str_to_time: 11:18:04 => 1366183084 Wed Apr 17 11:18:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:15) time: (11:18:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:19:50 (null)
+Debug [083] str_to_time: 11:19:50 => 1366183190 Wed Apr 17 11:19:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:07) time: (11:19:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:21:18 (null)
+Debug [083] str_to_time: 11:21:18 => 1366183278 Wed Apr 17 11:21:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (11:21:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:24:40 (null)
+Debug [083] str_to_time: 11:24:40 => 1366183480 Wed Apr 17 11:24:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:15) time: (11:24:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:26:06 (null)
+Debug [083] str_to_time: 11:26:06 => 1366183566 Wed Apr 17 11:26:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:51) time: (11:26:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:28:35 (null)
+Debug [083] str_to_time: 11:28:35 => 1366183715 Wed Apr 17 11:28:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:49) time: (11:28:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:31:52 (null)
+Debug [083] str_to_time: 11:31:52 => 1366183912 Wed Apr 17 11:31:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:40) time: (11:31:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:32:56 (null)
+Debug [083] str_to_time: 11:32:56 => 1366183976 Wed Apr 17 11:32:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:55) time: (11:32:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:35:09 (null)
+Debug [083] str_to_time: 11:35:09 => 1366184109 Wed Apr 17 11:35:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:03) time: (11:35:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:36:07 (null)
+Debug [083] str_to_time: 11:36:07 => 1366184167 Wed Apr 17 11:36:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (11:36:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:38:51 (null)
+Debug [083] str_to_time: 11:38:51 => 1366184331 Wed Apr 17 11:38:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:50) time: (11:38:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:40:17 (null)
+Debug [083] str_to_time: 11:40:17 => 1366184417 Wed Apr 17 11:40:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:14) time: (11:40:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:40:20 (null)
+Debug [083] str_to_time: 11:40:20 => 1366184420 Wed Apr 17 11:40:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:11) time: (11:40:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:42:51 (null)
+Debug [083] str_to_time: 11:42:51 => 1366184571 Wed Apr 17 11:42:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:25) time: (11:42:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:46:06 (null)
+Debug [083] str_to_time: 11:46:06 => 1366184766 Wed Apr 17 11:46:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:01) time: (11:46:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:50:08 (null)
+Debug [083] str_to_time: 11:50:08 => 1366185008 Wed Apr 17 11:50:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:44) time: (11:50:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:53:49 (null)
+Debug [083] str_to_time: 11:53:49 => 1366185229 Wed Apr 17 11:53:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:44) time: (11:53:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:55:45 (null)
+Debug [083] str_to_time: 11:55:45 => 1366185345 Wed Apr 17 11:55:45 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:41) time: (11:55:45)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:56:58 (null)
+Debug [083] str_to_time: 11:56:58 => 1366185418 Wed Apr 17 11:56:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:53) time: (11:56:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->11:58:52 (null)
+Debug [083] str_to_time: 11:58:52 => 1366185532 Wed Apr 17 11:58:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:03) time: (11:58:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:01:43 (null)
+Debug [083] str_to_time: 12:01:43 => 1366185703 Wed Apr 17 12:01:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:54) time: (12:01:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:05:57 (null)
+Debug [083] str_to_time: 12:05:57 => 1366185957 Wed Apr 17 12:05:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:59) time: (12:05:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:08:06 (null)
+Debug [083] str_to_time: 12:08:06 => 1366186086 Wed Apr 17 12:08:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:26) time: (12:08:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:11:59 (null)
+Debug [083] str_to_time: 12:11:59 => 1366186319 Wed Apr 17 12:11:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:32) time: (12:11:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:14:31 (null)
+Debug [083] str_to_time: 12:14:31 => 1366186471 Wed Apr 17 12:14:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:17) time: (12:14:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:15:00 (null)
+Debug [083] str_to_time: 12:15:00 => 1366186500 Wed Apr 17 12:15:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:07) time: (12:15:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:18:00 (null)
+Debug [083] str_to_time: 12:18:00 => 1366186680 Wed Apr 17 12:18:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:42) time: (12:18:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:19:42 (null)
+Debug [083] str_to_time: 12:19:42 => 1366186782 Wed Apr 17 12:19:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:09) time: (12:19:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:20:51 (null)
+Debug [083] str_to_time: 12:20:51 => 1366186851 Wed Apr 17 12:20:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:25) time: (12:20:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:22:32 (null)
+Debug [083] str_to_time: 12:22:32 => 1366186952 Wed Apr 17 12:22:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:53) time: (12:22:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:24:37 (null)
+Debug [083] str_to_time: 12:24:37 => 1366187077 Wed Apr 17 12:24:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:02) time: (12:24:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:26:49 (null)
+Debug [083] str_to_time: 12:26:49 => 1366187209 Wed Apr 17 12:26:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:01) time: (12:26:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:29:09 (null)
+Debug [083] str_to_time: 12:29:09 => 1366187349 Wed Apr 17 12:29:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:34) time: (12:29:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:32:44 (null)
+Debug [083] str_to_time: 12:32:44 => 1366187564 Wed Apr 17 12:32:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:05) time: (12:32:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:36:14 (null)
+Debug [083] str_to_time: 12:36:14 => 1366187774 Wed Apr 17 12:36:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:31) time: (12:36:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:36:49 (null)
+Debug [083] str_to_time: 12:36:49 => 1366187809 Wed Apr 17 12:36:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:38) time: (12:36:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:37:23 (null)
+Debug [083] str_to_time: 12:37:23 => 1366187843 Wed Apr 17 12:37:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:49) time: (12:37:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:41:36 (null)
+Debug [083] str_to_time: 12:41:36 => 1366188096 Wed Apr 17 12:41:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:45) time: (12:41:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:45:35 (null)
+Debug [083] str_to_time: 12:45:35 => 1366188335 Wed Apr 17 12:45:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:49) time: (12:45:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:48:14 (null)
+Debug [083] str_to_time: 12:48:14 => 1366188494 Wed Apr 17 12:48:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:08) time: (12:48:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:51:26 (null)
+Debug [083] str_to_time: 12:51:26 => 1366188686 Wed Apr 17 12:51:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:16) time: (12:51:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:52:12 (null)
+Debug [083] str_to_time: 12:52:12 => 1366188732 Wed Apr 17 12:52:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:26) time: (12:52:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:55:48 (null)
+Debug [083] str_to_time: 12:55:48 => 1366188948 Wed Apr 17 12:55:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:56) time: (12:55:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->12:59:53 (null)
+Debug [083] str_to_time: 12:59:53 => 1366189193 Wed Apr 17 12:59:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:04) time: (12:59:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:00:40 (null)
+Debug [083] str_to_time: 13:00:40 => 1366189240 Wed Apr 17 13:00:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:00) time: (13:00:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:01:58 (null)
+Debug [083] str_to_time: 13:01:58 => 1366189318 Wed Apr 17 13:01:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:07) time: (13:01:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:05:43 (null)
+Debug [083] str_to_time: 13:05:43 => 1366189543 Wed Apr 17 13:05:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:50) time: (13:05:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:08:42 (null)
+Debug [083] str_to_time: 13:08:42 => 1366189722 Wed Apr 17 13:08:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:01) time: (13:08:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:12:46 (null)
+Debug [083] str_to_time: 13:12:46 => 1366189966 Wed Apr 17 13:12:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:30) time: (13:12:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:12:54 (null)
+Debug [083] str_to_time: 13:12:54 => 1366189974 Wed Apr 17 13:12:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:54) time: (13:12:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:15:47 (null)
+Debug [083] str_to_time: 13:15:47 => 1366190147 Wed Apr 17 13:15:47 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:26) time: (13:15:47)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:17:17 (null)
+Debug [083] str_to_time: 13:17:17 => 1366190237 Wed Apr 17 13:17:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:25) time: (13:17:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:21:03 (null)
+Debug [083] str_to_time: 13:21:03 => 1366190463 Wed Apr 17 13:21:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:41) time: (13:21:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:23:29 (null)
+Debug [083] str_to_time: 13:23:29 => 1366190609 Wed Apr 17 13:23:29 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:56) time: (13:23:29)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:24:34 (null)
+Debug [083] str_to_time: 13:24:34 => 1366190674 Wed Apr 17 13:24:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:08) time: (13:24:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:25:08 (null)
+Debug [083] str_to_time: 13:25:08 => 1366190708 Wed Apr 17 13:25:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:28) time: (13:25:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:25:27 (null)
+Debug [083] str_to_time: 13:25:27 => 1366190727 Wed Apr 17 13:25:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:25) time: (13:25:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:25:49 (null)
+Debug [083] str_to_time: 13:25:49 => 1366190749 Wed Apr 17 13:25:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:00) time: (13:25:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:26:46 (null)
+Debug [083] str_to_time: 13:26:46 => 1366190806 Wed Apr 17 13:26:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:03) time: (13:26:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:28:03 (null)
+Debug [083] str_to_time: 13:28:03 => 1366190883 Wed Apr 17 13:28:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:14) time: (13:28:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:28:35 (null)
+Debug [083] str_to_time: 13:28:35 => 1366190915 Wed Apr 17 13:28:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:01) time: (13:28:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:28:41 (null)
+Debug [083] str_to_time: 13:28:41 => 1366190921 Wed Apr 17 13:28:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:29) time: (13:28:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:28:52 (null)
+Debug [083] str_to_time: 13:28:52 => 1366190932 Wed Apr 17 13:28:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:38) time: (13:28:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:31:50 (null)
+Debug [083] str_to_time: 13:31:50 => 1366191110 Wed Apr 17 13:31:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:56) time: (13:31:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:32:37 (null)
+Debug [083] str_to_time: 13:32:37 => 1366191157 Wed Apr 17 13:32:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:32) time: (13:32:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:36:20 (null)
+Debug [083] str_to_time: 13:36:20 => 1366191380 Wed Apr 17 13:36:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:03) time: (13:36:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:39:39 (null)
+Debug [083] str_to_time: 13:39:39 => 1366191579 Wed Apr 17 13:39:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:52) time: (13:39:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:43:08 (null)
+Debug [083] str_to_time: 13:43:08 => 1366191788 Wed Apr 17 13:43:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:42) time: (13:43:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:46:57 (null)
+Debug [083] str_to_time: 13:46:57 => 1366192017 Wed Apr 17 13:46:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:47) time: (13:46:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:50:20 (null)
+Debug [083] str_to_time: 13:50:20 => 1366192220 Wed Apr 17 13:50:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:51) time: (13:50:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:54:33 (null)
+Debug [083] str_to_time: 13:54:33 => 1366192473 Wed Apr 17 13:54:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:04) time: (13:54:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:57:11 (null)
+Debug [083] str_to_time: 13:57:11 => 1366192631 Wed Apr 17 13:57:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:31) time: (13:57:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->13:59:00 (null)
+Debug [083] str_to_time: 13:59:00 => 1366192740 Wed Apr 17 13:59:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:37) time: (13:59:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:02:59 (null)
+Debug [083] str_to_time: 14:02:59 => 1366192979 Wed Apr 17 14:02:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:02) time: (14:02:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:06:41 (null)
+Debug [083] str_to_time: 14:06:41 => 1366193201 Wed Apr 17 14:06:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:06) time: (14:06:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:09:46 (null)
+Debug [083] str_to_time: 14:09:46 => 1366193386 Wed Apr 17 14:09:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:11) time: (14:09:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:11:51 (null)
+Debug [083] str_to_time: 14:11:51 => 1366193511 Wed Apr 17 14:11:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:00) time: (14:11:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:11:53 (null)
+Debug [083] str_to_time: 14:11:53 => 1366193513 Wed Apr 17 14:11:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:46) time: (14:11:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:16:00 (null)
+Debug [083] str_to_time: 14:16:00 => 1366193760 Wed Apr 17 14:16:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:06) time: (14:16:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:17:16 (null)
+Debug [083] str_to_time: 14:17:16 => 1366193836 Wed Apr 17 14:17:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:12) time: (14:17:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:19:10 (null)
+Debug [083] str_to_time: 14:19:10 => 1366193950 Wed Apr 17 14:19:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:45) time: (14:19:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:21:42 (null)
+Debug [083] str_to_time: 14:21:42 => 1366194102 Wed Apr 17 14:21:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:32) time: (14:21:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:23:17 (null)
+Debug [083] str_to_time: 14:23:17 => 1366194197 Wed Apr 17 14:23:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:27) time: (14:23:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:24:14 (null)
+Debug [083] str_to_time: 14:24:14 => 1366194254 Wed Apr 17 14:24:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:37) time: (14:24:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:24:17 (null)
+Debug [083] str_to_time: 14:24:17 => 1366194257 Wed Apr 17 14:24:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:16) time: (14:24:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:25:53 (null)
+Debug [083] str_to_time: 14:25:53 => 1366194353 Wed Apr 17 14:25:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:56) time: (14:25:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:27:41 (null)
+Debug [083] str_to_time: 14:27:41 => 1366194461 Wed Apr 17 14:27:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:20) time: (14:27:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:29:18 (null)
+Debug [083] str_to_time: 14:29:18 => 1366194558 Wed Apr 17 14:29:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:10) time: (14:29:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:29:57 (null)
+Debug [083] str_to_time: 14:29:57 => 1366194597 Wed Apr 17 14:29:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:33) time: (14:29:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:31:27 (null)
+Debug [083] str_to_time: 14:31:27 => 1366194687 Wed Apr 17 14:31:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:11) time: (14:31:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:33:25 (null)
+Debug [083] str_to_time: 14:33:25 => 1366194805 Wed Apr 17 14:33:25 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:37) time: (14:33:25)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:35:35 (null)
+Debug [083] str_to_time: 14:35:35 => 1366194935 Wed Apr 17 14:35:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:04) time: (14:35:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:38:18 (null)
+Debug [083] str_to_time: 14:38:18 => 1366195098 Wed Apr 17 14:38:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:23) time: (14:38:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:40:09 (null)
+Debug [083] str_to_time: 14:40:09 => 1366195209 Wed Apr 17 14:40:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:22) time: (14:40:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:41:24 (null)
+Debug [083] str_to_time: 14:41:24 => 1366195284 Wed Apr 17 14:41:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:12) time: (14:41:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:43:41 (null)
+Debug [083] str_to_time: 14:43:41 => 1366195421 Wed Apr 17 14:43:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:22) time: (14:43:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:45:04 (null)
+Debug [083] str_to_time: 14:45:04 => 1366195504 Wed Apr 17 14:45:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:39) time: (14:45:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:46:33 (null)
+Debug [083] str_to_time: 14:46:33 => 1366195593 Wed Apr 17 14:46:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:49) time: (14:46:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:47:41 (null)
+Debug [083] str_to_time: 14:47:41 => 1366195661 Wed Apr 17 14:47:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:47) time: (14:47:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:51:18 (null)
+Debug [083] str_to_time: 14:51:18 => 1366195878 Wed Apr 17 14:51:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:41) time: (14:51:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:51:57 (null)
+Debug [083] str_to_time: 14:51:57 => 1366195917 Wed Apr 17 14:51:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:11) time: (14:51:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:53:51 (null)
+Debug [083] str_to_time: 14:53:51 => 1366196031 Wed Apr 17 14:53:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:28) time: (14:53:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:56:09 (null)
+Debug [083] str_to_time: 14:56:09 => 1366196169 Wed Apr 17 14:56:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:58) time: (14:56:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:58:04 (null)
+Debug [083] str_to_time: 14:58:04 => 1366196284 Wed Apr 17 14:58:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:23) time: (14:58:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->14:59:56 (null)
+Debug [083] str_to_time: 14:59:56 => 1366196396 Wed Apr 17 14:59:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:10) time: (14:59:56)
+
+Debug [069] push_timer_from_row: Signal short
+Debug [023] push_timer_from_string: ->15:02:32 (null)
+Debug [083] str_to_time: 15:02:32 => 1366196552 Wed Apr 17 15:02:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:07) time: (15:02:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:04:32 (null)
+Debug [083] str_to_time: 15:04:32 => 1366196672 Wed Apr 17 15:04:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:02) time: (15:04:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:06:33 (null)
+Debug [083] str_to_time: 15:06:33 => 1366196793 Wed Apr 17 15:06:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:57) time: (15:06:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:06:50 (null)
+Debug [083] str_to_time: 15:06:50 => 1366196810 Wed Apr 17 15:06:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:37) time: (15:06:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:07:35 (null)
+Debug [083] str_to_time: 15:07:35 => 1366196855 Wed Apr 17 15:07:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:16) time: (15:07:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:09:55 (null)
+Debug [083] str_to_time: 15:09:55 => 1366196995 Wed Apr 17 15:09:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (15:09:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:11:10 (null)
+Debug [083] str_to_time: 15:11:10 => 1366197070 Wed Apr 17 15:11:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:07) time: (15:11:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:13:54 (null)
+Debug [083] str_to_time: 15:13:54 => 1366197234 Wed Apr 17 15:13:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:07) time: (15:13:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:17:46 (null)
+Debug [083] str_to_time: 15:17:46 => 1366197466 Wed Apr 17 15:17:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:02) time: (15:17:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:19:27 (null)
+Debug [083] str_to_time: 15:19:27 => 1366197567 Wed Apr 17 15:19:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:36) time: (15:19:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:20:45 (null)
+Debug [083] str_to_time: 15:20:45 => 1366197645 Wed Apr 17 15:20:45 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:21) time: (15:20:45)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:24:42 (null)
+Debug [083] str_to_time: 15:24:42 => 1366197882 Wed Apr 17 15:24:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:13) time: (15:24:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:28:11 (null)
+Debug [083] str_to_time: 15:28:11 => 1366198091 Wed Apr 17 15:28:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:48) time: (15:28:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:30:17 (null)
+Debug [083] str_to_time: 15:30:17 => 1366198217 Wed Apr 17 15:30:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:37) time: (15:30:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:33:27 (null)
+Debug [083] str_to_time: 15:33:27 => 1366198407 Wed Apr 17 15:33:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:30) time: (15:33:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:36:49 (null)
+Debug [083] str_to_time: 15:36:49 => 1366198609 Wed Apr 17 15:36:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:37) time: (15:36:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:39:39 (null)
+Debug [083] str_to_time: 15:39:39 => 1366198779 Wed Apr 17 15:39:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:05) time: (15:39:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:41:53 (null)
+Debug [083] str_to_time: 15:41:53 => 1366198913 Wed Apr 17 15:41:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:23) time: (15:41:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:43:50 (null)
+Debug [083] str_to_time: 15:43:50 => 1366199030 Wed Apr 17 15:43:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:45) time: (15:43:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:48:00 (null)
+Debug [083] str_to_time: 15:48:00 => 1366199280 Wed Apr 17 15:48:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:16) time: (15:48:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:48:07 (null)
+Debug [083] str_to_time: 15:48:07 => 1366199287 Wed Apr 17 15:48:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:26) time: (15:48:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:50:20 (null)
+Debug [083] str_to_time: 15:50:20 => 1366199420 Wed Apr 17 15:50:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:04) time: (15:50:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:54:33 (null)
+Debug [083] str_to_time: 15:54:33 => 1366199673 Wed Apr 17 15:54:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:37) time: (15:54:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->15:58:06 (null)
+Debug [083] str_to_time: 15:58:06 => 1366199886 Wed Apr 17 15:58:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:52) time: (15:58:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:00:50 (null)
+Debug [083] str_to_time: 16:00:50 => 1366200050 Wed Apr 17 16:00:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:30) time: (16:00:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:02:50 (null)
+Debug [083] str_to_time: 16:02:50 => 1366200170 Wed Apr 17 16:02:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:04) time: (16:02:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:04:39 (null)
+Debug [083] str_to_time: 16:04:39 => 1366200279 Wed Apr 17 16:04:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:30) time: (16:04:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:05:35 (null)
+Debug [083] str_to_time: 16:05:35 => 1366200335 Wed Apr 17 16:05:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:00) time: (16:05:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:06:33 (null)
+Debug [083] str_to_time: 16:06:33 => 1366200393 Wed Apr 17 16:06:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:05) time: (16:06:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:07:42 (null)
+Debug [083] str_to_time: 16:07:42 => 1366200462 Wed Apr 17 16:07:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:15) time: (16:07:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:07:42 (null)
+Debug [083] str_to_time: 16:07:42 => 1366200462 Wed Apr 17 16:07:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:23) time: (16:07:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:07:49 (null)
+Debug [083] str_to_time: 16:07:49 => 1366200469 Wed Apr 17 16:07:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:37) time: (16:07:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:11:54 (null)
+Debug [083] str_to_time: 16:11:54 => 1366200714 Wed Apr 17 16:11:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:28) time: (16:11:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:14:14 (null)
+Debug [083] str_to_time: 16:14:14 => 1366200854 Wed Apr 17 16:14:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:44) time: (16:14:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:17:53 (null)
+Debug [083] str_to_time: 16:17:53 => 1366201073 Wed Apr 17 16:17:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:23) time: (16:17:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:21:23 (null)
+Debug [083] str_to_time: 16:21:23 => 1366201283 Wed Apr 17 16:21:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:14) time: (16:21:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:23:50 (null)
+Debug [083] str_to_time: 16:23:50 => 1366201430 Wed Apr 17 16:23:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:22) time: (16:23:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:25:01 (null)
+Debug [083] str_to_time: 16:25:01 => 1366201501 Wed Apr 17 16:25:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:58) time: (16:25:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:26:49 (null)
+Debug [083] str_to_time: 16:26:49 => 1366201609 Wed Apr 17 16:26:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:11) time: (16:26:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:30:19 (null)
+Debug [083] str_to_time: 16:30:19 => 1366201819 Wed Apr 17 16:30:19 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:37) time: (16:30:19)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:33:45 (null)
+Debug [083] str_to_time: 16:33:45 => 1366202025 Wed Apr 17 16:33:45 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:01) time: (16:33:45)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:36:55 (null)
+Debug [083] str_to_time: 16:36:55 => 1366202215 Wed Apr 17 16:36:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:12) time: (16:36:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:40:34 (null)
+Debug [083] str_to_time: 16:40:34 => 1366202434 Wed Apr 17 16:40:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:10) time: (16:40:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:41:43 (null)
+Debug [083] str_to_time: 16:41:43 => 1366202503 Wed Apr 17 16:41:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:03) time: (16:41:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:43:34 (null)
+Debug [083] str_to_time: 16:43:34 => 1366202614 Wed Apr 17 16:43:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:10) time: (16:43:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:43:53 (null)
+Debug [083] str_to_time: 16:43:53 => 1366202633 Wed Apr 17 16:43:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:00) time: (16:43:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:47:54 (null)
+Debug [083] str_to_time: 16:47:54 => 1366202874 Wed Apr 17 16:47:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:01) time: (16:47:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:48:32 (null)
+Debug [083] str_to_time: 16:48:32 => 1366202912 Wed Apr 17 16:48:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:54) time: (16:48:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:50:57 (null)
+Debug [083] str_to_time: 16:50:57 => 1366203057 Wed Apr 17 16:50:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:37) time: (16:50:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:54:03 (null)
+Debug [083] str_to_time: 16:54:03 => 1366203243 Wed Apr 17 16:54:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:31) time: (16:54:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:55:31 (null)
+Debug [083] str_to_time: 16:55:31 => 1366203331 Wed Apr 17 16:55:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:36) time: (16:55:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:55:54 (null)
+Debug [083] str_to_time: 16:55:54 => 1366203354 Wed Apr 17 16:55:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:14) time: (16:55:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:58:31 (null)
+Debug [083] str_to_time: 16:58:31 => 1366203511 Wed Apr 17 16:58:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:19) time: (16:58:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->16:59:20 (null)
+Debug [083] str_to_time: 16:59:20 => 1366203560 Wed Apr 17 16:59:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:22) time: (16:59:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:02:10 (null)
+Debug [083] str_to_time: 17:02:10 => 1366203730 Wed Apr 17 17:02:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:50) time: (17:02:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:05:36 (null)
+Debug [083] str_to_time: 17:05:36 => 1366203936 Wed Apr 17 17:05:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:57) time: (17:05:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:08:04 (null)
+Debug [083] str_to_time: 17:08:04 => 1366204084 Wed Apr 17 17:08:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:22) time: (17:08:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:10:07 (null)
+Debug [083] str_to_time: 17:10:07 => 1366204207 Wed Apr 17 17:10:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:01) time: (17:10:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:10:48 (null)
+Debug [083] str_to_time: 17:10:48 => 1366204248 Wed Apr 17 17:10:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:58) time: (17:10:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:10:51 (null)
+Debug [083] str_to_time: 17:10:51 => 1366204251 Wed Apr 17 17:10:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:07) time: (17:10:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:11:44 (null)
+Debug [083] str_to_time: 17:11:44 => 1366204304 Wed Apr 17 17:11:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:18) time: (17:11:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:15:10 (null)
+Debug [083] str_to_time: 17:15:10 => 1366204510 Wed Apr 17 17:15:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:31) time: (17:15:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:15:56 (null)
+Debug [083] str_to_time: 17:15:56 => 1366204556 Wed Apr 17 17:15:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:29) time: (17:15:56)
+
+Debug [069] push_timer_from_row: Signal long
+Debug [023] push_timer_from_string: ->17:16:05 (null)
+Debug [083] str_to_time: 17:16:05 => 1366204565 Wed Apr 17 17:16:05 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:06) time: (17:16:05)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:18:28 (null)
+Debug [083] str_to_time: 17:18:28 => 1366204708 Wed Apr 17 17:18:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:08) time: (17:18:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:19:40 (null)
+Debug [083] str_to_time: 17:19:40 => 1366204780 Wed Apr 17 17:19:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:10) time: (17:19:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:23:25 (null)
+Debug [083] str_to_time: 17:23:25 => 1366205005 Wed Apr 17 17:23:25 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:00) time: (17:23:25)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:24:29 (null)
+Debug [083] str_to_time: 17:24:29 => 1366205069 Wed Apr 17 17:24:29 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:07) time: (17:24:29)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:25:59 (null)
+Debug [083] str_to_time: 17:25:59 => 1366205159 Wed Apr 17 17:25:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:21) time: (17:25:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:26:27 (null)
+Debug [083] str_to_time: 17:26:27 => 1366205187 Wed Apr 17 17:26:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:15) time: (17:26:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:29:54 (null)
+Debug [083] str_to_time: 17:29:54 => 1366205394 Wed Apr 17 17:29:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:50) time: (17:29:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:30:00 (null)
+Debug [083] str_to_time: 17:30:00 => 1366205400 Wed Apr 17 17:30:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:06) time: (17:30:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:30:17 (null)
+Debug [083] str_to_time: 17:30:17 => 1366205417 Wed Apr 17 17:30:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:05) time: (17:30:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:33:04 (null)
+Debug [083] str_to_time: 17:33:04 => 1366205584 Wed Apr 17 17:33:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:16) time: (17:33:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:33:23 (null)
+Debug [083] str_to_time: 17:33:23 => 1366205603 Wed Apr 17 17:33:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:21) time: (17:33:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:35:35 (null)
+Debug [083] str_to_time: 17:35:35 => 1366205735 Wed Apr 17 17:35:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:04) time: (17:35:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:38:15 (null)
+Debug [083] str_to_time: 17:38:15 => 1366205895 Wed Apr 17 17:38:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:55) time: (17:38:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:40:39 (null)
+Debug [083] str_to_time: 17:40:39 => 1366206039 Wed Apr 17 17:40:39 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:33) time: (17:40:39)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:43:15 (null)
+Debug [083] str_to_time: 17:43:15 => 1366206195 Wed Apr 17 17:43:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:57) time: (17:43:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:46:14 (null)
+Debug [083] str_to_time: 17:46:14 => 1366206374 Wed Apr 17 17:46:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:08) time: (17:46:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:47:20 (null)
+Debug [083] str_to_time: 17:47:20 => 1366206440 Wed Apr 17 17:47:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:01) time: (17:47:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:47:48 (null)
+Debug [083] str_to_time: 17:47:48 => 1366206468 Wed Apr 17 17:47:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:28) time: (17:47:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:47:56 (null)
+Debug [083] str_to_time: 17:47:56 => 1366206476 Wed Apr 17 17:47:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:02) time: (17:47:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:52:08 (null)
+Debug [083] str_to_time: 17:52:08 => 1366206728 Wed Apr 17 17:52:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:53) time: (17:52:08)
+
+Debug [069] push_timer_from_row: Signal short
+Debug [023] push_timer_from_string: ->17:56:08 (null)
+Debug [083] str_to_time: 17:56:08 => 1366206968 Wed Apr 17 17:56:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:07) time: (17:56:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:58:41 (null)
+Debug [083] str_to_time: 17:58:41 => 1366207121 Wed Apr 17 17:58:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:04) time: (17:58:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->17:59:00 (null)
+Debug [083] str_to_time: 17:59:00 => 1366207140 Wed Apr 17 17:59:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:19) time: (17:59:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:01:27 (null)
+Debug [083] str_to_time: 18:01:27 => 1366207287 Wed Apr 17 18:01:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:30) time: (18:01:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:04:57 (null)
+Debug [083] str_to_time: 18:04:57 => 1366207497 Wed Apr 17 18:04:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:55) time: (18:04:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:08:49 (null)
+Debug [083] str_to_time: 18:08:49 => 1366207729 Wed Apr 17 18:08:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:58) time: (18:08:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:12:21 (null)
+Debug [083] str_to_time: 18:12:21 => 1366207941 Wed Apr 17 18:12:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:48) time: (18:12:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:15:18 (null)
+Debug [083] str_to_time: 18:15:18 => 1366208118 Wed Apr 17 18:15:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:59) time: (18:15:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:17:43 (null)
+Debug [083] str_to_time: 18:17:43 => 1366208263 Wed Apr 17 18:17:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:22) time: (18:17:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:21:16 (null)
+Debug [083] str_to_time: 18:21:16 => 1366208476 Wed Apr 17 18:21:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:55) time: (18:21:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:24:02 (null)
+Debug [083] str_to_time: 18:24:02 => 1366208642 Wed Apr 17 18:24:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:14) time: (18:24:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:24:36 (null)
+Debug [083] str_to_time: 18:24:36 => 1366208676 Wed Apr 17 18:24:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:38) time: (18:24:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:26:16 (null)
+Debug [083] str_to_time: 18:26:16 => 1366208776 Wed Apr 17 18:26:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:36) time: (18:26:16)
+
+Debug [069] push_timer_from_row: Signal short
+Debug [023] push_timer_from_string: ->18:28:24 (null)
+Debug [083] str_to_time: 18:28:24 => 1366208904 Wed Apr 17 18:28:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:07) time: (18:28:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:30:15 (null)
+Debug [083] str_to_time: 18:30:15 => 1366209015 Wed Apr 17 18:30:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:20) time: (18:30:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:33:37 (null)
+Debug [083] str_to_time: 18:33:37 => 1366209217 Wed Apr 17 18:33:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:17) time: (18:33:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:35:09 (null)
+Debug [083] str_to_time: 18:35:09 => 1366209309 Wed Apr 17 18:35:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:36) time: (18:35:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:35:36 (null)
+Debug [083] str_to_time: 18:35:36 => 1366209336 Wed Apr 17 18:35:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:31) time: (18:35:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:38:03 (null)
+Debug [083] str_to_time: 18:38:03 => 1366209483 Wed Apr 17 18:38:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:07) time: (18:38:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:39:10 (null)
+Debug [083] str_to_time: 18:39:10 => 1366209550 Wed Apr 17 18:39:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:07) time: (18:39:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:39:28 (null)
+Debug [083] str_to_time: 18:39:28 => 1366209568 Wed Apr 17 18:39:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:36) time: (18:39:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:40:20 (null)
+Debug [083] str_to_time: 18:40:20 => 1366209620 Wed Apr 17 18:40:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:59) time: (18:40:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:42:50 (null)
+Debug [083] str_to_time: 18:42:50 => 1366209770 Wed Apr 17 18:42:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:35) time: (18:42:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:45:42 (null)
+Debug [083] str_to_time: 18:45:42 => 1366209942 Wed Apr 17 18:45:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:11) time: (18:45:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:48:09 (null)
+Debug [083] str_to_time: 18:48:09 => 1366210089 Wed Apr 17 18:48:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:06) time: (18:48:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:50:28 (null)
+Debug [083] str_to_time: 18:50:28 => 1366210228 Wed Apr 17 18:50:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:37) time: (18:50:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:50:57 (null)
+Debug [083] str_to_time: 18:50:57 => 1366210257 Wed Apr 17 18:50:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:56) time: (18:50:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:53:09 (null)
+Debug [083] str_to_time: 18:53:09 => 1366210389 Wed Apr 17 18:53:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:04) time: (18:53:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:53:16 (null)
+Debug [083] str_to_time: 18:53:16 => 1366210396 Wed Apr 17 18:53:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:46) time: (18:53:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->18:57:06 (null)
+Debug [083] str_to_time: 18:57:06 => 1366210626 Wed Apr 17 18:57:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:59) time: (18:57:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:00:12 (null)
+Debug [083] str_to_time: 19:00:12 => 1366210812 Wed Apr 17 19:00:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:42) time: (19:00:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:02:41 (null)
+Debug [083] str_to_time: 19:02:41 => 1366210961 Wed Apr 17 19:02:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:33) time: (19:02:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:03:59 (null)
+Debug [083] str_to_time: 19:03:59 => 1366211039 Wed Apr 17 19:03:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:46) time: (19:03:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:04:57 (null)
+Debug [083] str_to_time: 19:04:57 => 1366211097 Wed Apr 17 19:04:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:23) time: (19:04:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:07:56 (null)
+Debug [083] str_to_time: 19:07:56 => 1366211276 Wed Apr 17 19:07:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:46) time: (19:07:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:09:55 (null)
+Debug [083] str_to_time: 19:09:55 => 1366211395 Wed Apr 17 19:09:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:10) time: (19:09:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:13:58 (null)
+Debug [083] str_to_time: 19:13:58 => 1366211638 Wed Apr 17 19:13:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:56) time: (19:13:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:14:57 (null)
+Debug [083] str_to_time: 19:14:57 => 1366211697 Wed Apr 17 19:14:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:04) time: (19:14:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:15:20 (null)
+Debug [083] str_to_time: 19:15:20 => 1366211720 Wed Apr 17 19:15:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:01) time: (19:15:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:18:57 (null)
+Debug [083] str_to_time: 19:18:57 => 1366211937 Wed Apr 17 19:18:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:41) time: (19:18:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:21:28 (null)
+Debug [083] str_to_time: 19:21:28 => 1366212088 Wed Apr 17 19:21:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:32) time: (19:21:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:23:01 (null)
+Debug [083] str_to_time: 19:23:01 => 1366212181 Wed Apr 17 19:23:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:59) time: (19:23:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:23:38 (null)
+Debug [083] str_to_time: 19:23:38 => 1366212218 Wed Apr 17 19:23:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:21) time: (19:23:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:25:20 (null)
+Debug [083] str_to_time: 19:25:20 => 1366212320 Wed Apr 17 19:25:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:56) time: (19:25:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:26:23 (null)
+Debug [083] str_to_time: 19:26:23 => 1366212383 Wed Apr 17 19:26:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:11) time: (19:26:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:29:24 (null)
+Debug [083] str_to_time: 19:29:24 => 1366212564 Wed Apr 17 19:29:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:22) time: (19:29:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:29:27 (null)
+Debug [083] str_to_time: 19:29:27 => 1366212567 Wed Apr 17 19:29:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:00) time: (19:29:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:30:34 (null)
+Debug [083] str_to_time: 19:30:34 => 1366212634 Wed Apr 17 19:30:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:33) time: (19:30:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:32:58 (null)
+Debug [083] str_to_time: 19:32:58 => 1366212778 Wed Apr 17 19:32:58 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:04) time: (19:32:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:33:21 (null)
+Debug [083] str_to_time: 19:33:21 => 1366212801 Wed Apr 17 19:33:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:26) time: (19:33:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:34:02 (null)
+Debug [083] str_to_time: 19:34:02 => 1366212842 Wed Apr 17 19:34:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:14) time: (19:34:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:38:07 (null)
+Debug [083] str_to_time: 19:38:07 => 1366213087 Wed Apr 17 19:38:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:16) time: (19:38:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:40:54 (null)
+Debug [083] str_to_time: 19:40:54 => 1366213254 Wed Apr 17 19:40:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:39) time: (19:40:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:42:06 (null)
+Debug [083] str_to_time: 19:42:06 => 1366213326 Wed Apr 17 19:42:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:40) time: (19:42:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:44:35 (null)
+Debug [083] str_to_time: 19:44:35 => 1366213475 Wed Apr 17 19:44:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:45) time: (19:44:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:47:23 (null)
+Debug [083] str_to_time: 19:47:23 => 1366213643 Wed Apr 17 19:47:23 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:40) time: (19:47:23)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:50:13 (null)
+Debug [083] str_to_time: 19:50:13 => 1366213813 Wed Apr 17 19:50:13 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:15) time: (19:50:13)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:50:25 (null)
+Debug [083] str_to_time: 19:50:25 => 1366213825 Wed Apr 17 19:50:25 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:40) time: (19:50:25)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:52:29 (null)
+Debug [083] str_to_time: 19:52:29 => 1366213949 Wed Apr 17 19:52:29 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:36) time: (19:52:29)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:52:53 (null)
+Debug [083] str_to_time: 19:52:53 => 1366213973 Wed Apr 17 19:52:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:52) time: (19:52:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:55:49 (null)
+Debug [083] str_to_time: 19:55:49 => 1366214149 Wed Apr 17 19:55:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:49) time: (19:55:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:56:49 (null)
+Debug [083] str_to_time: 19:56:49 => 1366214209 Wed Apr 17 19:56:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:19) time: (19:56:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:56:51 (null)
+Debug [083] str_to_time: 19:56:51 => 1366214211 Wed Apr 17 19:56:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:44) time: (19:56:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->19:58:06 (null)
+Debug [083] str_to_time: 19:58:06 => 1366214286 Wed Apr 17 19:58:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:21) time: (19:58:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:01:24 (null)
+Debug [083] str_to_time: 20:01:24 => 1366214484 Wed Apr 17 20:01:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:37) time: (20:01:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:02:26 (null)
+Debug [083] str_to_time: 20:02:26 => 1366214546 Wed Apr 17 20:02:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:32) time: (20:02:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:05:45 (null)
+Debug [083] str_to_time: 20:05:45 => 1366214745 Wed Apr 17 20:05:45 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:54) time: (20:05:45)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:07:21 (null)
+Debug [083] str_to_time: 20:07:21 => 1366214841 Wed Apr 17 20:07:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:02) time: (20:07:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:08:08 (null)
+Debug [083] str_to_time: 20:08:08 => 1366214888 Wed Apr 17 20:08:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:28) time: (20:08:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:10:40 (null)
+Debug [083] str_to_time: 20:10:40 => 1366215040 Wed Apr 17 20:10:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:07) time: (20:10:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:12:20 (null)
+Debug [083] str_to_time: 20:12:20 => 1366215140 Wed Apr 17 20:12:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:33) time: (20:12:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:15:18 (null)
+Debug [083] str_to_time: 20:15:18 => 1366215318 Wed Apr 17 20:15:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:09) time: (20:15:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:18:20 (null)
+Debug [083] str_to_time: 20:18:20 => 1366215500 Wed Apr 17 20:18:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:50) time: (20:18:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:22:32 (null)
+Debug [083] str_to_time: 20:22:32 => 1366215752 Wed Apr 17 20:22:32 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:54) time: (20:22:32)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:26:27 (null)
+Debug [083] str_to_time: 20:26:27 => 1366215987 Wed Apr 17 20:26:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:48) time: (20:26:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:27:49 (null)
+Debug [083] str_to_time: 20:27:49 => 1366216069 Wed Apr 17 20:27:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:50) time: (20:27:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:28:43 (null)
+Debug [083] str_to_time: 20:28:43 => 1366216123 Wed Apr 17 20:28:43 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:09) time: (20:28:43)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:30:20 (null)
+Debug [083] str_to_time: 20:30:20 => 1366216220 Wed Apr 17 20:30:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:55) time: (20:30:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:32:17 (null)
+Debug [083] str_to_time: 20:32:17 => 1366216337 Wed Apr 17 20:32:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:18) time: (20:32:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:34:37 (null)
+Debug [083] str_to_time: 20:34:37 => 1366216477 Wed Apr 17 20:34:37 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:22) time: (20:34:37)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:34:57 (null)
+Debug [083] str_to_time: 20:34:57 => 1366216497 Wed Apr 17 20:34:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:34) time: (20:34:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:39:12 (null)
+Debug [083] str_to_time: 20:39:12 => 1366216752 Wed Apr 17 20:39:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:07) time: (20:39:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:42:10 (null)
+Debug [083] str_to_time: 20:42:10 => 1366216930 Wed Apr 17 20:42:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:51) time: (20:42:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:45:13 (null)
+Debug [083] str_to_time: 20:45:13 => 1366217113 Wed Apr 17 20:45:13 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:18) time: (20:45:13)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:48:41 (null)
+Debug [083] str_to_time: 20:48:41 => 1366217321 Wed Apr 17 20:48:41 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:02) time: (20:48:41)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:48:49 (null)
+Debug [083] str_to_time: 20:48:49 => 1366217329 Wed Apr 17 20:48:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:35) time: (20:48:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:51:11 (null)
+Debug [083] str_to_time: 20:51:11 => 1366217471 Wed Apr 17 20:51:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:06) time: (20:51:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:54:01 (null)
+Debug [083] str_to_time: 20:54:01 => 1366217641 Wed Apr 17 20:54:01 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:48) time: (20:54:01)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:55:06 (null)
+Debug [083] str_to_time: 20:55:06 => 1366217706 Wed Apr 17 20:55:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:36) time: (20:55:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:58:55 (null)
+Debug [083] str_to_time: 20:58:55 => 1366217935 Wed Apr 17 20:58:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:32) time: (20:58:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->20:59:54 (null)
+Debug [083] str_to_time: 20:59:54 => 1366217994 Wed Apr 17 20:59:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:10) time: (20:59:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:00:16 (null)
+Debug [083] str_to_time: 21:00:16 => 1366218016 Wed Apr 17 21:00:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:12) time: (21:00:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:02:04 (null)
+Debug [083] str_to_time: 21:02:04 => 1366218124 Wed Apr 17 21:02:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:30) time: (21:02:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:03:35 (null)
+Debug [083] str_to_time: 21:03:35 => 1366218215 Wed Apr 17 21:03:35 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:56) time: (21:03:35)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:05:59 (null)
+Debug [083] str_to_time: 21:05:59 => 1366218359 Wed Apr 17 21:05:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:03) time: (21:05:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:08:11 (null)
+Debug [083] str_to_time: 21:08:11 => 1366218491 Wed Apr 17 21:08:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:24) time: (21:08:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:08:50 (null)
+Debug [083] str_to_time: 21:08:50 => 1366218530 Wed Apr 17 21:08:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:42) time: (21:08:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:12:15 (null)
+Debug [083] str_to_time: 21:12:15 => 1366218735 Wed Apr 17 21:12:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:53) time: (21:12:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:13:57 (null)
+Debug [083] str_to_time: 21:13:57 => 1366218837 Wed Apr 17 21:13:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:45) time: (21:13:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:16:08 (null)
+Debug [083] str_to_time: 21:16:08 => 1366218968 Wed Apr 17 21:16:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:03) time: (21:16:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:17:44 (null)
+Debug [083] str_to_time: 21:17:44 => 1366219064 Wed Apr 17 21:17:44 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:06) time: (21:17:44)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:17:48 (null)
+Debug [083] str_to_time: 21:17:48 => 1366219068 Wed Apr 17 21:17:48 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:24) time: (21:17:48)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:21:14 (null)
+Debug [083] str_to_time: 21:21:14 => 1366219274 Wed Apr 17 21:21:14 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:03) time: (21:21:14)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:23:11 (null)
+Debug [083] str_to_time: 21:23:11 => 1366219391 Wed Apr 17 21:23:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:40) time: (21:23:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:26:38 (null)
+Debug [083] str_to_time: 21:26:38 => 1366219598 Wed Apr 17 21:26:38 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:38) time: (21:26:38)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:29:56 (null)
+Debug [083] str_to_time: 21:29:56 => 1366219796 Wed Apr 17 21:29:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:51) time: (21:29:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:31:59 (null)
+Debug [083] str_to_time: 21:31:59 => 1366219919 Wed Apr 17 21:31:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:28) time: (21:31:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:32:06 (null)
+Debug [083] str_to_time: 21:32:06 => 1366219926 Wed Apr 17 21:32:06 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:19) time: (21:32:06)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:32:11 (null)
+Debug [083] str_to_time: 21:32:11 => 1366219931 Wed Apr 17 21:32:11 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:03) time: (21:32:11)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:35:10 (null)
+Debug [083] str_to_time: 21:35:10 => 1366220110 Wed Apr 17 21:35:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:08) time: (21:35:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:36:07 (null)
+Debug [083] str_to_time: 21:36:07 => 1366220167 Wed Apr 17 21:36:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:21) time: (21:36:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:38:28 (null)
+Debug [083] str_to_time: 21:38:28 => 1366220308 Wed Apr 17 21:38:28 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:50) time: (21:38:28)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:42:36 (null)
+Debug [083] str_to_time: 21:42:36 => 1366220556 Wed Apr 17 21:42:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (21:42:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:44:18 (null)
+Debug [083] str_to_time: 21:44:18 => 1366220658 Wed Apr 17 21:44:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:02) time: (21:44:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:47:42 (null)
+Debug [083] str_to_time: 21:47:42 => 1366220862 Wed Apr 17 21:47:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:36) time: (21:47:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:48:34 (null)
+Debug [083] str_to_time: 21:48:34 => 1366220914 Wed Apr 17 21:48:34 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:26) time: (21:48:34)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:48:52 (null)
+Debug [083] str_to_time: 21:48:52 => 1366220932 Wed Apr 17 21:48:52 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:55) time: (21:48:52)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:50:50 (null)
+Debug [083] str_to_time: 21:50:50 => 1366221050 Wed Apr 17 21:50:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:57) time: (21:50:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:52:56 (null)
+Debug [083] str_to_time: 21:52:56 => 1366221176 Wed Apr 17 21:52:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:01) time: (21:52:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:55:50 (null)
+Debug [083] str_to_time: 21:55:50 => 1366221350 Wed Apr 17 21:55:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:02) time: (21:55:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->21:57:29 (null)
+Debug [083] str_to_time: 21:57:29 => 1366221449 Wed Apr 17 21:57:29 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:04) time: (21:57:29)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:00:18 (null)
+Debug [083] str_to_time: 22:00:18 => 1366221618 Wed Apr 17 22:00:18 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:26) time: (22:00:18)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:02:00 (null)
+Debug [083] str_to_time: 22:02:00 => 1366221720 Wed Apr 17 22:02:00 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:06) time: (22:02:00)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:04:53 (null)
+Debug [083] str_to_time: 22:04:53 => 1366221893 Wed Apr 17 22:04:53 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:51) time: (22:04:53)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:07:20 (null)
+Debug [083] str_to_time: 22:07:20 => 1366222040 Wed Apr 17 22:07:20 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:55) time: (22:07:20)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:10:25 (null)
+Debug [083] str_to_time: 22:10:25 => 1366222225 Wed Apr 17 22:10:25 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:05) time: (22:10:25)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:10:57 (null)
+Debug [083] str_to_time: 22:10:57 => 1366222257 Wed Apr 17 22:10:57 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:57) time: (22:10:57)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:13:42 (null)
+Debug [083] str_to_time: 22:13:42 => 1366222422 Wed Apr 17 22:13:42 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:50) time: (22:13:42)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:17:07 (null)
+Debug [083] str_to_time: 22:17:07 => 1366222627 Wed Apr 17 22:17:07 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:52) time: (22:17:07)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:17:08 (null)
+Debug [083] str_to_time: 22:17:08 => 1366222628 Wed Apr 17 22:17:08 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:36) time: (22:17:08)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:20:21 (null)
+Debug [083] str_to_time: 22:20:21 => 1366222821 Wed Apr 17 22:20:21 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:19) time: (22:20:21)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:22:59 (null)
+Debug [083] str_to_time: 22:22:59 => 1366222979 Wed Apr 17 22:22:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:20) time: (22:22:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:23:31 (null)
+Debug [083] str_to_time: 22:23:31 => 1366223011 Wed Apr 17 22:23:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:47) time: (22:23:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:26:30 (null)
+Debug [083] str_to_time: 22:26:30 => 1366223190 Wed Apr 17 22:26:30 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:02) time: (22:26:30)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:26:59 (null)
+Debug [083] str_to_time: 22:26:59 => 1366223219 Wed Apr 17 22:26:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:28) time: (22:26:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:30:12 (null)
+Debug [083] str_to_time: 22:30:12 => 1366223412 Wed Apr 17 22:30:12 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:12) time: (22:30:12)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:30:36 (null)
+Debug [083] str_to_time: 22:30:36 => 1366223436 Wed Apr 17 22:30:36 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:10) time: (22:30:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:32:31 (null)
+Debug [083] str_to_time: 22:32:31 => 1366223551 Wed Apr 17 22:32:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:49) time: (22:32:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:36:33 (null)
+Debug [083] str_to_time: 22:36:33 => 1366223793 Wed Apr 17 22:36:33 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:37) time: (22:36:33)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:38:24 (null)
+Debug [083] str_to_time: 22:38:24 => 1366223904 Wed Apr 17 22:38:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:17) time: (22:38:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:42:26 (null)
+Debug [083] str_to_time: 22:42:26 => 1366224146 Wed Apr 17 22:42:26 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:42) time: (22:42:26)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:45:16 (null)
+Debug [083] str_to_time: 22:45:16 => 1366224316 Wed Apr 17 22:45:16 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:07) time: (22:45:16)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:45:49 (null)
+Debug [083] str_to_time: 22:45:49 => 1366224349 Wed Apr 17 22:45:49 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:23) time: (22:45:49)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:48:03 (null)
+Debug [083] str_to_time: 22:48:03 => 1366224483 Wed Apr 17 22:48:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:27) time: (22:48:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:49:10 (null)
+Debug [083] str_to_time: 22:49:10 => 1366224550 Wed Apr 17 22:49:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:56) time: (22:49:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:50:02 (null)
+Debug [083] str_to_time: 22:50:02 => 1366224602 Wed Apr 17 22:50:02 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:58) time: (22:50:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:50:22 (null)
+Debug [083] str_to_time: 22:50:22 => 1366224622 Wed Apr 17 22:50:22 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:44) time: (22:50:22)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:53:50 (null)
+Debug [083] str_to_time: 22:53:50 => 1366224830 Wed Apr 17 22:53:50 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:33) time: (22:53:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:53:51 (null)
+Debug [083] str_to_time: 22:53:51 => 1366224831 Wed Apr 17 22:53:51 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:42) time: (22:53:51)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:54:04 (null)
+Debug [083] str_to_time: 22:54:04 => 1366224844 Wed Apr 17 22:54:04 2013
+
+Debug [084] push_timer_from_row: duration: (00:04:01) time: (22:54:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:54:56 (null)
+Debug [083] str_to_time: 22:54:56 => 1366224896 Wed Apr 17 22:54:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:25) time: (22:54:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->22:59:03 (null)
+Debug [083] str_to_time: 22:59:03 => 1366225143 Wed Apr 17 22:59:03 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:42) time: (22:59:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:02:10 (null)
+Debug [083] str_to_time: 23:02:10 => 1366225330 Wed Apr 17 23:02:10 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:31) time: (23:02:10)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:03:27 (null)
+Debug [083] str_to_time: 23:03:27 => 1366225407 Wed Apr 17 23:03:27 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:30) time: (23:03:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:04:46 (null)
+Debug [083] str_to_time: 23:04:46 => 1366225486 Wed Apr 17 23:04:46 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:18) time: (23:04:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:08:54 (null)
+Debug [083] str_to_time: 23:08:54 => 1366225734 Wed Apr 17 23:08:54 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:02) time: (23:08:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:11:31 (null)
+Debug [083] str_to_time: 23:11:31 => 1366225891 Wed Apr 17 23:11:31 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:49) time: (23:11:31)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:14:13 (null)
+Debug [083] str_to_time: 23:14:13 => 1366226053 Wed Apr 17 23:14:13 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:09) time: (23:14:13)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:16:13 (null)
+Debug [083] str_to_time: 23:16:13 => 1366226173 Wed Apr 17 23:16:13 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:34) time: (23:16:13)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:18:59 (null)
+Debug [083] str_to_time: 23:18:59 => 1366226339 Wed Apr 17 23:18:59 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:22) time: (23:18:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:21:40 (null)
+Debug [083] str_to_time: 23:21:40 => 1366226500 Wed Apr 17 23:21:40 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:34) time: (23:21:40)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:23:24 (null)
+Debug [083] str_to_time: 23:23:24 => 1366226604 Wed Apr 17 23:23:24 2013
+
+Debug [084] push_timer_from_row: duration: (00:00:17) time: (23:23:24)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:25:15 (null)
+Debug [083] str_to_time: 23:25:15 => 1366226715 Wed Apr 17 23:25:15 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:44) time: (23:25:15)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:27:17 (null)
+Debug [083] str_to_time: 23:27:17 => 1366226837 Wed Apr 17 23:27:17 2013
+
+Debug [084] push_timer_from_row: duration: (00:03:07) time: (23:27:17)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:28:09 (null)
+Debug [083] str_to_time: 23:28:09 => 1366226889 Wed Apr 17 23:28:09 2013
+
+Debug [084] push_timer_from_row: duration: (00:01:24) time: (23:28:09)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:28:56 (null)
+Debug [083] str_to_time: 23:28:56 => 1366226936 Wed Apr 17 23:28:56 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:55) time: (23:28:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:32:55 (null)
+Debug [083] str_to_time: 23:32:55 => 1366227175 Wed Apr 17 23:32:55 2013
+
+Debug [084] push_timer_from_row: duration: (00:02:31) time: (23:32:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:35:04 (null)
+Debug [083] str_to_time: 23:35:04 => 1366227304 Wed Apr 17 23:35:04 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227304) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:02:32) time: (23:35:04)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:37:27 (null)
+Debug [083] str_to_time: 23:37:27 => 1366227447 Wed Apr 17 23:37:27 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227447) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:01:56) time: (23:37:27)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:37:46 (null)
+Debug [083] str_to_time: 23:37:46 => 1366227466 Wed Apr 17 23:37:46 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227466) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:02:29) time: (23:37:46)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:41:56 (null)
+Debug [083] str_to_time: 23:41:56 => 1366227716 Wed Apr 17 23:41:56 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227716) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:02:57) time: (23:41:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:42:03 (null)
+Debug [083] str_to_time: 23:42:03 => 1366227723 Wed Apr 17 23:42:03 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227723) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:01:28) time: (23:42:03)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:42:22 (null)
+Debug [083] str_to_time: 23:42:22 => 1366227742 Wed Apr 17 23:42:22 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227742) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:03:42) time: (23:42:22)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:45:50 (null)
+Debug [083] str_to_time: 23:45:50 => 1366227950 Wed Apr 17 23:45:50 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366227950) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:03:41) time: (23:45:50)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:48:54 (null)
+Debug [083] str_to_time: 23:48:54 => 1366228134 Wed Apr 17 23:48:54 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228134) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:00:44) time: (23:48:54)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:49:55 (null)
+Debug [083] str_to_time: 23:49:55 => 1366228195 Wed Apr 17 23:49:55 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228195) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:01:30) time: (23:49:55)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:51:36 (null)
+Debug [083] str_to_time: 23:51:36 => 1366228296 Wed Apr 17 23:51:36 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228296) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:00:28) time: (23:51:36)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:52:59 (null)
+Debug [083] str_to_time: 23:52:59 => 1366228379 Wed Apr 17 23:52:59 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228379) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:01:36) time: (23:52:59)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:54:56 (null)
+Debug [083] str_to_time: 23:54:56 => 1366228496 Wed Apr 17 23:54:56 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228496) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:00:20) time: (23:54:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:54:56 (null)
+Debug [083] str_to_time: 23:54:56 => 1366228496 Wed Apr 17 23:54:56 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228496) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:04:04) time: (23:54:56)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:54:58 (null)
+Debug [083] str_to_time: 23:54:58 => 1366228498 Wed Apr 17 23:54:58 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228498) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:00:50) time: (23:54:58)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:58:02 (null)
+Debug [083] str_to_time: 23:58:02 => 1366228682 Wed Apr 17 23:58:02 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228682) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:03:19) time: (23:58:02)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:58:30 (null)
+Debug [083] str_to_time: 23:58:30 => 1366228710 Wed Apr 17 23:58:30 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228710) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:03:54) time: (23:58:30)
+
+Debug [069] push_timer_from_row: Signal not default
+Debug [023] push_timer_from_string: ->23:59:00 (null)
+Debug [083] str_to_time: 23:59:00 => 1366228740 Wed Apr 17 23:59:00 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228740) nsec:(0)
+Debug [084] push_timer_from_row: duration: (00:02:58) time: (23:59:00)
+
+Debug [083] str_to_time: 0:0:0 => 1366142400 Wed Apr 17 00:00:00 2013
+
+Debug [053] push_timer: pushing int sec:(0) nsec:(0)
+Debug [054] push_timer: pushing val sec:(1366228800) nsec:(0)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 152[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 116[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 149[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 177[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 88[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 222[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)
+Debug [156] main_loop: FETCHED Real-time signal 0 SIGNAL(34)
+Debug [105] fork_exec: forc_exec [32m./ringer 221[0m
+Debug [156] main_loop: FETCHED Child exited SIGNAL(17)

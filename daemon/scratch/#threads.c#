@@ -1,0 +1,114 @@
+#include <string.h>
+#include <string.h>
+#include <signal.h>
+
+#include "threads.h"
+#include "timers.h"
+
+#include "mysql_op.h"
+#include "error.h"
+
+
+
+
+static inline void serve_rq(struct request *rq)
+{
+  //	struct timer_set_rq *s_rq;
+
+	dbg_print("unleashed");
+
+	
+	
+	/* More RT's could be added if needed */
+
+	switch(rq->type) {
+
+	case RT_SET_TIMERS:
+		rm_all_timers();
+		mk_timers_set_rq((struct timer_set_rq *)rq->stuff);
+		break;
+
+	default:
+		wrn_print("Unknown rq type %d",rq->type);
+		break;
+	}
+
+	dbg_print("terminated");
+
+}
+void rexec(void)
+{
+	execv(path, args);
+	
+	err_print("execv");
+	terminate();
+} 
+static inline void mk_sigevent(struct sigevent *se)
+{
+	se->sigev_notify = SE_SIGNAL;
+	se->sigev_signo = SIG_REXEC;
+}
+int arm_24h_sig(void)
+{
+	struct itimerspec ts;
+	struct sigevent sigevent;
+	timer_t timerid;
+
+	mk_sigevent(&sigevent);
+       
+	if (timer_create( CLOCK_REALTIME ,
+			  &sigevent, &timerid) == -1 ) {
+		err_print( "timer_create" );		
+		return -1;
+	}
+
+	ts_h24(ts.it_value);	
+	ts_h0(ts.it_interval);		
+
+	if( timer_settime(&timerid, 0, &ts,NULL) == -1 ) {
+		err_print( "timer_settime" );		
+		return -1;
+	}
+	return 0;
+}
+
+int main_loop(int f) 
+{	
+	
+	
+	sigset_t set;
+	siginfo_t info;
+	
+	if(sigfillset(&set) == -1 ) {
+		err_print ("sigwaitinfo");
+		return -1;
+	}
+
+
+
+	if(arm_24h_sig() == -1) {
+		wrn_print("failed to arm 24h \"killer timer\"");
+		terminate();
+	}
+	arm_timers_from_mysql(mysql);
+	for( ;; ) {	
+		int sig = sigwaitinfo(&set, &info);
+
+		switch(sig) {
+		case -1:
+			if(errno != EAGAIN) {
+				err_print("sigwaitinfo");		
+				break;
+			}
+		case SIG_REXEC:
+			rexec();
+			break;	
+		case SIG_RING:
+			break;
+		}
+	}
+	
+
+}
+
+
