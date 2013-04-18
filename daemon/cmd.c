@@ -101,18 +101,21 @@ void dump_cmd(struct cmdline *cmd)
 		"\tpass: %s\n",		
 		cmd->host, cmd->dbname,
 		cmd->user, cmd->pass );
-	printf("Misc:\n"
+	printf("Log:\n"
 	       "\terr log   : %s\n"
 	       "\tout log   : %s\n"
+	       "Rings:\n"
 	       "\tring prog : %s\n"
 	       "\tshort ring: %s\n"
 	       "\tlong ring : %s\n"
+	       "Daemon stuff:\n"
+	       "\tpid file   : %s\n"
 	       "\trexec_sig_time: %s\n"
 	       "\tdemonized: %s\n"
 	       "\texiting: %s\n",
 	       cmd->log_err,cmd->log_out,
 	       cmd->ring_prog,cmd->short_ring,
-	       cmd->long_ring,cmd->rexec_sig_time,
+	       cmd->long_ring,cmd->pid_file,cmd->rexec_sig_time,
 	       cmd->daemon_flags ? "yes": "no",
 	       cmd->exit_after_dump ?"yes": "no"
 		);

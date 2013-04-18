@@ -2,6 +2,9 @@
 #include <string.h>
 #include <signal.h>
 #include <wait.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 #include "threads.h"
 #include "timers.h"
@@ -12,9 +15,7 @@
 #include "cmd.h"
 #include "head.h"
 
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
+
 
 /* Thanks to Mikael Kerrisk */
 static inline int lockReg ( int fd, int cmd, int type, int whence, 
@@ -54,6 +55,7 @@ int create_pid_file (const char * pidFile)
 			return -1;		
 		}
 	}
+	dbg_print("All ok? %d",errno);
 	if ( ftruncate ( fd, 0 ) == -1 ) {
 		err_print("ftrucate");
 		return -1;
@@ -65,6 +67,34 @@ int create_pid_file (const char * pidFile)
 	}
   
 	return fd;
+}
+static inline int reopen_files(void)
+{			       
+	FILE *sp;
+	if(truncate(cmd.log_err, 0) == -1) {
+		if(errno != ENOENT)
+			err_print("truncate %s", cmd.log_err);
+	}
+	
+	sp = fopen(cmd.log_err,"a");	
+	if ( !sp ) {		
+		err_print("fopen");
+		return -1;
+	}
+	cmd.err_fp = sp;
+	
+	if(truncate(cmd.log_out, 0) == -1) {
+		if(errno != ENOENT)
+			err_print("truncate %s", cmd.log_out);
+	}
+
+	sp = fopen(cmd.log_out,"a");		
+	if ( !sp ) {		
+		err_print("fopen");
+		return -1;
+	}		
+	cmd.out_fp = sp;
+	return 0;
 }
 int become_daemon ( int flags )
 {
@@ -105,25 +135,10 @@ int become_daemon ( int flags )
 	}
 	if ( !(flags & BD_NO_REOPEN_STD_FDS ) )
 	{
-		close ( STDIN_FILENO );
-		fd = open ( "/dev/null", O_RDWR );
-		if ( fd != STDIN_FILENO ) {		
-			err_print("open");
+		if(reopen_files() == -1) {
+			wrn_print("Reoprn files returned fault");
 			return -1;
-		}
-		truncate(cmd.log_out, 0);		
-		cmd.err_fp = fopen(cmd.log_err,"a");
-		
-		if ( !cmd.err_fp ) {		
-			err_print("fopen");
-			return -1;
-		}
-		truncate(optarg, 0);
-		cmd.out_fp = fopen(cmd.log_out,"a");		
-		if ( !cmd.out_fp ) {		
-			err_print("fopen");
-			return -1;
-		}		
+		}	
 		
 	}
 	

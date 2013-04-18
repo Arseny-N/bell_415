@@ -66,20 +66,26 @@ int main ( int argc, char * argv [] )
 	if(!cmd.no_dump_config)
 		dump_cmd(&cmd);
 	
-	if(cmd.daemon_flags) {
-		dbg_print("Demonizing..");
-		if(become_daemon(cmd.daemon_flags))
-			wrn_print("Running not demonized because of error");
-	}
+	dbg_print("Pid file %s",cmd.pid_file);
 	if(cmd.pid_file) {
+	
 		int r = create_pid_file(cmd.pid_file);
 		if(r == -2) {
 			wrn_print("An instance of %s is already running",cmd.path);
 			exit(EXIT_SUCCESS);
 		}
-		if(r == -1) 
+		if(r == -1) {
 			wrn_print("creat_pid_file failed");
+			terminate();
+		}
 	}
+	if(cmd.daemon_flags) {
+		dbg_print("Demonizing..");
+		if(become_daemon(cmd.daemon_flags)) {
+			wrn_print("Can't demonize because of error");
+			terminate();
+		}
+	} 
 	dbg_print("Hello");
 	wrn_print("Hello");
 	

@@ -6,7 +6,7 @@
 #ifndef __HEAD_H__
 # define __HEAD_H__
 
-# define TERMINATE_ON_ERR
+//# define TERMINATE_ON_ERR
 
 # define _DEBUG
 

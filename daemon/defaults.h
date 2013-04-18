@@ -1,10 +1,10 @@
 #include "head.h"
 static inline void cmd_defaults(struct cmdline *cmd,char *self)
 {
-	cmd->daemon_flags = 1 | BD_NO_CHDIR | 0x8 | 1;
+	cmd->daemon_flags = 1;
 
 	
-	cmd->ring_prog = "./ringer";
+	cmd->ring_prog = "/sbin/ringer";
 	
 	cmd->host = "localhost";
 	cmd->dbname = "test_3";

@@ -4,7 +4,7 @@
 #include "error.h"
 #include "ename.h"
 #include "cmd.h"
-
+#include "time.h"
 
 #define __valid_err(err) (err > 0 && err < MAX_ERR) ? err : 0; 
 
@@ -34,7 +34,9 @@ static inline void __print(FILE *s,char *fmt, va_list *va)
 {
 	if(!s)
 		return;
+	fprintf(s, "[%s] ", curr_time("%Y-%m-%d %T"));
 	vfprintf(s, fmt, *va);
+	fflush(s);
 }
 static inline void flush_streams(void)
 {       
