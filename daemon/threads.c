@@ -40,13 +40,21 @@ int create_pid_file (const char * pidFile)
 {
 	char buf [BUF_SIZE];
   
-	int fd = open ( pidFile, O_RDWR | O_CREAT | O_CLOEXEC, 
-			S_IRUSR | S_IWUSR );
+	int fd = open ( pidFile, O_RDWR | O_CREAT 
+#ifdef O_CLOEXEC
+			| O_CLOEXEC
+#endif			
+			,S_IRUSR | S_IWUSR );
 	if ( fd == -1 ) {
 		err_print("open");
 		return -1;
 	} 
-		
+#ifndef O_CLOEXEC
+	if (fcntl(fd, F_SETFD, FD_CLOEXEC) == -1) { 
+		err_print("fcntl");
+		return -1;
+	}
+#endif
 	if ( lock_region ( fd, F_WRLCK, SEEK_SET, 0, 0 ) == -1 ) {
 		if ( errno == EAGAIN || errno == EACCES )
 			return -2;		
