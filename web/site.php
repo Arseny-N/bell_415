@@ -6,11 +6,11 @@ function table_open($head,$cols)
 	$numcols = count($cols);
 	echo '
 			<table class="main">
-				<tr><td align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</div></td></tr>
+				<tr><th align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</div></td></tr>
 				<tr>';
 	$i = 0;
 	while ($numcols > $i)  {
-		echo '<td align="center" class="entry">'.$cols[$i++].'</td>';
+		echo '<th align="center" class="entry">'.$cols[$i++].'</th>';
 	}
 	echo '</tr>';		
 }
@@ -41,35 +41,17 @@ function sub_box_close()
 		$sub_box_opened = false;
 	}
 }
-function print_banner()
+function print_navi_menu()
 {
-	//echo '<br><div class="banner" align="left">With Great Power 
-		//								 Comes Great Responsibility </div>';
-}
-function main_box_open()
-{
-	global $main_box_opened;
-	if(!$main_box_opened) {
-		echo '<table class="main_box"><tr><td class="main_box">';	
-		$main_box_opened = true;
-	}
-}
-function main_box_close()
-{
-	global $main_box_opened;
-	if($main_box_opened) {
-		echo '</td></tr></table>';
-		$main_box_opened = false;
-	}
+	echo '<table id="navi_box">';		  
+	echo '<tr><td class="navi_box"> <a href="index.php" class="button" > Index </a></td></tr>';
+	echo '<tr><td class="navi_box"> <a href="profs.php" class="button" > Profiles </a></td></tr>';
+	echo '<tr><td class="navi_box"> <a href="logs.php" class="button" > Logs </a></td></tr>';
+	echo '<tr><td class="navi_box"> <a href="help.php" class="button" > Help </a></td></tr>';
+	echo '</table>';	
 }
 function print_head($style)
 {
-	echo <<<_EOH_
-	<html>
-<head>
-  <meta charset="UTF-8"/>
-  <link type="text/css" rel="stylesheet" href="$style">
-</head>
-_EOH_;
+	echo '<html><head><meta charset="UTF-8"/><link type="text/css" rel="stylesheet" href="'.$style.'"></head>';
 }
 ?>

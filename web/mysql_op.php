@@ -110,8 +110,7 @@ function get_profile_id_by_name($name)
 }
 function get_armed_profile()
 {
-	var_dump($p = get_rule_profile_id_by_day(today()));
-	return get_profile($p);
+	return get_profile(get_rule_profile_id_by_day(today()));
 }
 function get_rule_profile_id_by_day($day)
 {
@@ -129,7 +128,7 @@ function add_ring($prof_id,$time)
 }
 function add_profile($name)
 {
-	return mk_query("INSERT INTO profiles (name,armed) VALUES('".$name."','0')");
+	return mk_query("INSERT INTO profiles (name) VALUES('".$name."')");
 }
 function add_override($profn,$date)
 {	
@@ -139,9 +138,13 @@ function add_override($profn,$date)
 	return true;
 }
 
-function update_ring($ring_id,$time)
+function update_ring_time($ring_id,$time)
 {
 	return mk_query("UPDATE rings SET ring_time='".$time."' WHERE id='".$ring_id."'");
+}
+function update_ring_duration($ring_id,$time)
+{
+	return mk_query("UPDATE rings SET ring_duration='".$time."' WHERE id='".$ring_id."'");
 }
 function update_profile_name($prof_id,$name)
 {

@@ -4,26 +4,30 @@
 #include <string.h>
 #include <libgen.h>
 #include "cmd.h"
-
+#include "error.h"
 
 static struct option long_options[] = {
 	{"nodaemon",  no_argument, 0,  'D' },
 
 	{"log",  required_argument, 0,  'l' },
-	{"log_out",  required_argument, 0,  'o' },
-	{"log_err",  required_argument, 0,  'e' },
+	{"log-out",  required_argument, 0,  'o' },
+	{"log-err",  required_argument, 0,  'e' },
+	{"log-truncate",  no_argument, 0,  'L' },
+	{"log-disable",  no_argument, 0,  'N' },	
 
-	{"ring_prog",  required_argument, 0,  'r' },
+	{"ring-prog",  required_argument, 0,  'r' },
+	{"rexec-at",  required_argument, 0,  'R' },
 
 	{"host",  required_argument, 0,  'h' },
 	{"dbname",  required_argument, 0,  'd' },
 	{"user",  required_argument, 0,  'u' },
 	{"passwd",  required_argument, 0,  'p' },
 	
-	{"pid_file",  required_argument, 0,  'P' },
+
+	{"pid-file",  required_argument, 0,  'P' },
 	{"help",  no_argument, 0,  'H' },
-	{"exit_after_dump",  no_argument, 0,  'E' },
-	{"dump_config",  no_argument, 0,  'c' },
+	{"exit-after-dump",  no_argument, 0,  'E' },
+	{"dump-config",  no_argument, 0,  'c' },
 	
 	{0,         0,                 0,  0 },
 };
@@ -47,6 +51,9 @@ void cmd_process(char argc, char **argv, struct cmdline *cmd )
 		if(c == -1)
 			break;
 		switch(c) {		
+		case -1: 
+			wrn_print("Unrecognized opton");
+			terminate();
 		case 0:
 		case 'H':
 			print_help(argv[0]);
@@ -57,6 +64,15 @@ void cmd_process(char argc, char **argv, struct cmdline *cmd )
 		case 'l':
 			cmd->log_out = optarg;
 			cmd->log_err = optarg;			
+			break;
+		case 'R':
+			cmd->rexec_sig_time = optarg;
+			break;
+		case 'L':		
+			cmd->log_truncate = 1;			
+			break;
+		case 'N':		
+			cmd->logs_enable = 0;			
 			break;
 		case 'o':			
 			cmd->log_out = optarg;
@@ -92,6 +108,7 @@ void cmd_process(char argc, char **argv, struct cmdline *cmd )
 			
 	}
 }
+#define bool_fmt(expr) ((expr) ? "yes" : "no")
 void dump_cmd(struct cmdline *cmd)
 {
 	printf( "Mysql:\n"
@@ -112,11 +129,13 @@ void dump_cmd(struct cmdline *cmd)
 	       "\tpid file   : %s\n"
 	       "\trexec_sig_time: %s\n"
 	       "\tdemonized: %s\n"
-	       "\texiting: %s\n",
+	       "\texiting: %s\n"
+       	       "\tlog truncate: %s\n",
 	       cmd->log_err,cmd->log_out,
 	       cmd->ring_prog,cmd->short_ring,
 	       cmd->long_ring,cmd->pid_file,cmd->rexec_sig_time,
-	       cmd->daemon_flags ? "yes": "no",
-	       cmd->exit_after_dump ?"yes": "no"
+	       bool_fmt(cmd->daemon_flags),
+	       bool_fmt(cmd->exit_after_dump),
+	       bool_fmt(cmd->log_truncate)
 		);
 }

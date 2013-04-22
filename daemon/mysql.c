@@ -65,9 +65,9 @@ static void push_timer_from_row(MYSQL_ROW row, int fields)
 	struct sigevent se;
 	se.sigev_notify = SIGEV_SIGNAL;
 
-	int s = se.sigev_signo = fit_default_durations(rng_duration);
-	dbg_print("Signal %s", s == SIG_RING_SHORT ?"short":s == SIG_RING_LONG ? "long" : "not default");
-	/* W IS DEFAULT */
+	/*int s =*/ se.sigev_signo = fit_default_durations(rng_duration);
+	//dbg_print("Signal %s", s == SIG_RING_SHORT ?"short":s == SIG_RING_LONG ? "long" : "not default");
+
 	if(se.sigev_signo == -1 ) {
 		struct tm *tm = str_to_tm(rng_duration,0);
 		
@@ -81,7 +81,7 @@ static void push_timer_from_row(MYSQL_ROW row, int fields)
 		return;			
 	}
 
-	dbg_print("duration: (%s) time: (%s)\n",rng_duration, rng_time);	
+	dbg_print("duration: (%s) time: (%s)",rng_duration, rng_time);	
 	
 }
 static void for_each_result_entry( MYSQL_RES *result, void (*row_func) ( MYSQL_ROW row, int fields))
@@ -101,12 +101,13 @@ static void for_each_result_entry( MYSQL_RES *result, void (*row_func) ( MYSQL_R
 static char *get_query_first_field(MYSQL *mysql,  char *query)
 {
 	MYSQL_RES *result = query_result(mysql,query);
+	char *r = NULL;
 	if(!result) {       
 		mysqle_print(mysql, "query_result");
 		goto freeing;
 	}
 	
-	char *r = NULL;
+	
 	static char buf[MAX_PROFID];
 	
 	
@@ -184,6 +185,7 @@ static MYSQL_RES *get_rings(MYSQL *sql,char *prof)
 
 int arm_main_timers(void)
 {
+	int r = 0;
 	MYSQL *mysql = open_mysql( cmd.host, cmd.dbname, cmd.user, cmd.pass);
 	if(!mysql) {
 		wrn_print("open_mysql");
@@ -193,19 +195,22 @@ int arm_main_timers(void)
 	char *prof = fresh_profile_id(mysql);
 	if(!prof) {
 		wrn_print("fresh_profile_id");
-		return -1;
+		r = -1;
+		goto close;
 	}
 
 	MYSQL_RES *result = get_rings(mysql, prof);	
 
 	if(!result) {
 		wrn_print("get_rings");
-		return -1;
+		r = -1;
+		goto close;
 	}	   
 
 	for_each_result_entry(result, push_timer_from_row);
 
 	mysql_free_result(result);	       
+close:
 	close_mysql(mysql);
-	return 0;
+	return r;
 }

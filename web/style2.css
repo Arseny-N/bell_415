@@ -1,22 +1,19 @@
 td.bg {
-	background-color : #ffffff;
-	
+	background-color : #ffffff;	
 	padding-right: 15px;
 	padding-left: 15px;
-	border-radius: 5px 5px 5px 5px;
+	border-radius: 0px;
 	padding-top: 10px;
-	padding-bottom: 10px;
-	border: 1px solid rgb(0, 0, 0);
+	padding-bottom: 10px;	
 	
 
 }
 td.buttons {
-	background-color : #ffffff;
-	
+	background-color : #ffffff;	
 	border-radius: 5px 5px 5px 5px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	border: 1px solid rgb(0, 0, 0);
+	/*border: 1px solid rgb(0, 0, 0);*/
 	
 
 }
@@ -39,65 +36,93 @@ td.err_box {
 	
 }
 td.main_box {
-	border: 1px solid rgb(0, 0, 0);
-	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.3);
+	padding-right: 15%;
+	vertical-align: top;	
     border-radius: 5px 5px 5px 5px;
-    padding: 8px;
+    padding-left: 18px;
+    padding-right: 118px;
 }
-div.table_heads{
-	/*font: 14pt/16pt fantasy, cursive, Serif;*/
-	color : #777777;  
-}
-table.main {
-	
-	border-radius: 5px 5px 5px 5px;
+table.main {		
 	border-collapse: collapse;
 	width: 100%;
+	border: 0px solid rgb(0, 0, 0);
 }
 table.inboxer {
-    
+    border-radius: 5px 5px 5px 5px;
 	width: 100%;
 }
-td.entry {
-	
+td.entry {		
+	border: 1px solid rgb(0, 0, 0);
+	padding-right: 15px;	
+	padding-left: 15px;
+	text-align: centre;
+}
+th.entry {	
 	border: 1px solid rgb(0, 0, 0);
 	padding-right: 15px;	
 	padding-left: 15px;
 	text-align: centre;	
-}
-th.entry {
+	font-weight: bold;	
 	
-	border: 1px solid rgb(0, 0, 0);
-	padding-right: 15px;	
-	padding-left: 15px;
-	text-align: centre;	
+	
 }
-tr.entry {
+.profile_name{
+	text-align: centre;
+	
+}
 
+
+tr.entry {		
+	background-color : #dddddd;
+	
+}
+tr.entry:hover {
 	background-color : #eeeeee;
 	
-}
-tr.shown_entry {
-
-	background-color : #777777;  
 	
 }
-div.entry {
-	background-color : #777777;  
-	text-align: centre;
-	color: rgb(0, 0, 0);
+td.navi_box_menu {	
+	vertical-align: top;
+	background-color: rgb(51,51,51);	
+	border-right: 4px solid rgb(0, 0, 0);
+	/*box-shadow: 0px 7px 20px */
+	box-shadow: 10px 6px 5px 5px rgba(0, 0, 0, 0.3);    
+    padding: 8px;
 }
+#navi_box {	
+	text-align: center;
+	font-family: "Gotham Rounded A","Gotham Rounded B","proxima-nova-soft",sans-serif;    
+    border-radius: 0px 0px 0px 0px;            
+}
+#navi_box tr{
+	border: 1px solid rgb(0, 0, 0);	
+	vertical-align: top;
+}
+#navi_box td{		
+	padding: 9px 16px;
+	background: none repeat scroll 0% 0% rgb(78, 104, 199);	
+}
+#navi_box td:hover{		
+	padding: 9px 16px;
+	background: none repeat scroll 0% 0% #3151C6;	
+}
+#navi_box a.button{	
+	text-decoration: none;	
+    color: white;    
+    display: inline-block;
+    border: 0px none;
+
+}
+
 body { 
-	margin-left: 30%;
-	margin-right: 30%;
-	margin-top: 2%;
-    background: #eeeeee; 
-   
-    
+	
+    margin-top: 0%;
+    margin-bottom: 0%;    
     /*
+     * #E3DAC9;
      * #72f0f0;
-    padding-top: 5%;
-    padding-bottom: 5%;
+     * background-image: url("img/bg.png"); 
+
     
     padding-right: 15%;
     padding-left: 15%;

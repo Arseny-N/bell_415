@@ -38,8 +38,8 @@ int push_timer(struct sigevent *se, struct timespec *exp,
  
 	if(verify && is_expired(exp)) {	
 		return 0;
-
 	}
+
 
 	ts_h0(ts.it_interval);
 	ts_h0(ts.it_value);
@@ -49,8 +49,6 @@ int push_timer(struct sigevent *se, struct timespec *exp,
 	if(exp)
 		ts.it_value = *exp;
 
-	dbg_print( "pushing int %s",ts_to_string(&ts.it_interval));	       
-	dbg_print( "pushing val %s",ts_to_string(&ts.it_value));		
 
 	if (timer_create( CLOCK_REALTIME, se, &timerid) == -1 ) {
 		err_print( "timer_create" );		
@@ -74,15 +72,14 @@ int arm_24h_sig(void)
 	
 	exp.tv_nsec = 0;
 
-	if(unlikely(!cmd.rexec_sig_time)) {
-		exp.tv_sec = str_to_time("0:0:0", 1);
-		exp.tv_sec += h24;
+	if(unlikely(!!cmd.rexec_sig_time)) {
+		exp.tv_sec = str_to_time(cmd.rexec_sig_time, 1);		
 	} else {
-		exp.tv_sec = str_to_time(cmd.rexec_sig_time, 1);
+		exp.tv_sec = str_to_time("0:0:01", 1);
+		exp.tv_sec += h24;		
 	}
 	
-	
-	return push_timer(&se, &exp, NULL, 0,0);
+	return push_timer(&se, &exp, NULL, TIMER_ABSTIME,1);
 }
 
 

@@ -1,6 +1,3 @@
-//#include <pthread.h>
-//#include <time.h>
-//#include <string.h>
 #include <libgen.h>
 
 #include "threads.h"
@@ -50,35 +47,37 @@ static inline void block_all_sigs(void)
 }
 int main ( int argc, char * argv [] )
 {
-	setbuf(stderr, NULL);
-	setbuf(stdout, NULL);
-
+	cmd_defaults(&cmd,argv[0]);
+	
 	if(!is_path_absolute(argv[0])) {
 		wrn_print("Require execution with absolute path(%s)",argv[0]);
 		terminate();
-	}	
-	dbg_print("Hello");
-	wrn_print("Hello");
-
-	cmd_defaults(&cmd,argv[0]);
+	}		
+	
 	cmd_process(argc,argv,&cmd);	
 	
 	if(!cmd.no_dump_config)
 		dump_cmd(&cmd);
 	
+
 	dbg_print("Pid file %s",cmd.pid_file);
-	if(cmd.pid_file) {
-	
-		int r = create_pid_file(cmd.pid_file);
-		if(r == -2) {
-			wrn_print("An instance of %s is already running",cmd.path);
-			exit(EXIT_SUCCESS);
-		}
-		if(r == -1) {
+	if(cmd.pid_file) {	
+		switch (create_pid_file(cmd.pid_file)) {
+	        case -1: 
 			wrn_print("creat_pid_file failed");
 			terminate();
+		case -2:
+			wrn_print("An instance of %s is already running",cmd.path);
+			exit(EXIT_SUCCESS);		
+
 		}
 	}
+	if(cmd.logs_enable)
+		if(reopen_files() == -1) {
+			wrn_print("reopen_files failed");
+			terminate();
+		}
+	
 	if(cmd.daemon_flags) {
 		dbg_print("Demonizing..");
 		if(become_daemon(cmd.daemon_flags)) {
@@ -86,8 +85,10 @@ int main ( int argc, char * argv [] )
 			terminate();
 		}
 	} 
+	
 	dbg_print("Hello");
 	wrn_print("Hello");
+	err_print("Hello");
 	
 	if(cmd.exit_after_dump) 
 		exit(EXIT_SUCCESS);
@@ -99,3 +100,25 @@ int main ( int argc, char * argv [] )
 	wrn_print("suspicious main_loop return...");
 	exit(EXIT_FAILURE);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

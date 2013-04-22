@@ -22,8 +22,7 @@ function err_box($err = NULL,$source = NULL)
 {
 	if(!$err) {
 		$err = 'Unspecified error, might be a bug.';
-	}
-	main_box_close();
+	}	
 	sub_box_open('class="err_box"',NULL,'width="45px" ');
 	echo 
 	'

@@ -68,12 +68,19 @@ int create_pid_file (const char * pidFile)
   
 	return fd;
 }
-static inline int reopen_files(void)
+int reopen_files(void)
 {			       
 	FILE *sp;
-	if(truncate(cmd.log_err, 0) == -1) {
-		if(errno != ENOENT)
-			err_print("truncate %s", cmd.log_err);
+	
+	if(cmd.log_truncate) {		
+		if(truncate(cmd.log_err, 0) == -1) {
+			if(errno != ENOENT)
+				err_print("truncate %s", cmd.log_err);
+		}
+		if(truncate(cmd.log_out, 0) == -1) {
+			if(errno != ENOENT)
+				err_print("truncate %s", cmd.log_out);
+		}
 	}
 	
 	sp = fopen(cmd.log_err,"a");	
@@ -81,29 +88,43 @@ static inline int reopen_files(void)
 		err_print("fopen");
 		return -1;
 	}
-	cmd.err_fp = sp;
+	cmd.err_fp = sp;			
 	
-	if(truncate(cmd.log_out, 0) == -1) {
-		if(errno != ENOENT)
-			err_print("truncate %s", cmd.log_out);
-	}
-
-	sp = fopen(cmd.log_out,"a");		
+      	if ( dup2 ( fileno(sp), STDERR_FILENO ) != STDERR_FILENO ) {
+      		err_print("Failed to reopen err");
+      		return -1;			
+      	}
+      	
+      	
+      	sp = fopen(cmd.log_out,"a");	
 	if ( !sp ) {		
 		err_print("fopen");
 		return -1;
 	}		
+	
+	
 	cmd.out_fp = sp;
+	
+      	if ( dup2 ( fileno(sp), STDOUT_FILENO ) != STDOUT_FILENO ) {
+      		err_print("Failed to reopen out");
+
+	}
+	
 	return 0;
 }
+	
+
 int become_daemon ( int flags )
 {
-	int maxfd, fd;
 	
 	switch ( fork () ) {		
-	case -1: err_print("fork");return -1;
-	case  0: break;
-	default: _exit (EXIT_SUCCESS);
+	case -1: 
+		err_print("fork");
+		return -1;
+	case  0: 
+		break;
+	default: 
+		_exit (EXIT_SUCCESS);
 	}
 	if ( setsid () == -1 ) {
 		err_print("setsid");
@@ -111,37 +132,21 @@ int become_daemon ( int flags )
 	}
 	
 	switch ( fork () ) {		
-	case -1: err_print("fork");return -1;
-	case  0: break;
-	default: _exit (EXIT_SUCCESS);
+	case -1: 
+		err_print("fork");
+		return -1;
+	case  0: 
+		break;
+	default: 
+		_exit (EXIT_SUCCESS);
 	}
 	
-	if ( !( flags & BD_NO_UMASK0 ) )
-		umask (0);
-
-	if ( !( flags & BD_NO_CHDIR ) ) 
-		if( chdir ( "/" ) == -1 ) {
-			err_print("chdir");
-			return -1;
-		}
+	umask (0);
 	
-	if ( !( flags & BD_NO_CLOSE_FILES ) ) {
-		maxfd = sysconf (_SC_OPEN_MAX );
-		if ( maxfd == -1 )
-			maxfd = BD_MAX_CLOSE;
-		
-		for ( fd = 0; fd < maxfd; ++fd )
-			close (fd);
+	if( chdir ( "/" ) == -1 ) {
+		err_print("chdir");
+		return -1;
 	}
-	if ( !(flags & BD_NO_REOPEN_STD_FDS ) )
-	{
-		if(reopen_files() == -1) {
-			wrn_print("Reoprn files returned fault");
-			return -1;
-		}	
-		
-	}
-	
 	return 0;
 }
 

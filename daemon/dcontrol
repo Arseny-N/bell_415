@@ -1,0 +1,26 @@
+#!/bin/bash
+logdir=/var/log/bell
+pid_file=/var/run/bell/bell_pid
+bin_dir=/sbin
+
+case "$1" in
+    "kill" )
+	kill -s SIGTERM $( cat "$pid_file")
+	;;
+    "is-up")
+	kill -0 $( cat "$pid_file" ) 2&> /dev/null && echo "runnung" || echo "not runnuing"
+	;;
+    "rexec")
+	kill -s SIGHUP $( cat "$pid_file" )
+	;;
+    "logs")
+        echo "$logdir"
+        ;;
+    "up")
+	$bin_dir/run --dump_config  --log_err $logdir/run-err.log --log_out $logdir/run-dbg.log --ring_prog $bin_dir/ringer --pid_file $pid_file
+	;;
+    * )
+	echo "Unknown action $1"
+	;;
+esac
+

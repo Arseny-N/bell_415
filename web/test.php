@@ -92,8 +92,13 @@ function submit_tt($name,$new_name)
 	
 	foreach ( $ids as $id ) {	
 		
-		if($_REQUEST[$id['id']] != "" ) {			
-			update_ring($id['id'],$_REQUEST[$id['id']]);		
+		if($_REQUEST['times'][$id['id']] != "" ) {	
+			//echo $_REQUEST['times'][$id['id']];		
+			update_ring_time($id['id'],$_REQUEST['times'][$id['id']]);		
+		}
+		if($_REQUEST['duration'][$id['id']] != "" ) {						
+			//echo $_REQUEST['duration'][$id['id']];
+			update_ring_duration($id['id'],$_REQUEST['duration'][$id['id']]);		
 		}
 	}
 	
@@ -164,18 +169,19 @@ function is_shown($tt)
 }
 
 
-
+global $argv;
 print_head('style2.css');
-
-echo 'Post: ' ;var_dump($_POST); echo '<br>'; 
-echo 'Get:  '; var_dump($_GET);  echo '<br>'; 
 	
 load_lib('mysql');
-connect_to_mysql("test_2");
+connect_to_mysql("test_3");
 
 process_buttons();
 echo '<body dir="ltr">';
-main_box_open();
+echo '<table class="main_box"><tr><td class="navi_box_menu">';	
+
+print_navi_menu();
+
+echo '</td><td class="main_box">';	
 
 if( $shown_tt == NULL )	
 	$shown_tt = get_armed_profile();
@@ -202,10 +208,8 @@ if( $shown_tt == NULL )
 	sub_box_open('class="bg"');	
 		print_overrides_list();	
 	sub_box_close();
-
-main_box_close();
-
-print_banner();
+	
+echo '</td></tr></table>';
 echo '</body>';
 
 ?>

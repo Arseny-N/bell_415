@@ -21,7 +21,7 @@ function print_buttons()
 			  <button type="submit" name="edit"  value='. $shown_tt['id'].'>edit</button>		
 			  <button type="submit" name="clone" value='. $shown_tt['id'].'>clone</button>					  
 			  <button type="submit" name="drop"  value='. $shown_tt['id'].'>drop</button>
-			  <button type="submit" name="arm"   value='. $shown_tt['id'].'>arm</button>			  
+			 		  
 			  
 			  ';
 	} else { 
@@ -50,16 +50,16 @@ function print_shown_tt()
 	global $edit_flag, $shown_tt;
 	form_open();	
 	
-	echo '<table><tr>';				
+	echo '<table><tr class="profile_name">';				
 									
 	if (!$edit_flag) {
-		echo '<td>' . $shown_tt['name'] . '</td>';
+		echo '<td class="profile_name">' ."Profile name ". $shown_tt['name'] . '</td>';
 	} else {
-		echo '<td><input type="text" name="new_name" placeholder="' . $shown_tt['name'] . '" />' . '</td>';
+		echo '<td class="profile_name"><input type="text" name="new_name" placeholder="' . $shown_tt['name'] . '" />' . '</td>';
 	}
 	echo '</tr></table>';
 	
-		table_open('Profile',['n','Lesson','Time','Duration']);
+		table_open('Profile rings',['n','Lesson','Time','Duration']);
 			print_rings($shown_tt['id']);
 		table_close();
 	form_close();
@@ -93,6 +93,12 @@ function print_overrides_list()
 {
 	global $new_ov_flag,$argv;
 	
+	
+	table_open('Overrides',["Activation Day","Profile Descr","Actions"]);	
+		form_open();
+			print_overrides();		 
+		form_close();
+	table_close();
 	echo '<table>';
 	if($new_ov_flag) {		
 		print_new_ov_box();
@@ -102,10 +108,5 @@ function print_overrides_list()
 		form_close();
 	}
 	echo'</table>';
-	table_open('Overrides',["Activation Day","Profile Descr","Actions"]);	
-		form_open();
-			print_overrides();		 
-		form_close();
-	table_close();
 }
 ?>

@@ -4,9 +4,11 @@
 #include <stdio.h>
 struct cmdline {
 
+	bool log_truncate;
 	bool no_dump_config;
 	bool exit_after_dump;
-	
+	bool logs_enable;
+		
 	int daemon_flags;	      
 	char *pid_file;
 	

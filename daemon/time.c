@@ -80,7 +80,6 @@ time_t str_to_time(const char *p, bool abs)
 	}
 	t = mktime(&tm);
 
-	dbg_print("%s => %ld %s",p, (long)t,ctime(&t));
 	if( t == -1 ) {
 		err_print("mktime()");
 		return -1;
