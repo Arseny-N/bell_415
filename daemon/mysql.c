@@ -65,8 +65,7 @@ static void push_timer_from_row(MYSQL_ROW row, int fields)
 	struct sigevent se;
 	se.sigev_notify = SIGEV_SIGNAL;
 
-	/*int s =*/ se.sigev_signo = fit_default_durations(rng_duration);
-	//dbg_print("Signal %s", s == SIG_RING_SHORT ?"short":s == SIG_RING_LONG ? "long" : "not default");
+	se.sigev_signo = fit_default_durations(rng_duration);
 
 	if(se.sigev_signo == -1 ) {
 		struct tm *tm = str_to_tm(rng_duration,0);
@@ -75,7 +74,6 @@ static void push_timer_from_row(MYSQL_ROW row, int fields)
 		se.sigev_value.sival_int = tm->tm_sec + tm->tm_min * 60 + tm->tm_hour * 3600;		
 	}
 
-	
 	if( push_timer_from_string(&se, rng_time, NULL,TIMER_ABSTIME,1) == -1 ) {
 		wrn_print("push_timer_from_string %s", rng_time);
 		return;			

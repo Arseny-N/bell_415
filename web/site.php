@@ -1,11 +1,12 @@
 <?php
+
 $sub_box_opened = false;
 $main_box_opened = false;
-function table_open($head,$cols)
+function table_open($head,$cols, $args=NULL)
 {
 	$numcols = count($cols);
 	echo '
-			<table class="main">
+			<table class="main" '.$args.'>
 				<tr><th align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</div></td></tr>
 				<tr>';
 	$i = 0;
@@ -45,7 +46,7 @@ function print_navi_menu()
 {
 	echo '<table id="navi_box">';		  
 	echo '<tr><td class="navi_box"> <a href="index.php" class="button" > Index </a></td></tr>';
-	echo '<tr><td class="navi_box"> <a href="profs.php" class="button" > Profiles </a></td></tr>';
+	echo '<tr><td class="navi_box"> <a href="profiles.php" class="button" > Profiles </a></td></tr>';
 	echo '<tr><td class="navi_box"> <a href="logs.php" class="button" > Logs </a></td></tr>';
 	echo '<tr><td class="navi_box"> <a href="help.php" class="button" > Help </a></td></tr>';
 	echo '</table>';	
@@ -54,4 +55,5 @@ function print_head($style)
 {
 	echo '<html><head><meta charset="UTF-8"/><link type="text/css" rel="stylesheet" href="'.$style.'"></head>';
 }
+
 ?>

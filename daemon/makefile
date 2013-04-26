@@ -1,7 +1,10 @@
 LOG_DIR := "/var/log/bell"
 PID_DIR := "/var/run/bell"
 BIN_DIR := "/sbin"
-PID_FILE := "$(PID_DIR)/bell_pid"
+PID_FILE := "$(PID_DIR)/pid"
+
+DEBUG_LOG_FILE:= $(LOG_DIR)"/dbg"
+ERROR_LOG_FILE:= $(LOG_DIR)"/err"
 
 PROG_USER:= "arseni"
 PROG_GROUP:= "arseni"
@@ -26,7 +29,8 @@ obj = timers.o threads.o error.o time.o mysql.o cmd.o mysql_error.o
 
 main: $(obj) ringer.c dcontrol
 	$(CC) $(CC_FLAGS) -o run $(obj) \
-	-lrt -lpthread $(MYSQL_CLIBS)   $(MYSQL_CFLAGS) main.c
+	-lrt -lpthread $(MYSQL_CLIBS) $(MYSQL_CFLAGS) main.c \
+	-DDEBUG_LOG_FILE=\"$(DEBUG_LOG_FILE)\" -DERROR_LOG_FILE=\"$(ERROR_LOG_FILE)\" -DPID_FILE=\"$(PID_FILE)\"
 
 	$(CC) $(CC_FLAGS) -o ringer ringer.c 
 

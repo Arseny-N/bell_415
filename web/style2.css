@@ -22,8 +22,10 @@ div.banner{
 	text-align: left;
 }
 table.main_box {
-	max-width: 50%;
+/*	max-width: 100%;*/
 	min-width: 40%;
+	margin-bottom: 0px;
+	
 }
 
 td.err_box {
@@ -63,7 +65,7 @@ th.entry {
 	padding-left: 15px;
 	text-align: centre;	
 	font-weight: bold;	
-	
+	background-color : #eeeeee;	
 	
 }
 .profile_name{
@@ -73,7 +75,7 @@ th.entry {
 
 
 tr.entry {		
-	background-color : #dddddd;
+	background-color : #ffffff;
 	
 }
 tr.entry:hover {
@@ -87,8 +89,23 @@ td.navi_box_menu {
 	border-right: 4px solid rgb(0, 0, 0);
 	/*box-shadow: 0px 7px 20px */
 	box-shadow: 10px 6px 5px 5px rgba(0, 0, 0, 0.3);    
-    padding: 8px;
+	padding: 8px;
+    	padding-bottom: 60%;
 }
+#log {
+	border: 1px solid rgb(0, 0, 0);	
+	text-align: center;
+}
+
+#log th {
+	background-color : #eeeeee;
+	font-weight: bold;	
+}
+#log td, tr{
+	border: 1px solid rgb(0, 0, 0);
+}
+
+
 #navi_box {	
 	text-align: center;
 	font-family: "Gotham Rounded A","Gotham Rounded B","proxima-nova-soft",sans-serif;    

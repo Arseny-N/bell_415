@@ -14,72 +14,14 @@
 #include "error.h"
 #include "cmd.h"
 #include "head.h"
+#include "pid_file.c"
 
 
-
-/* Thanks to Mikael Kerrisk */
-static inline int lockReg ( int fd, int cmd, int type, int whence, 
-		     int start, off_t len )
-{
-	struct flock fl;
-	
-	fl.l_type = type;
-	fl.l_whence = whence;
-	fl.l_start = start;
-	fl.l_len = len;
-	
-	return fcntl ( fd, cmd, &fl );
-}
-
-
-static int lock_region ( int fd, int type, int whence, int start, off_t len )
-{
-	return lockReg ( fd, F_SETLK, type, whence, start, len );
-}			  
-int create_pid_file (const char * pidFile)
-{
-	char buf [BUF_SIZE];
-  
-	int fd = open ( pidFile, O_RDWR | O_CREAT 
-#ifdef O_CLOEXEC
-			| O_CLOEXEC
-#endif			
-			,S_IRUSR | S_IWUSR );
-	if ( fd == -1 ) {
-		err_print("open");
-		return -1;
-	} 
-#ifndef O_CLOEXEC
-	if (fcntl(fd, F_SETFD, FD_CLOEXEC) == -1) { 
-		err_print("fcntl");
-		return -1;
-	}
-#endif
-	if ( lock_region ( fd, F_WRLCK, SEEK_SET, 0, 0 ) == -1 ) {
-		if ( errno == EAGAIN || errno == EACCES )
-			return -2;		
-		else {
-		        err_print("lock_region");
-			return -1;		
-		}
-	}
-	dbg_print("All ok? %d",errno);
-	if ( ftruncate ( fd, 0 ) == -1 ) {
-		err_print("ftrucate");
-		return -1;
-	}
-	snprintf ( buf, BUF_SIZE, "%ld\n", (long) getpid () );
-	if ( write ( fd, buf, strlen (buf) ) != strlen (buf) ) {
-		err_print("write");
-		return -1;
-	}
-  
-	return fd;
-}
 int reopen_files(void)
 {			       
 	FILE *sp;
 	
+	/*
 	if(cmd.log_truncate) {		
 		if(truncate(cmd.log_err, 0) == -1) {
 			if(errno != ENOENT)
@@ -90,7 +32,7 @@ int reopen_files(void)
 				err_print("truncate %s", cmd.log_out);
 		}
 	}
-	
+	*/
 	sp = fopen(cmd.log_err,"a");	
 	if ( !sp ) {		
 		err_print("fopen");
@@ -160,7 +102,7 @@ int become_daemon ( int flags )
 
 void rexec(void)
 {
-	dbg_print("execv(path:\'%s\',args:%p)",cmd.path,cmd.args);
+	dbg_print("execv(path:\'%s\')",cmd.path);
 	execv(cmd.path, cmd.args);
 	
 	err_print("execv");
@@ -222,6 +164,7 @@ int main_loop()
 		dbg_print("FETCHED %s SIGNAL(%ld)",strsignal(sig),(long)sig);
 
 		if(IS_EXIT_SIG(sig)) {
+			dbg_print("%s SIGNAL(%ld) - exit sig; exiting", strsignal(sig),(long)sig);
 			exit(EXIT_SUCCESS);
 		}
 		

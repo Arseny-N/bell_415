@@ -1,5 +1,4 @@
 <?php
-include_once 'pages/links.php';
 
 function stdf_error_echo($err)
 {

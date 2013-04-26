@@ -10,8 +10,11 @@ static inline void cmd_defaults(struct cmdline *cmd,char *self)
 	cmd->user = "arseni";
 	cmd->pass = "1";
 
-	cmd->log_out = "/var/log/bell/""dbg.log";
-	cmd->log_err = "/var/log/bell/""err.log";
+	//cmd->log_out = "/var/log/bell/"DEBUG_LOG_FILE;
+	//cmd->log_err = "/var/log/bell/"ERROR_LOG_FILE;
+	
+	cmd->log_out = DEBUG_LOG_FILE;
+	cmd->log_err = ERROR_LOG_FILE;
 	cmd->log_truncate = 0;
 	
 	cmd->err_fp = stderr;
@@ -22,7 +25,7 @@ static inline void cmd_defaults(struct cmdline *cmd,char *self)
 	cmd->long_ring = "00:00:06";
 
 
-	cmd->pid_file = "/var/run/bell/""bell_pid";
+	cmd->pid_file = PID_FILE;
 	cmd->no_dump_config = 1;
 	cmd->exit_after_dump = 0;
 	cmd->rexec_sig_time = NULL;

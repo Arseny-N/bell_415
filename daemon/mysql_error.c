@@ -18,7 +18,7 @@ void _mysqle_print_no_exit(MYSQL *p, char *fmt, ... )
 	char fmt_buf[MAX_PBUF];
 
 
-	snprintf(fmt_buf, MAX_PBUF,"MySql Error:\'%s\' (%s)\n", mysql_error(p),fmt);
+	snprintf(fmt_buf, MAX_PBUF,"MySql-Error:\'%s\' (%s)\n", mysql_error(p),fmt);
 	
 	va_start(va, fmt);	
 	__print(stderr,fmt_buf, &va);

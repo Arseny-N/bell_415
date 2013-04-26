@@ -61,7 +61,7 @@ void _mysqle_print_no_exit(MYSQL *err,char *fmt, ... )  __attribute__ ((format (
 
 
 void _dbg_print( char *fmt,...) __attribute__ ((format (printf, 1, 2)));
-#define dbg_print(fmt,...) _dbg_print("[%.3ld] %s: "fmt,(long)__LINE__,__FUNCTION__, ##__VA_ARGS__)
+#define dbg_print(fmt,...) _dbg_print("[%s]: "fmt,__FUNCTION__, ##__VA_ARGS__)
 
 
 

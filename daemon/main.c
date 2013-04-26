@@ -59,8 +59,20 @@ int main ( int argc, char * argv [] )
 	if(!cmd.no_dump_config)
 		dump_cmd(&cmd);
 	
-
-	dbg_print("Pid file %s",cmd.pid_file);
+	if(cmd.logs_enable)
+		if(reopen_files() == -1) {
+			wrn_print("reopen_files failed");
+			terminate();
+		}
+	dbg_print("%s start executinon", argv[0]);
+	
+	if(cmd.daemon_flags) {
+		dbg_print("Demonizing..");
+		if(become_daemon(cmd.daemon_flags)) {
+			wrn_print("Can't demonize because of error");
+			terminate();
+		}
+	} 
 	if(cmd.pid_file) {	
 		switch (create_pid_file(cmd.pid_file)) {
 	        case -1: 
@@ -71,28 +83,11 @@ int main ( int argc, char * argv [] )
 			exit(EXIT_SUCCESS);		
 
 		}
-	}
-	if(cmd.logs_enable)
-		if(reopen_files() == -1) {
-			wrn_print("reopen_files failed");
-			terminate();
-		}
-	
-	if(cmd.daemon_flags) {
-		dbg_print("Demonizing..");
-		if(become_daemon(cmd.daemon_flags)) {
-			wrn_print("Can't demonize because of error");
-			terminate();
-		}
-	} 
-	
-	dbg_print("Hello");
-	wrn_print("Hello");
-	err_print("Hello");
+	}	
 	
 	if(cmd.exit_after_dump) 
 		exit(EXIT_SUCCESS);
-	
+		
 	block_all_sigs();
 	
 	main_loop();

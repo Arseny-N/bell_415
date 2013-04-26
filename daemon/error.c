@@ -50,8 +50,8 @@ void _err_print_no_exit(char *fmt, ... )
 	char fmt_buf[MAX_PBUF];
 
 	
-	snprintf(fmt_buf, MAX_PBUF,"Error: %s(%s):%s\n",
-		 strerror(errno),__get_ename(errno),fmt);
+	snprintf(fmt_buf, MAX_PBUF,"Error: %s (%s) %s\n",
+		 fmt,__get_ename(errno), strerror(errno));
 	
 
 	va_start(va, fmt);	
@@ -67,8 +67,8 @@ void _nerr_print_no_exit(int err, char *fmt, ... )
 	char fmt_buf[MAX_PBUF];
 
 
-	snprintf(fmt_buf, MAX_PBUF,"Error: %s (%s):%s\n",
-		 strerror(err),__get_ename(err),fmt);
+	snprintf(fmt_buf, MAX_PBUF,"Error: %s (%s) %s\n",
+		 fmt, __get_ename(errno),strerror(err));
 	
 	va_start(va, fmt);	
 	__print(cmd.err_fp,fmt_buf, &va);
@@ -83,7 +83,7 @@ void _wrn_print_no_exit(char *fmt, ... )
 	char fmt_buf[MAX_PBUF];
 
 
-	snprintf(fmt_buf, MAX_PBUF,"Warning:%s\n",fmt);
+	snprintf(fmt_buf, MAX_PBUF,"Warning: %s\n",fmt);
 	
 	va_start(va, fmt);	
 	__print(cmd.err_fp,fmt_buf, &va);
@@ -101,7 +101,7 @@ void _dbg_print(char *fmt, ... )
 	va_list va;
 	char fmt_buf[MAX_PBUF];
 
-	snprintf(fmt_buf, MAX_PBUF,"Debug %s\n",fmt);
+	snprintf(fmt_buf, MAX_PBUF,"Log: %s\n",fmt);
 	
 	va_start(va, fmt);	
 	__print(cmd.out_fp,fmt_buf, &va);

@@ -39,11 +39,11 @@ function mk_query($query)
 	$result = mysql_query($query) or err_box($query,'mysql');
 	return $result;
 }
-function foreach_query($query,$printfunc,$arg=NULL) 
+function foreach_query($query,$pclass,$arg=NULL) 
 {
 	$result = mk_query($query);
 	while($row = mysql_fetch_array($result)) {
-		$printfunc ($row,$arg);
+		$pclass :: print_elem($row,$arg);
 	}
 }
 function get_query($query)
@@ -61,19 +61,19 @@ function get_query($query)
 
 function print_rings($prof_id)
 {
-	return foreach_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' GROUP BY ring_time",'print_ring');
+	return foreach_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' GROUP BY ring_time",'rings');
 }
 function print_profiles()
 {
-	return foreach_query('SELECT * FROM profiles','print_profile');
+	return foreach_query('SELECT * FROM profiles','profiles');
 }
 function print_rules()
 {
-	return foreach_query('SELECT * FROM rules','print_rule');
+	return foreach_query('SELECT * FROM rules','rules');
 }
 function print_overrides()
 {
-	return foreach_query('SELECT * FROM overrides GROUP BY over_date','print_override');
+	return foreach_query('SELECT * FROM overrides GROUP BY over_date','overrides');
 	
 }
 
