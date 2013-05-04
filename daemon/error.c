@@ -8,42 +8,60 @@
 
 #define __valid_err(err) (err > 0 && err < MAX_ERR) ? err : 0; 
 
+struct error_method error_method;
 
-void terminate (void) 
-{
-	bool need_core = 0;
-#ifdef NEED_COREDUMP
-	need_core = 1;
-#endif
-	if( need_core || getenv("NEED_COREDUMP") != NULL )
-		abort();
-	wrn_print("Terminating.");
-	exit(EXIT_FAILURE);
-}
-
-static bool __first_err = 1;
 static inline char *__get_ename( int err )
 {
-	if(__first_err) {
-		__ename_init();
-		__first_err = 0;
-	}
+	__ename_init();	
 	err = __valid_err(err);
 	return ename[err] != NULL ? ename[err] : ename[0] ;
 }
-static inline void __print(FILE *s,char *fmt, va_list *va)
+static void __print(FILE *s,char *fmt, va_list va)
 {
 	if(!s)
 		return;
-	fprintf(s, "[%s] ", curr_time("%Y-%m-%d %T"));
-	vfprintf(s, fmt, *va);
+	fprintf(s, "[%s] [%ld] ", curr_time("%Y-%m-%d %T"),(long)getpid());
+	vfprintf(s, fmt, va);
 	fflush(s);
 }
-static inline void flush_streams(void)
+static void flush_streams(void)
 {       
-  ////	fflush(cmd.err_fp);
-  //	fflush(cmd.out_fp);
+  	fflush(*(error_method.error_stream));
+  	fflush(*(error_method.debug_stream));
 }
+
+
+
+void init_error(void)
+{
+#ifdef NEED_COREDUMP
+	error_method.need_core = 1;
+#else
+	error_method.need_core = 0;
+#endif	
+	error_method._print = __print;
+	error_method.flush_streams = flush_streams;
+	
+	error_method.error_stream = &(cmd.err_fp);
+	error_method.debug_stream = &(cmd.out_fp);
+	__ename_init();	
+	
+}
+
+
+
+void terminate (void) 
+{	
+	wrn_print("Terminating.");
+	if( error_method.need_core || getenv("NEED_COREDUMP") != NULL ) {
+		wrn_print("ABORTING.");
+		abort();
+	}	
+	exit(EXIT_FAILURE);
+}
+
+
+
 void _err_print_no_exit(char *fmt, ... )
 {
 	va_list va;
@@ -55,7 +73,7 @@ void _err_print_no_exit(char *fmt, ... )
 	
 
 	va_start(va, fmt);	
-	__print( cmd.err_fp ,fmt_buf, &va);
+	error_method._print( *(error_method.error_stream) ,fmt_buf, va);
 	va_end(va);
 	
 	flush_streams();
@@ -71,7 +89,7 @@ void _nerr_print_no_exit(int err, char *fmt, ... )
 		 fmt, __get_ename(errno),strerror(err));
 	
 	va_start(va, fmt);	
-	__print(cmd.err_fp,fmt_buf, &va);
+	error_method._print(*(error_method.error_stream),fmt_buf, va);
 	va_end(va);
 
 	flush_streams();
@@ -86,7 +104,7 @@ void _wrn_print_no_exit(char *fmt, ... )
 	snprintf(fmt_buf, MAX_PBUF,"Warning: %s\n",fmt);
 	
 	va_start(va, fmt);	
-	__print(cmd.err_fp,fmt_buf, &va);
+	error_method._print(*(error_method.error_stream),fmt_buf, va);
 	va_end(va);
 
 	flush_streams();
@@ -104,7 +122,7 @@ void _dbg_print(char *fmt, ... )
 	snprintf(fmt_buf, MAX_PBUF,"Log: %s\n",fmt);
 	
 	va_start(va, fmt);	
-	__print(cmd.out_fp,fmt_buf, &va);
+	error_method._print(*(error_method.debug_stream),fmt_buf, va);
 	va_end(va);
 
 	flush_streams();
@@ -114,3 +132,4 @@ void _dbg_print(char *fmt, ... )
 {
 }
 #endif
+

@@ -63,6 +63,19 @@ void _mysqle_print_no_exit(MYSQL *err,char *fmt, ... )  __attribute__ ((format (
 void _dbg_print( char *fmt,...) __attribute__ ((format (printf, 1, 2)));
 #define dbg_print(fmt,...) _dbg_print("[%s]: "fmt,__FUNCTION__, ##__VA_ARGS__)
 
+typedef void (*err_print_func_t) (FILE *s, char *fmt, va_list va);
+typedef void (*flush_error_streams_t) (void);
 
+struct error_method
+{
+	err_print_func_t _print;
+	flush_error_streams_t flush_streams;
+	
+	bool need_core;	
+	FILE **error_stream;
+	FILE **debug_stream;
+};
 
+extern struct error_method error_method;
+void init_error(void);
 #endif

@@ -17,13 +17,9 @@ td.buttons {
 	
 
 }
-div.banner{
-	margin: 0px;
-	text-align: left;
-}
 table.main_box {
 /*	max-width: 100%;*/
-	min-width: 40%;
+/*	min-width: 40%;*/
 	margin-bottom: 0px;
 	
 }
@@ -38,7 +34,7 @@ td.err_box {
 	
 }
 td.main_box {
-	padding-right: 15%;
+	
 	vertical-align: top;	
     border-radius: 5px 5px 5px 5px;
     padding-left: 18px;
@@ -76,13 +72,7 @@ th.entry {
 
 tr.entry {		
 	background-color : #ffffff;
-	
-}
-tr.entry:hover {
-	background-color : #eeeeee;
-	
-	
-}
+}	
 td.navi_box_menu {	
 	vertical-align: top;
 	background-color: rgb(51,51,51);	
@@ -92,6 +82,23 @@ td.navi_box_menu {
 	padding: 8px;
     	padding-bottom: 60%;
 }
+#d_box {
+	border: 1px solid rgb(0, 0, 0);	
+	text-align: left;
+}
+#d_box th {
+	background-color : #eeeeee;
+	font-weight: bold;	
+}
+#d_box tr {
+	
+	border: 1px solid rgb(0, 0, 0);
+}
+#d_box td {
+
+	border: 1px solid rgb(0, 0, 0);
+}
+
 #log {
 	border: 1px solid rgb(0, 0, 0);	
 	text-align: center;

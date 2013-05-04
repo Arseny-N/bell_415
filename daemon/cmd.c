@@ -1,10 +1,13 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <getopt.h>
 #include <string.h>
 #include <libgen.h>
-#include "cmd.h"
+#include <stdio.h>
+
 #include "error.h"
+#include "creds.h"
+#include "cmd.h"
+
 
 static struct option long_options[] = {
 	{"nodaemon",  no_argument, 0,  'D' },
@@ -16,13 +19,20 @@ static struct option long_options[] = {
 	{"log-disable",  no_argument, 0,  'N' },	
 
 	{"ring-prog",  required_argument, 0,  'r' },
-	{"rexec-at",  required_argument, 0,  'R' },
+	{"rexec",  no_argument, 0,  'R' },
 
-	{"host",  required_argument, 0,  'h' },
-	{"dbname",  required_argument, 0,  'd' },
-	{"user",  required_argument, 0,  'u' },
-	{"passwd",  required_argument, 0,  'p' },
+	{"mysql-host",  required_argument, 0,  'h' },
+	{"mysql-db",  required_argument, 0,  'd' },
+	{"mysql-user",  required_argument, 0,  'u' },
+	{"mysql-passwd",  required_argument, 0,  'p' },
 	
+	{"group",  required_argument, 0,  'G' },
+	{"user",  required_argument, 0,  'U' },
+	
+	{"gid",  required_argument, 0,  'b' },
+	{"uid",  required_argument, 0,  't' },
+
+	{"kill",  no_argument, 0,  'K' },
 
 	{"pid-file",  required_argument, 0,  'P' },
 	{"help",  no_argument, 0,  'H' },
@@ -46,7 +56,7 @@ void cmd_process(char argc, char **argv, struct cmdline *cmd )
 	
 	for(;;) {		
 		int option_index = 0;
-		char c = getopt_long(argc, argv, "DlierhdupEcP",
+		int c = getopt_long(argc, argv, "DlierhdupEcP",
 				     long_options, &option_index);
 		if(c == -1)
 			break;
@@ -59,15 +69,35 @@ void cmd_process(char argc, char **argv, struct cmdline *cmd )
 			print_help(argv[0]);
 			exit(EXIT_SUCCESS);
 		case 'D':
-			cmd->daemon_flags = 0;
+			cmd->need_daemon = 0;
 			break;
+		case 'K':						
+			cmd->kill_running = 1;
+			break;
+		case 'R':						
+			cmd->rexec_running = 1;
+			break;
+		case 'U':			
+			cmd->creds.user = optarg;
+			break;							
+		case 'G':
+			cmd->creds.group = optarg;
+			break;
+		case 't':			
+			cmd->creds.uid = atol(optarg);
+			break;							
+		case 'b':
+			cmd->creds.gid = atol(optarg);
+			break;
+
+
 		case 'l':
 			cmd->log_out = optarg;
 			cmd->log_err = optarg;			
 			break;
-		case 'R':
-			cmd->rexec_sig_time = optarg;
-			break;
+//		case 'R':
+//			cmd->rexec_sig_time = optarg;
+//			break;
 		case 'L':		
 			cmd->log_truncate = 1;			
 			break;
@@ -130,12 +160,22 @@ void dump_cmd(struct cmdline *cmd)
 	       "\trexec_sig_time: %s\n"
 	       "\tdemonized: %s\n"
 	       "\texiting: %s\n"
-       	       "\tlog truncate: %s\n",
+       	       "\tlog truncate: %s (deprecated)\n",
 	       cmd->log_err,cmd->log_out,
 	       cmd->ring_prog,cmd->short_ring,
 	       cmd->long_ring,cmd->pid_file,cmd->rexec_sig_time,
-	       bool_fmt(cmd->daemon_flags),
+	       bool_fmt(cmd->need_daemon),
 	       bool_fmt(cmd->exit_after_dump),
 	       bool_fmt(cmd->log_truncate)
-		);
+		);	
+	printf("Creds:\n"
+		"\tuser: %s\n"
+		"\tgroup: %s\n"
+		"\tuid: %ld\n"
+		"\tgid: %ld\n",
+		cmd->creds.user,
+		cmd->creds.group,
+		(long)cmd->creds.uid,
+		(long)cmd->creds.gid);
+		
 }

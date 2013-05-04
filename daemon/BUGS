@@ -1,3 +1,5 @@
 24h signal?!                                          [Solved]
 ignoring pid file existence                           [Solved]
 'chmod +x dcontrol' not functioning in makefile
+
+ADD to startup files "mkdir $(dirname $PID_FILE)"

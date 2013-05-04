@@ -2,6 +2,7 @@
 
 function stdf_error_echo($err)
 {
+	global $php_errormsg;
 	echo $err .' :<br>';
 	echo $php_errormsg.'<br>';
 }
@@ -38,6 +39,7 @@ function err_box($err = NULL,$source = NULL)
 			user_error_echo($err);
 			break;
 		case 'stdf':
+		case 'system':
 			stdf_error_echo($err);
 			break;
 		default:

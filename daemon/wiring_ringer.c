@@ -14,16 +14,16 @@ int main (int argc, char *argv[])
 	int d = atoi(argv[1]);
 	
 	if(!DELAY_OK(d)) {
-		fprintf(stderr,"delay errors %d",d);
+		//fprintf(stderr,"delay errors %d",d);
 		exit (EXIT_FAILURE);
 	}
 	if (wiringPiSetup () == -1) {
-		perror("wirionPiSetup");
+		//perror("wirionPiSetup");
 		exit (EXIT_FAILURE);
 	}
 	int pin = pin_init();
 	if( pin == -1 ) {
-		perror("pin_init");
+		//perror("pin_init");
 		exit (EXIT_FAILURE);
 	}
 	

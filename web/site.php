@@ -5,11 +5,13 @@ $main_box_opened = false;
 function table_open($head,$cols, $args=NULL)
 {
 	$numcols = count($cols);
-	echo '
-			<table class="main" '.$args.'>
-				<tr><th align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</div></td></tr>
-				<tr>';
+	echo '<table class="main" '.$args.'>';
+	if($head) {		
+		echo '<tr><th align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</th></tr>';
+	}
 	$i = 0;
+	
+	echo'<tr>';
 	while ($numcols > $i)  {
 		echo '<th align="center" class="entry">'.$cols[$i++].'</th>';
 	}

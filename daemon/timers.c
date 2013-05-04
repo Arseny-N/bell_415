@@ -79,7 +79,7 @@ int arm_24h_sig(void)
 		exp.tv_sec += h24;		
 	}
 	
-	return push_timer(&se, &exp, NULL, TIMER_ABSTIME,1);
+	return push_timer(&se, &exp, NULL, TIMER_ABSTIME,0);
 }
 
 

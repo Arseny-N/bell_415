@@ -2,16 +2,20 @@
 #define __CMD_H
 #include <stdbool.h>
 #include <stdio.h>
+#include "creds.h"
+
 struct cmdline {
 
 	bool log_truncate;
 	bool no_dump_config;
 	bool exit_after_dump;
 	bool logs_enable;
+	bool kill_running;	      
+	bool rexec_running;	      
 		
-	int daemon_flags;	      
+	bool need_daemon;	      
 	char *pid_file;
-	
+
 	char *host;
 	char *dbname;
 	char *user;
@@ -34,7 +38,8 @@ struct cmdline {
 
 	char **args; 
 	char *path;
-
+	
+	struct cmd_creds creds;
 
 };
 
