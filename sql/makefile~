@@ -1,0 +1,22 @@
+DB="test_3"
+
+.PHONY: acid random_acid clean files clean_mysql
+
+mysql: files
+	./mk-mysql.sh $(DB)
+
+acid: files
+	./acid_table.sh 120 '' rings.sql 
+	./mk-mysql.sh $(DB)
+
+random_acid: files
+	./acid_table.sh 120 '' rings.sql yes
+	./mk-mysql.sh $(DB)
+files:	
+	@a=.*.sql; for i in $$a; do cp $$i $$(echo $$i | sed 's/.//') ;done
+clean:
+	rm  $$(ls *.sql)
+
+	
+clean_mysql:
+	@echo 'Not implemented'	
