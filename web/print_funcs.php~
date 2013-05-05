@@ -8,8 +8,7 @@ function select_profile_elem()
 class select_profiles
 {
 	public function print_elem($pname)
-	{			
-		#echo "Hey ARMED!!!" . $pname['id'];
+	{					
 		if(is_armed_profile($pname['id'])) {		
 			echo '<option value="'.$pname['name'].'" selected="">'.$pname['name'].'</option>';
 		}else{

@@ -90,7 +90,7 @@ ename.h: mk-ename.sh
 
 dcontrol: mk-dcontrol.sh
 	./mk-dcontrol.sh $(BIN_DIR) $(RING_PROG) $(LOG_DIR) $(PID_FILE) > $(CTRL_PROG_NAME)
-	
+
 .ONESHELL:
 logrotate:
 	@printf "$(DEBUG_LOG_FILE) $(ERROR_LOG_FILE) {
@@ -105,7 +105,7 @@ logrotate:
 clean:
 	@rm -vf $(obj) ename.h 
 clean_X2: clean
-	@rm -vf ename.h $(BELL_PROG_NAME) $(RING_PROG_NAME) $(CTRL_PROG_NAME)
+	@rm -vf ename.h $(BELL_PROG_NAME) $(RING_PROG_NAME) $(CTRL_PROG_NAME) $(LOGRTE_SRPT)
 
 install: 		
 	cp ./$(BELL_PROG_NAME) $(BELL_PROG)
@@ -122,10 +122,7 @@ install:
 
 uninstall:
 	$(CTRL_PROG) kill
-	@rm -vf $(BELL_PROG)
-	@rm -vf $(CTRL_PROG)
-	@rm -vf $(RING_PROG)
-	@rm -vf $(LOG_DIR)/*
+	@rm -vf $(BELL_PROG) $(CTRL_PROG) $(RING_PROG) $(LOG_DIR)/*
 	rmdir $(LOG_DIR)
 	# They gonna die at reboot
 	# @rm -vf $(PID_DIR)/* 

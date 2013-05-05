@@ -1,7 +1,0 @@
-/var/log/bell/dbg /var/log/bell/err {
-	weekly
-	rotate 4
-	dateext
-	create 0664 arseni arseni
-	ifempty	
-}

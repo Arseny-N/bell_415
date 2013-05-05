@@ -56,6 +56,7 @@ function print_navi_menu()
 function print_head($style)
 {
 	echo '<html><head><meta charset="UTF-8"/><link type="text/css" rel="stylesheet" href="'.$style.'"></head>';
+	date_deafult_timezone_set('Europe/Moscow');
 }
 
 ?>

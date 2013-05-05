@@ -28,18 +28,6 @@ int reopen_files(void)
 {			       
 	FILE *sp;
 	
-	/*
-	if(cmd.log_truncate) {		
-		if(truncate(cmd.log_err, 0) == -1) {
-			if(errno != ENOENT)
-				err_print("truncate %s", cmd.log_err);
-		}
-		if(truncate(cmd.log_out, 0) == -1) {
-			if(errno != ENOENT)
-				err_print("truncate %s", cmd.log_out);
-		}
-	}
-	*/
 	sp = fopen(cmd.log_err,"a");	
 	if ( !sp ) {		
 		err_print("fopen");
@@ -137,6 +125,7 @@ void ring(char *d)
 {
 	static char buf[BUF_SIZE];	
 	snprintf(buf, BUF_SIZE, "%s %s", cmd.ring_prog, d);	
+	dbg_print("Ringing %s", buf);
 	fork_exec(buf);
 }
 static inline void zombie_assasin(void)
@@ -205,26 +194,6 @@ int main_loop()
 		}
 	}	
 }
-
-/*
-  Scratch:
-
-
-time_t get_interval( time_t when )
-{
-	time_t mn = __get_midnight(when);
-	if ( mn == (time_t) -1 ) {
-		err_print( "__get_midnight %le", (double) when );
-		return mn;
-	}
-	return difftime(when, mn);
-}
-*/
-
-
-
-
-
 
 
 static inline int is_path_absolute(char *path)
