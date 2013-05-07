@@ -1,23 +1,14 @@
 <?php
-function select_profile_elem()
+function select_profile_elem($rule_day)
 {
-	echo '<select size="'.cnt_profiles().'" name="select_elem">';							
-	foreach_query("SELECT * FROM profiles",'select_profiles');
+	$id = get_rule_profile_id_by_day($rule_day);	
+	echo '<select size="1" name="select_elem">';
+	$result = mk_query("SELECT * FROM profiles");
+	while($row = mysql_fetch_array($result)) {		
+		echo '<option value="'.$row['name'].'" '. ($row['id'] == $id ? ' selected="" ' : '') .'>'.$row['name'].'</option>';
+	}							
 	echo '</select>	';
 }
-class select_profiles
-{
-	public function print_elem($pname)
-	{					
-		if(is_armed_profile($pname['id'])) {		
-			echo '<option value="'.$pname['name'].'" selected="">'.$pname['name'].'</option>';
-		}else{
-			echo '<option value="'.$pname['name'].'">'.$pname['name'].'</option>';
-		}
-	}
-}
-
-
 
 class profiles
 {
@@ -29,20 +20,20 @@ class profiles
 		$ring = get_ring($p['id']);
 		echo '<td align="center" class="entry">' . $p['name'] . '</td>' . "\n";
 		echo '<td align="center" class="entry">' . $ring[0]['ring_time'] . '-' .  $ring[1]['ring_time'] . '</td>' . "\n";	
-		echo '<td align="center" class="entry">' . (is_armed_profile($p['id'])? 'yes' : 'no') . '</td>' . "\n";
+		echo '<td align="center" class="entry">' . (is_armed_profile($p['id'])? 'да' : 'нет') . '</td>' . "\n";
 		echo '		
 				<td align="center" class="entry">
-					<button type="submit" name="show" value='.$p['id'].'>show</button>
+					<button type="submit" name="show" value='.$p['id'].'>Показать</button>
 				</td>';		
 		
 		echo '</tr>';
 	}
 }
-$days = ['Unknown value','Monday', 'Tuesday','Wensday','Thirday','Firsday','Sunday','Saturday'];
+$days = ['Unknown value','Понедельник', 'Вторник','Среда','Четверг','Пятница','Суббота','Воскресение'];
 function num_to_day($day)
 {
 	global $days;		
-	return $days[$day] . $day;
+	return $days[$day];
 }
 class rules
 {
@@ -54,12 +45,14 @@ class rules
 		echo '<td align="center" class="entry">' . num_to_day($rule['rule_day']) . '</td>' . "\n";	
 		echo '<td align="center" class="entry">' . get_profile_name_by_id(($rule['profile_id'])) . '</td>' . "\n";
 		echo '<td align="center" class="entry">';
-		select_profile_elem();
+		form_open();
+		select_profile_elem($rule['rule_day']);
 		echo '</td>
 				<td align="center" class="entry">
-					<button type="submit" name="rule_submit" value='.$rule['rule_day'].'>submit</button>
+					<button type="submit" name="rule_submit" value='.$rule['rule_day'].'>Изменить</button>
 				</td>
 			</tr>';
+		form_close();
 	}
 }
 class overrides {
@@ -74,7 +67,7 @@ class overrides {
 		
 		echo '		
 				<td align="center" class="entry">
-					<button type="submit" name="ov_drop" value='.$o['id'].'>drop</button>
+					<button type="submit" name="ov_drop" value='.$o['id'].'>Удалить</button>
 				</td>
 			 ';		
 			

@@ -5,8 +5,15 @@ td.bg {
 	border-radius: 0px;
 	padding-top: 10px;
 	padding-bottom: 10px;	
-	
+	text-align: centre;	
 
+}
+td.profile_name {
+	border: 2px solid rgb(0, 0, 0);
+	padding-right: 15px;	
+	padding-left: 15px;
+	text-align: centre;
+	margin: 100%;
 }
 td.buttons {
 	background-color : #ffffff;	
@@ -137,7 +144,7 @@ td.navi_box_menu {
     border: 0px none;
 
 }
-
+p { text-indent : 1% }
 body { 
 	
     margin-top: 0%;

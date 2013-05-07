@@ -26,8 +26,8 @@ DEFAULT_PASS:="1"
 PROG_USER:= "arseni"
 PROG_GROUP:= "arseni"
 
-RINGER_USER:= "arseni"
-RINGER_GROUP:= "arseni"
+RINGER_USER:= "root"
+RINGER_GROUP:= "root"
 
 LOGRTE_SRPT:="bell"
 
@@ -117,8 +117,9 @@ install:
 	# mkdir $(PID_DIR)
 	chown  $(PROG_USER)':'$(PROG_GROUP) $(BELL_PROG) $(CTRL_PROG) $(LOG_DIR) $(PID_DIR)
 	chown $(RINGER_USER)':'$(RINGER_GROUP) $(RING_PROG)
-	chmod 'ug+s' $(CTRL_PROG)
-	setcap 'cap_setuid=pe cap_setgid=pe' $(BELL_PROG)	
+	chmod 'ug+s' $(CTRL_PROG) # Disabled for scripts ?!
+	setcap 'cap_setuid=pe cap_setgid=pe cap_dac_override=pe' $(BELL_PROG)	
+	setcap 'cap_dac_override=pe' $(CTRL_PROG)
 
 uninstall:
 	$(CTRL_PROG) kill

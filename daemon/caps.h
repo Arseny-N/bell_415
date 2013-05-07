@@ -11,4 +11,5 @@ void print_proc_caps(char *prefix);
 void print_caps(char *prefix, cap_t caps);
 
 int drop_all_caps(void); /* All caps fom all sets! */
+
 #endif

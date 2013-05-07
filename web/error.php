@@ -9,7 +9,7 @@ function stdf_error_echo($err)
 function user_error_echo($err)
 {
 	
-	echo 'Consult the '.link_to_help('help').' page:<br>';	
+	echo 'Consult the help page:<br>';	
 	echo $err .'<br>';
 }
 function mysql_error_echo($err)

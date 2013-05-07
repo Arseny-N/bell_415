@@ -5,10 +5,11 @@ include_once 'site.php';
 include_once 'show_tt.php';
 
 include_once 'mysql_op.php';
-
+include_once 'dc.php';
 
 
 $shown_tt = NULL;
+
 $edit_flag = false;
 $new_ov_flag = false;
 
@@ -56,7 +57,13 @@ function arm_tt($name)
 	global $shown_tt;
 	$shown_tt = get_profile($name);		
 	arm_profile($shown_tt['id']);
-	$shown_tt = get_profile($name);		
+	
+	$_shown_tt = get_profile($name);
+	
+	if($_shown_tt != $shown_tt) {
+		d_rexec();
+	}
+	$shown_tt = $_shown_tt;
 }
 function add_tt($name)
 {
@@ -64,7 +71,7 @@ function add_tt($name)
 	$shown_tt = get_profile($name);
 		
 	$edit_flag = true;
-	add_ring($shown_tt['id'],"0:0") or err_box('Unfilled rings.','user');
+	add_ring($shown_tt['id'],date("H") .":". date("i") .":". date("s")); #or err_box('Unfilled rings.','user');
 	
 	$shown_tt = get_profile($name);
 }
@@ -86,17 +93,17 @@ function submit_tt($name,$new_name)
 {
 	global $shown_tt, $edit_flag;
 	$shown_tt = get_profile($name);
-	//var_dump($shown_tt);
+	
 	$ids = get_ids($shown_tt['id']);	
 	
 	foreach ( $ids as $id ) {	
 		
 		if($_REQUEST['times'][$id['id']] != "" ) {	
-			//echo $_REQUEST['times'][$id['id']];		
+			
 			update_ring_time($id['id'],$_REQUEST['times'][$id['id']]);		
 		}
 		if($_REQUEST['duration'][$id['id']] != "" ) {						
-			//echo $_REQUEST['duration'][$id['id']];
+			
 			update_ring_duration($id['id'],$_REQUEST['duration'][$id['id']]);		
 		}
 	}
@@ -142,7 +149,9 @@ function process_buttons()
 		submit_tt($_REQUEST['submit'],$_REQUEST['new_name']);
 	}
 	if(isset($_REQUEST['rule_submit']) && isset($_REQUEST['select_elem'])) {
-		update_rule($_REQUEST['rule_submit'], $_REQUEST['select_elem']);
+		update_rule($_REQUEST['rule_submit'], $_REQUEST['select_elem']);				
+		d_rexec();
+		error_log('Here all ok');
 	}
 	if(isset($_REQUEST['ov_blank'])) {
 		$new_ov_flag = true;

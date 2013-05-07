@@ -15,7 +15,6 @@ static struct option long_options[] = {
 	{"log",  required_argument, 0,  'l' },
 	{"log-out",  required_argument, 0,  'o' },
 	{"log-err",  required_argument, 0,  'e' },
-	{"log-truncate",  no_argument, 0,  'L' },
 	{"log-disable",  no_argument, 0,  'N' },	
 
 	{"ring-prog",  required_argument, 0,  'r' },
@@ -90,16 +89,9 @@ void cmd_process(char argc, char **argv, struct cmdline *cmd )
 			cmd->creds.gid = atol(optarg);
 			break;
 
-
 		case 'l':
 			cmd->log_out = optarg;
 			cmd->log_err = optarg;			
-			break;
-//		case 'R':
-//			cmd->rexec_sig_time = optarg;
-//			break;
-		case 'L':		
-			cmd->log_truncate = 1;			
 			break;
 		case 'N':		
 			cmd->logs_enable = 0;			
@@ -157,16 +149,14 @@ void dump_cmd(struct cmdline *cmd)
 	       "\tlong ring : %s\n"
 	       "Daemon stuff:\n"
 	       "\tpid file   : %s\n"
-	       "\trexec_sig_time: %s\n"
 	       "\tdemonized: %s\n"
-	       "\texiting: %s\n"
-       	       "\tlog truncate: %s (deprecated)\n",
+	       "\texiting: %s\n",
+ 
 	       cmd->log_err,cmd->log_out,
 	       cmd->ring_prog,cmd->short_ring,
-	       cmd->long_ring,cmd->pid_file,cmd->rexec_sig_time,
+	       cmd->long_ring,cmd->pid_file,
 	       bool_fmt(cmd->need_daemon),
-	       bool_fmt(cmd->exit_after_dump),
-	       bool_fmt(cmd->log_truncate)
+	       bool_fmt(cmd->exit_after_dump)
 		);	
 	printf("Creds:\n"
 		"\tuser: %s\n"

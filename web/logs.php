@@ -1,43 +1,44 @@
 <?php
 include_once "site.php";
 include_once "error.php";
+include_once "dc.php";
 ###################################
 ##### !!!! setenforce 0 !!!! ######
 ###################################
 
-$prog = '/sbin/dcontrol';
+
 
 function process_buttons()
 {
 	global $prog;
 	
 	if(isset($_REQUEST['kill'])) {
-		echo system($prog.' kill');
+		system($prog.' kill');
 	}
 	
 	if(isset($_REQUEST['rexec'])) {
-		echo system($prog.' rexec');
+		d_rexec();
 	}
 	
 	if(isset($_REQUEST['start'])) {
-		echo system($prog.' up '. escapeshellcmd($_REQUEST['start_cmd']));
+		system($prog.' up '. escapeshellcmd($_REQUEST['start_cmd']));
 	}
 	
 	if(isset($_REQUEST['ring'])) {
-		echo system($prog.' ring '. escapeshellcmd($_REQUEST['ring_duration']));
+		system($prog.' ring '. escapeshellcmd($_REQUEST['ring_duration']));
 	}
 	if(isset($_REQUEST['ring1'])) {
-		echo system( $prog.' ring1');
+		system( $prog.' ring1');
 	}
 	if(isset($_REQUEST['ring2'])) {
-		echo system($prog.' ring2');
+		system($prog.' ring2');
 	}
 }
 function print_daemon_table()
 {
 	global $state, $error_logs,$dbg_logs, $argv;
 	//echo '<div id="d_box">';
-	table_open(NULL,['Question','Answer'], 'id="d_box"');
+	table_open(NULL,[], 'id="d_box"');
 	echo '<form action="'.$argv[0].'" method="post">';
 	echo '<tr><td>Deamon state</td><td>' . $state . '</td></tr>';
 #	echo '<tr><td>Error log file </td><td>' . $error_logs . '</td></tr>';

@@ -6,9 +6,9 @@
 
 struct cmdline {
 
-	bool log_truncate;
 	bool no_dump_config;
 	bool exit_after_dump;
+	
 	bool logs_enable;
 	bool kill_running;	      
 	bool rexec_running;	      
@@ -32,9 +32,6 @@ struct cmdline {
 
 	char *short_ring;
 	char *long_ring;
-
-	char *rexec_sig_time;
-
 
 	char **args; 
 	char *path;

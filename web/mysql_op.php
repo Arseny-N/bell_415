@@ -118,13 +118,12 @@ function get_rule_profile_id_by_day($day)
 }
 
 
-
 function add_ring($prof_id,$time)
 {
-	if(!get_ring_time($prof_id,$time)) {
+	#if(!get_ring_time($prof_id,$time)) {
 		return mk_query("INSERT INTO rings (ring_time,profile_id) VALUES('".$time."','".$prof_id."')");
-	}
-	return false;
+	#}
+	#return false;
 }
 function add_profile($name)
 {
@@ -197,7 +196,7 @@ function today()
 
 function arm_profile($id)
 {	
-	echo 'Today:' . today() .'Id'.$id;
+	//echo 'Today:' . today() .'Id'.$id;
 	return mk_query("UPDATE rules SET profile_id='".$id."' WHERE rule_day='".mk_day($rday)."'");
 }
 function is_armed_profile($id)

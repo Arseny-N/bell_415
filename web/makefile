@@ -1,8 +1,11 @@
-PATH:="/var/www/html"
-php_files:= error.php style2.css mysql_op.php site.php profiles.php print_funcs.php show_tt.php logs.php
 
+
+DEST_DIR ?="/var/www/html"
+
+php_objs := *.php *.css
+img_objs := u-telnet.png
 .PHONY: install
 install:
-	/bin/cp  $(php_files) $(PATH)
-#	/bin/cp pages/*  $(PATH)/pages
-	/bin/cp img/*   $(PATH)/img
+	[ ! -d $(DEST_DIR)/img ] && mkdir -v $(DEST_DIR)/img || :
+	cp -v $(php_objs) $(DEST_DIR)/
+	cp -v img/$(img_objs) $(DEST_DIR)/img/

@@ -72,12 +72,9 @@ int arm_24h_sig(void)
 	
 	exp.tv_nsec = 0;
 
-	if(unlikely(!!cmd.rexec_sig_time)) {
-		exp.tv_sec = str_to_time(cmd.rexec_sig_time, 1);		
-	} else {
-		exp.tv_sec = str_to_time("0:0:01", 1);
-		exp.tv_sec += h24;		
-	}
+	exp.tv_sec = str_to_time("0:0:01", 1);
+	exp.tv_sec += h24;		
+	
 	
 	return push_timer(&se, &exp, NULL, TIMER_ABSTIME,0);
 }

@@ -21,43 +21,55 @@
 #include "caps.h"
 #include "pid_file.c"
 
+#define LOG_FILE_PERMS 0664
 
 struct cmdline cmd;
 
 int reopen_files(void)
 {			       
-	FILE *sp;
-	
-	sp = fopen(cmd.log_err,"a");	
-	if ( !sp ) {		
-		err_print("fopen");
+	int fd;
+	if( close(STDIN_FILENO) == -1) {
+		err_print("close STDIN_FILENO");
 		return -1;
 	}
-	cmd.err_fp = sp;			
-	
-      	if ( dup2 ( fileno(sp), STDERR_FILENO ) != STDERR_FILENO ) {
-      		err_print("Failed to reopen err");
-      		return -1;			
-      	}
-      	
-      	
-      	sp = fopen(cmd.log_out,"a");	
-	if ( !sp ) {		
-		err_print("fopen");
+	if(open("/dev/null", O_RDONLY) != STDIN_FILENO) {
+		err_print("close STDIN_FILENO");
 		return -1;
-	}		
-	
-	
-	cmd.out_fp = sp;
-	
-      	if ( dup2 ( fileno(sp), STDOUT_FILENO ) != STDOUT_FILENO ) {
-      		err_print("Failed to reopen out");
-
+	}
+	if( close(STDOUT_FILENO) == -1 ) {
+		err_print("close STDOUT_FILENO");
+		return -1;
+	}
+	fd = open(cmd.log_out, O_CREAT | O_RDWR, LOG_FILE_PERMS);
+	if(fd != STDOUT_FILENO) {
+		err_print("open %s", cmd.log_out);
+		return -1;
 	}
 	
+	cmd.out_fp = fdopen(fd, "a");
+	if(cmd.out_fp == NULL) {
+		err_print("fdopen %s", cmd.log_out);
+		return -1;
+	}
+	
+	
+	if( close(STDERR_FILENO) == -1 ) {
+		dbg_print("Error while closing STDERR_FILENO");
+		return -1;
+	}
+	fd = open(cmd.log_err, O_CREAT | O_RDWR, LOG_FILE_PERMS);
+	if(fd != STDERR_FILENO) {
+		dbg_print("Error while opening open %s", cmd.log_err);
+		return -1;
+	}
+	cmd.err_fp = fdopen(fd, "a");
+	if(!cmd.err_fp) {
+		dbg_print("Error while opening stream fdopen");
+		return -1;
+	}
+		
 	return 0;
 }
-	
 
 int become_daemon ()
 {

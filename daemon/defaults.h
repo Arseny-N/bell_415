@@ -20,8 +20,8 @@ static inline void cmd_defaults(struct cmdline *cmd,char *self)
 #endif		
 	
 	cmd->log_out = DEBUG_LOG_FILE;
-	cmd->log_err = ERROR_LOG_FILE;
-	cmd->log_truncate = 0;
+	cmd->log_err = ERROR_LOG_FILE;	
+	
 	cmd->kill_running = 0;
 	cmd->rexec_running = 0;
 	
@@ -37,7 +37,6 @@ static inline void cmd_defaults(struct cmdline *cmd,char *self)
 	
 	cmd->no_dump_config = 1;
 	cmd->exit_after_dump = 0;
-	cmd->rexec_sig_time = NULL;
 	
 	cmd->creds.uid = (long)DEFAULT_UID;
 	cmd->creds.gid = (long)DEFAULT_GID;

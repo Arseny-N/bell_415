@@ -44,19 +44,38 @@ function sub_box_close()
 		$sub_box_opened = false;
 	}
 }
-function print_navi_menu()
+function print_navi_menu($disable_logs = true)
 {
 	echo '<table id="navi_box">';		  
-	echo '<tr><td class="navi_box"> <a href="index.php" class="button" > Index </a></td></tr>';
-	echo '<tr><td class="navi_box"> <a href="profiles.php" class="button" > Profiles </a></td></tr>';
-	echo '<tr><td class="navi_box"> <a href="logs.php" class="button" > Logs </a></td></tr>';
-	echo '<tr><td class="navi_box"> <a href="help.php" class="button" > Help </a></td></tr>';
+	echo '<tr><td class="navi_box"> <a href="profiles.php" class="button" > Профили </a></td></tr>';	
+	if(!$disable_logs)
+		echo '<tr><td class="navi_box"> <a href="logs.php" class="button" > Логи </a></td></tr>';
+	echo '<tr><td class="navi_box"> <a href="help.php" class="button" > Помощь </a></td></tr>';
 	echo '</table>';	
 }
 function print_head($style)
 {
-	echo '<html><head><meta charset="UTF-8"/><link type="text/css" rel="stylesheet" href="'.$style.'"></head>';
+
+	echo '<html >
+	<head>
+		<meta charset="UTF-8"/>
+		<link type="text/css" rel="stylesheet" href="'.$style.'">
+		<link rel="icon" href="img/u-telnet.png" type="image/png">
+		<title>Настройка Звонка</title>
+	</head>';
 	date_default_timezone_set('Europe/Moscow');
 }
-
+function form_open($s=NULL)
+{
+		global $argv;
+		echo '<form action="'.$argv[0].'" method="post" style="display:inline">';		
+		if($s) {
+			echo $s;
+			echo '</form>';
+		}
+}
+function form_close()
+{
+		echo '</form>';
+}
 ?>
