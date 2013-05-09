@@ -182,7 +182,7 @@ global $argv;
 print_head('style2.css');
 	
 load_lib('mysql');
-connect_to_mysql("ringTimeTable");
+connect_to_mysql("bellTimeTable");
 
 process_buttons();
 echo '<body dir="ltr">';

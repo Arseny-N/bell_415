@@ -1,7 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <stdbool.h>
 #include "caps.h"
 
+
+static inline bool not_root(void)
+{
+	return getuid() != 0;
+}
 
 static int modify_cap(int capability, int setting)
 {
@@ -50,12 +57,12 @@ void print_proc_caps(char *prefix)
 }
 int raise_cap(int cap)
 {
-    return modify_cap(cap, CAP_SET);
+    return not_root() ? modify_cap(cap, CAP_SET) : 0;
 }
 
 int drop_cap(int cap) 
 {
-	return modify_cap(cap, CAP_CLEAR);
+	return not_root() ? modify_cap(cap, CAP_CLEAR) : 0;
 }
 
 int drop_all_caps(void)

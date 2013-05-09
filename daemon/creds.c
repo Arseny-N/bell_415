@@ -89,7 +89,7 @@ static inline int _check_group(struct cmd_creds *cds)
 	
 	if(cds->gid == gid)
 		return 0;	
-	if(raise_cap(CAP_SETGID) == -1) {
+	if( raise_cap(CAP_SETGID) == -1) {
 		err_print("raise_cap");
 		return -1;
 	}

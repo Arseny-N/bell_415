@@ -1,0 +1,74 @@
+#!/bin/bash 
+
+ring_prog=/sbin/ringer 
+bell_prog=/sbin/run 
+ERR_LOG=/var/log/bell/err 
+DBG_LOG=/var/log/bell/dbg 
+PID_FILE=/var/run/bell/pid
+P_USER=arseni 
+P_GROUP=arseni
+
+
+PID_DIR=$(dirname $PID_FILE)
+
+function pid_get()
+{
+	
+	if [ ! -d $PID_DIR ] ; then		
+		mkdir -m 0664 $PID_DIR
+		chown $P_USER:$P_GROUP $PID_DIR		
+	fi
+	[ -e $PID_FILE ] && pgrep -F $PID_FILE
+}
+
+pid=$( pid_get )
+
+case "$1" in
+	"kill" | "down" )
+		$bell_prog --kill # 2>/dev/null
+		;;
+	"pid" )
+		echo $pid
+		;;
+	"state")	
+		[ $pid ] && echo  "up" || echo  "down" 
+		;;
+	"rexec")
+		$bell_prog --rexec # 2>/dev/null
+		:
+		;;
+	"flush-logs" | "flush")
+		truncate -s0 $ERR_LOG $DBG_LOG
+	        ;;
+	"dbg-log")
+		cat $DBG_LOG
+		;;
+	"err-log")
+		cat $ERR_LOG
+		;;
+	"dbg-log-path")
+		echo -n $DBG_LOG
+		;;
+	"err-log-path")
+		echo -n $ERR_LOG
+		;;		
+	"up")
+		shift 1
+		$bell_prog $@
+		;;
+	"exec-up")
+		shift 1
+		exec $bell_prog $@
+		;;
+	"ring")
+		shift 1
+		$ring_prog $@		
+		;;
+	"help")
+		cat $0
+		;;
+    	*)    	
+	echo "Unknown action $1"
+	;;
+esac
+

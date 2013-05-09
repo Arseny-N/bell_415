@@ -12,7 +12,6 @@
 
 #define PID_PERMS  0664
 
-//S_IRUSR | S_IWUSR
 
 /* Thanks to Mikael Kerrisk */
 static int lockReg ( int fd, int cmd, int type, int whence, 

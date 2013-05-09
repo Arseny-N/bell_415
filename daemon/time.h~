@@ -16,7 +16,7 @@ static inline char *curr_dayn(void)
 }
 static inline char *curr_date(void)
 {
-	return curr_time("%Y-%m-%d");
+	return curr_time("%Y-%d-%m");
 }
 
 static inline int fit_default_durations(char *time_str)

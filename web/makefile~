@@ -3,7 +3,7 @@
 DEST_DIR ?="/var/www/html"
 
 php_objs := *.php *.css
-img_objs := *.png
+img_objs := u-telnet.png help.png
 .PHONY: install
 install:
 	[ ! -d $(DEST_DIR)/img ] && mkdir -v $(DEST_DIR)/img || :
