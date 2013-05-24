@@ -5,14 +5,14 @@ include_once 'print_funcs.php';
 profiles(
 	  id INT NOT NULL AUTO_INCREMENT, 
 	  PRIMARY KEY(id),
-	  name VARCHAR(30), 
-	  armed BOOL
+	  name VARCHAR(30), 	 
 );
 rings (
        id INT NOT NULL AUTO_INCREMENT, 
        PRIMARY KEY(id), 
        profile_id INT NOT NULL,
        ring_time TIME
+       hidden BOOL
 );
 rules (
        name VARCHAR(30), 
@@ -30,7 +30,8 @@ overrides(
 
 function connect_to_mysql($db_name)
 {	
-	$link = mysql_connect("localhost","arseni",'1') or err_box('mysql_connect', 'mysql');	
+	global $CONF;
+	$link = mysql_connect("localhost",$CONF['db']['user'],$CONF['db']['pass']) or err_box('mysql_connect', 'mysql');	
 	return mysql_select_db($db_name, $link) or err_box('select db '.$db_name, 'mysql');
 }
 
@@ -84,6 +85,10 @@ function get_ring($prof_id)
 {
 	return get_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' GROUP BY ring_time");
 }
+function get_ring_id($ring_id)
+{
+	return get_query("SELECT * FROM rings WHERE id='$ring_id'")[0];
+}
 function get_ring_time($prof_id,$time)
 {
 	return get_query("SELECT * FROM rings WHERE profile_id='".$prof_id."' HAVING ring_time='".$time."'");
@@ -121,7 +126,7 @@ function get_rule_profile_id_by_day($day)
 function add_ring($prof_id,$time)
 {
 	#if(!get_ring_time($prof_id,$time)) {
-		return mk_query("INSERT INTO rings (ring_time,profile_id) VALUES('".$time."','".$prof_id."')");
+	return mk_query("INSERT INTO rings (ring_time,profile_id) VALUES('".$time."','".$prof_id."')");
 	#}
 	#return false;
 }
@@ -140,6 +145,13 @@ function add_override($profn,$date)
 function update_ring_time($ring_id,$time)
 {
 	return mk_query("UPDATE rings SET ring_time='".$time."' WHERE id='".$ring_id."'");
+}
+function update_ring_sub($ring_id,$profile_id,$sub)
+{	
+	if($sub)
+		return mk_query('UPDATE  rings SET sub_ring=TRUE WHERE id=\''.$ring_id.'\'');
+	else
+		return mk_query('UPDATE  rings SET sub_ring=FALSE WHERE id=\''.$ring_id.'\'');	
 }
 function update_ring_duration($ring_id,$time)
 {
@@ -166,7 +178,10 @@ function copy_ring_entry($entry, $new_id)
 
 function clone_rings($id,$new_id)
 {
-	return foreach_query("SELECT * FROM rings WHERE profile_id='".$id."'",'copy_ring_entry',$new_id);
+	$result = mk_query("SELECT * FROM rings WHERE profile_id='$id'");
+	while($row = mysql_fetch_array($result)) {
+		copy_ring_entry($row, $new_id);
+	}
 }
 function clone_profile($id,$new_name)
 {
@@ -203,7 +218,10 @@ function is_armed_profile($id)
 {
 	return (get_rule_profile_id_by_day(today()) == $id);
 }
-
+function is_time_present($time, $pr_id)
+{
+	return !!get_query("SELECT * FROM rings WHERE ring_time='$time' and profile_id=".$pr_id."");
+}
 
 
 
@@ -214,6 +232,7 @@ function drop_profile($id)
 		mk_query("DELETE FROM overrides WHERE profile_id='".$id."'");
 		mk_query("DELETE FROM rules WHERE profile_id='".$id."'");
 		return mk_query("DELETE FROM rings WHERE profile_id='".$id."'");
+		
 	}
 	return false;
 }
@@ -226,5 +245,9 @@ function del_ring($prof_id)
 	$id = get_query("SELECT MAX(id) FROM rings WHERE profile_id='".$prof_id."'")[0]['MAX(id)'];
 	return mk_query("DELETE FROM rings WHERE id='".$id."'");
 	
+}
+function have_sub($prof_id)
+{
+	return !!$prof_id['sub_ring'];		
 }
 ?>

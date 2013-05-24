@@ -13,7 +13,7 @@ function process_buttons()
 	global $prog;
 	
 	if(isset($_REQUEST['kill'])) {
-		system($prog.' kill');
+		system($prog.' down');
 	}
 	
 	if(isset($_REQUEST['rexec'])) {
@@ -176,7 +176,7 @@ sub_box_close();
 
 sub_box_open('class="bg"');
 	table_open('Errror Log',['Type', 'Date','Pid','Time','Function','Message'], 'id="log"');
-		$handle = popen($prog.' err-log', "r");
+		$handle = popen('cat /var/log/bell/err', "r");
 		if(!$handle) 
 			echo 'No file (err-logs)';
 		$err = new log_praser($handle);	
@@ -191,7 +191,7 @@ sub_box_close();
 
 sub_box_open('class="bg"');
 	table_open('Normal Log',['Type', 'Date','Pid','Time','Function','Message'], 'id="log"');
-		$handle = popen($prog.' dbg-log', "r");
+		$handle = popen('cat /var/log/bell/dbg', "r");
 		if(!$handle) 
 			echo 'No file (dbg-logs)';	
 		$dbg = new log_praser($handle);	

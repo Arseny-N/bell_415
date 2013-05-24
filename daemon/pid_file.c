@@ -55,61 +55,18 @@ static inline bool could_lock_file( int fd, int type)
 }
 
 
-
-
-int create_pid_file (const char * pidFile)
-{
-	char buf [BUF_SIZE];
-  
-	int fd = open ( pidFile, O_RDWR | O_CREAT 
-#ifdef O_CLOEXEC
-			| O_CLOEXEC
-#endif			
-			,PID_PERMS );
-	if ( fd == -1 ) {
-		err_print("open");
-		return -1;
-	} 
-	
-#ifndef O_CLOEXEC
-	if (fcntl(fd, F_SETFD, FD_CLOEXEC) == -1) { 
-		err_print("fcntl");
-		return -1;
-	}
-#endif
-	if ( lock_file ( fd, F_WRLCK ) == -1 ) {
-		if ( errno == EAGAIN || errno == EACCES )
-			return -2;		
-		else {
-		        err_print("lock_region");
-			return -1;		
-		}
-	}
-	if ( ftruncate ( fd, 0 ) == -1 ) {
-		err_print("ftrucate");
-		return -1;
-	}
-	snprintf ( buf, BUF_SIZE, "%ld\n", (long) getpid () );
-	if ( write ( fd, buf, strlen (buf) ) != strlen (buf) ) {
-		err_print("write");
-		return -1;
-	}
-  
-	return fd;
-}
-
-pid_t read_pid_file(char *pidfile)
+int read_pid_file(char *pidfile, pid_t *pid)
 {
 	char buf[BUF_SIZE];
 	size_t numRead;
-	pid_t pid;
+	int r = 0;	
 	
-	int fd = open ( pidfile, O_RDONLY);
+	int fd = open ( pidfile, O_RDONLY);	
 	if ( fd == -1 ) 
 		return -1;
 	 
-	if ( could_lock_file(fd, F_WRLCK) ) 
-		return -2;
+	if ( !could_lock_file(fd, F_WRLCK) ) 
+		r = -2; 
 		
 	numRead = read(fd, buf, BUF_SIZE);
 	if(numRead == -1)
@@ -117,14 +74,16 @@ pid_t read_pid_file(char *pidfile)
 	
 	buf[numRead+1] = '\0';
 	
-	pid = (pid_t) atol(buf);
-	return pid;	
+	*pid = (pid_t) atol(buf);
+	return r;	
 }
 int kill_from_pid_file(char *pidfile, int sig)
 {
-	pid_t pid = read_pid_file(pidfile);
-	if(pid < 0)
-		return pid;	
+	int ret;
+	pid_t pid;
+	
+	if((ret = read_pid_file(pidfile, &pid)) < 0 )
+		return ret;	
 	return kill(pid, sig);
 }
 #endif

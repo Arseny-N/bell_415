@@ -25,6 +25,47 @@
 
 struct cmdline cmd;
 
+int create_pid_file (const char * pidFile)
+{
+	char buf [BUF_SIZE];
+  
+	int fd = open ( pidFile, O_RDWR | O_CREAT 
+#ifdef O_CLOEXEC
+			| O_CLOEXEC
+#endif			
+			,PID_PERMS );
+	if ( fd == -1 ) {
+		err_print("open");
+		return -1;
+	} 
+	
+#ifndef O_CLOEXEC
+	if (fcntl(fd, F_SETFD, FD_CLOEXEC) == -1) { 
+		err_print("fcntl");
+		return -1;
+	}
+#endif
+	if ( lock_file ( fd, F_WRLCK ) == -1 ) {
+		if ( errno == EAGAIN || errno == EACCES )
+			return -2;		
+		else {
+		        err_print("lock_region");
+			return -1;		
+		}
+	}
+	if ( ftruncate ( fd, 0 ) == -1 ) {
+		err_print("ftrucate");
+		return -1;
+	}
+	snprintf ( buf, BUF_SIZE, "%ld\n", (long) getpid () );
+	if ( write ( fd, buf, strlen (buf) ) != strlen (buf) ) {
+		err_print("write");
+		return -1;
+	}
+  
+	return fd;
+}
+
 int reopen_files(void)
 {			       
 	int fd;
@@ -246,8 +287,8 @@ int main ( int argc, char * argv [] )
 	
 	if(!cmd.no_dump_config)
 		dump_cmd(&cmd);
-	if( check_creds(&cmd.creds) == -1 )
-		wrn_print("check_creds failed, program execution compromised");
+//	if( check_creds(&cmd.creds) == -1 )
+//		wrn_print("check_creds failed, program execution compromised");
 		
 	if( cmd.kill_running || cmd.rexec_running) {
 		// dbg_print("Sending %s signal",strsignal(cmd.rexec_running ? SIGHUP : cmd.kill_running ? SIGTERM : 0));

@@ -1,6 +1,6 @@
 
 
-DEST_DIR ?="/var/www/html"
+DEST_DIR ?="/var/www"
 
 php_objs := *.php *.css
 img_objs := *.png

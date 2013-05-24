@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 DB_NAME=$1
-if [ ! $DB_NAME ]; then DB_NAME='test_2'; fi
+if [ ! $DB_NAME ]; then DB_NAME='test'; fi
 PASSWD="1"
 DB_USER="arseni"
 

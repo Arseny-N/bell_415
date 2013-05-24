@@ -36,47 +36,7 @@
 # define BD_NO_CHDIR		    0x4	 
 # define BD_NO_CLOSE_FILES	    0x8	 
 # define BD_NO_REOPEN_STD_FDS	    0x10 
-#include <stdarg.h>
-#include "cmd.h"
 
-
-static int vsystem(char *cmds, ... )
-{
-	char cmd_buf[BUF_SIZE];
-	va_list va;
-	
-	va_start(va, cmds);	
-	vsnprintf( cmd_buf, BUF_SIZE, cmds, va);
-	va_end(va);
-	printf("%s\n",cmd_buf);
-	FILE *p = popen(cmd_buf, "r");
-	if(p == NULL) {
-		perror("popen");
-		return -1;
-	}		
-	while(fgets(cmd_buf, BUF_SIZE, p)) {
-		if(fputs(cmd_buf,cmd.out_fp) == -1) 
-			return -1;
-	}
-	int r = 0;
-	if(ferror(p)) {
-		perror("fgets");
-		r = -1;
-	}
-	if(pclose(p) == -1) {
-		perror("pclose");
-		r = -1;
-	}
-	return r;
-	//return system(cmd_buf);
-}
-#include <sys/types.h>
-#include <unistd.h>
-static inline void print_locks( void )
-{	
-	printf("print_locks\n");
-	vsystem("grep %ld /proc/locks"/*" >> /home/arseni/Documents/p/bell/locks"*/, (long)getpid());
-}
 /*
 #ifndef likely 
 #  define likely(x)      __builtin_expect(!!(x), 1)

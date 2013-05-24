@@ -1,4 +1,4 @@
-DB?="test_3"
+DB?=""
 
 
 .PHONY: acid random_acid clean files clean_mysql

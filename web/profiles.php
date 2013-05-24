@@ -1,12 +1,19 @@
 <?php
 
+$CONF = [ 'db' => 
+		['name'=>'ringer', 
+		 'host'=>'localhost', 
+		 'user'=>'arseni', 
+		 'pass'=>'1']
+	];
+
 include_once 'error.php';
 include_once 'site.php';
-include_once 'show_tt.php';
-
+include_once 'print_funcs.php';
 include_once 'mysql_op.php';
 include_once 'dc.php';
 
+//echo 'Request: ' ;var_dump($_REQUEST); echo '<br>'; 
 
 $shown_tt = NULL;
 
@@ -95,19 +102,37 @@ function submit_tt($name,$new_name)
 	$shown_tt = get_profile($name);
 	
 	$ids = get_ids($shown_tt['id']);	
-	
+
+
 	foreach ( $ids as $id ) {	
 		
 		if($_REQUEST['times'][$id['id']] != "" ) {	
-			
-			update_ring_time($id['id'],$_REQUEST['times'][$id['id']]);		
+			if(!is_time_present($_REQUEST['times'][$id['id']], $shown_tt['id'])) {
+				update_ring_time($id['id'],$_REQUEST['times'][$id['id']]);
+			} else {
+				echo "PRESENT" . $_REQUEST['times'][$id['id']];
+			}
 		}
 		if($_REQUEST['duration'][$id['id']] != "" ) {						
 			
 			update_ring_duration($id['id'],$_REQUEST['duration'][$id['id']]);		
 		}
+
+		if(isset ($_REQUEST['sub_ring'])) {
+		
+			if(isset($_REQUEST['sub_ring'][$id['id']]))
+				update_ring_sub($id['id'],$shown_tt['id'],1);		
+			else
+				update_ring_sub($id['id'],$shown_tt['id'],0);
+			d_rexec();
+		} else {
+			update_ring_sub($id['id'],$shown_tt['id'],0);
+			d_rexec();
+		}
+			
+		
 	}
-	
+	# echo "New Name: $new_name<brk>";
 	if ($new_name !=  "") {
 		update_profile_name($shown_tt['id'],$new_name);
 		$shown_tt = get_profile($new_name);
@@ -147,11 +172,11 @@ function process_buttons()
 	}
 	if(isset($_REQUEST['submit'])) {
 		submit_tt($_REQUEST['submit'],$_REQUEST['new_name']);
+		d_rexec();
 	}
 	if(isset($_REQUEST['rule_submit']) && isset($_REQUEST['select_elem'])) {
 		update_rule($_REQUEST['rule_submit'], $_REQUEST['select_elem']);				
 		d_rexec();
-		error_log('Here all ok');
 	}
 	if(isset($_REQUEST['ov_blank'])) {
 		$new_ov_flag = true;
@@ -162,6 +187,20 @@ function process_buttons()
 	}
 	if(isset($_REQUEST['ov_drop'])) {
 		drop_override($_REQUEST['ov_drop']);
+	}
+	
+	if(isset($_REQUEST['sub_before'])&&$_REQUEST['sub_before']!="") {
+		mk_query("UPDATE sub_conf set ring_before='".$_REQUEST['sub_before']."';");
+	}
+	if(isset($_REQUEST['sub_for'])&&$_REQUEST['sub_for']!="") {
+		mk_query("UPDATE sub_conf set ring_for='".$_REQUEST['sub_for']."';");	
+	}
+	if(isset($_REQUEST['sub_global'])) {
+		if($_REQUEST['sub_global']=="on") {
+			mk_query("UPDATE sub_conf set global_enable=TRUE;");	
+		}else if($_REQUEST['sub_global']=="off"){
+			mk_query("UPDATE sub_conf set global_enable=FALSE;");	
+		}
 	}
 	return $shown_tt;
 }
@@ -182,7 +221,7 @@ global $argv;
 print_head('style2.css');
 	
 load_lib('mysql');
-connect_to_mysql("ringTimeTable");
+connect_to_mysql($CONF['db']['name']);
 
 process_buttons();
 echo '<body dir="ltr">';
@@ -198,6 +237,10 @@ if( $shown_tt == NULL )
 	echo '<form action="'.$argv[0].'" method="post">';	
 	sub_box_open('class="bg"');	
 		print_shown_tt();		
+	sub_box_close();
+
+	sub_box_open('class="bg"');	
+		print_sub_conf();
 	sub_box_close();
 
 	sub_box_open('class="buttons" align="center"');	
@@ -216,6 +259,10 @@ if( $shown_tt == NULL )
 	
 	sub_box_open('class="bg"');	
 		print_overrides_list();	
+	sub_box_close();
+		
+	sub_box_open('class="bg"');	
+		print_panic_ctrl();
 	sub_box_close();
 	
 echo '</td></tr></table>';

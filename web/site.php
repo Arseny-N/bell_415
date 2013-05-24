@@ -2,9 +2,10 @@
 
 $sub_box_opened = false;
 $main_box_opened = false;
-function table_open($head,$cols, $args=NULL)
+function table_open($head,$cols=NULL, $args=NULL)
 {
 	$numcols = count($cols);
+
 	echo '<table class="main" '.$args.'>';
 	if($head) {		
 		echo '<tr><th align="center" class="entry" colspan="'.$numcols.'"><div calss="table_heads">'.$head.'</th></tr>';

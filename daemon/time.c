@@ -36,7 +36,7 @@ static inline void __zero_out_unneed( struct tm *tm )
 char *str_brtime(const char *fmt, struct tm *tm)
 {
 	static char buf[BUF_SIZE];
-	if( strftime( buf, BUF_SIZE, (fmt != NULL) ? fmt : "%c %Z", tm) == 0) {
+	if( strftime( buf, BUF_SIZE, (fmt ? fmt : "%c %Z"), tm) == 0) {
 		err_print("gmtime_r()");
 		return NULL;
 	}
@@ -95,8 +95,8 @@ struct tm *str_to_tm(const char *p, bool abs)
 	if(abs) {
 		time_t t = time(NULL);
 		localtime_r(&t,&tm);
-	} else {
-		__zero_out_unneed(&tm);
+	} else {		
+		__zero_out_unneed(&tm);		
 	}
 	/* Relies on glibc  */
 				

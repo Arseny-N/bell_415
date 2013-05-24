@@ -54,6 +54,7 @@ int push_timer(struct sigevent *se, struct timespec *exp,
 		err_print( "timer_create" );		
 		return -1;
 	}
+
 	if( timer_settime(timerid, flags, &ts, NULL) == -1 ) {		
 		err_print( "timer_settime");		
 		return -1;

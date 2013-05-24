@@ -47,8 +47,20 @@ void init_error(void)
 	__ename_init();	
 	
 }
-
-
+void costum_error( err_print_func_t print,
+		   flush_error_streams_t _flush_streams, 
+		   FILE *err_stream, FILE *dbg_stream, 
+		   bool need_core)
+{
+	error_method._print = print ? print : __print;
+	error_method.flush_streams = _flush_streams ? _flush_streams : flush_streams;
+	
+	error_method.need_core = need_core;	
+	error_method.error_stream = err_stream ? (&err_stream) : &stderr;
+	error_method.debug_stream = dbg_stream ? (&dbg_stream) : &stdout;
+	
+	__ename_init();	
+}
 
 void terminate (void) 
 {	

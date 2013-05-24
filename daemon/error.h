@@ -6,7 +6,10 @@
 #ifndef __ERROR_H__
 # define __ERROR_H__
 # define MAX_PBUF 64
+
+#ifndef NO_MYSQL
 # include "mysql.h"
+#endif
 # include "head.h"
 
 void terminate (void) __attribute__ ((noreturn));
@@ -14,7 +17,10 @@ void terminate (void) __attribute__ ((noreturn));
 void _err_print_no_exit(char *fmt, ... )   __attribute__ ((format (printf, 1, 2)));   
 void _nerr_print_no_exit(int err,char *fmt, ... )  __attribute__ ((format (printf, 2, 3)));  
 void _wrn_print_no_exit(char *fmt, ... )   __attribute__ ((format (printf, 1, 2)));                
+
+#ifndef NO_MYSQL
 void _mysqle_print_no_exit(MYSQL *err,char *fmt, ... )  __attribute__ ((format (printf, 2, 3)));  
+#endif
 
 #ifdef _DEBUG
 # define err_print_no_exit(fmt,...) _err_print_no_exit("[%s]: "fmt,__FUNCTION__,##__VA_ARGS__)
@@ -44,11 +50,13 @@ void _mysqle_print_no_exit(MYSQL *err,char *fmt, ... )  __attribute__ ((format (
 # define nerr_print(err,fmt, ... ) nerr_print_no_exit(err,fmt, ##__VA_ARGS__);
 #endif
 
-#ifdef TERMINATE_ON_ERR
+
+#ifdef TERMINATE_ON_ERR 
 # define mysqle_print(err,fmt, ... ) do { mysqle_print_no_exit(err,fmt, ##__VA_ARGS__); terminate(); } while(0)
 #else
 # define mysqle_print(err,fmt, ... ) mysqle_print_no_exit(err,fmt, ##__VA_ARGS__)
 #endif
+
 
 /* wrn - if a selfmade function returns  error but does  not set errno */
 #ifdef TERMINATE_ON_WRN

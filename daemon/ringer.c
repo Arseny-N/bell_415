@@ -31,7 +31,7 @@ char * curr_time (const char *fmt)
 
 int main (int argc, char *argv[])
 {
-	FILE *out = fopen("/home/arseni/Documents/p/bell/daemon/ringed.list","a");
+	FILE *out = fopen("/home/arseni/Documents/p/bell_on_pi/daemon/ringed.list","a");
 	if(!out) {
 		perror("fopen");
 		exit(EXIT_FAILURE);
