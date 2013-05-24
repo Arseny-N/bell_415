@@ -1,0 +1,144 @@
+apt-get mysqlclient16
+apt-get get mysqlclient16
+apt-get install mysqlclient16
+sudo apt-get install mysqlclient16
+su -c'apt-get install mysqlclient16 sudo'
+su -c'apt-get install sudo'
+man mysql
+sudo apt-get install mysql
+su
+sl
+ls
+systemctl status mysqld.ser
+man join
+join
+echo abssdew | join 
+echo abssdew | join -
+mysql
+apt-cache mysqld
+apt-cachesearch  mysqld
+apt-cache search  mysqld
+apt-get install  libmysqld-dev
+sudo apt-get install  libmysqld-dev
+su
+nano mysql.c
+make
+su -c'make uninstall'
+su -c'mv run /sbin/run'
+nano makefile
+make
+make -B
+su -c'mv run /sbin/run'
+cd ~
+history > saveMe
+less saveMe
+cd ~/Documents
+cd ~/bell_415-master/
+ls
+cd deamon
+cd daemon
+ls
+nano main.c
+cd deamon
+cd daemon
+make
+ls /usr/include/sys | less
+ls /usr/include | less
+ls -l /usr/include | less
+ls -l /usr/include 
+ls /usr/include 
+ls /usr/include | grep capability
+ls -R /usr/include | grep capability
+find /usr/include | grep capability
+ls
+nano caps.h
+make
+man capabilities 
+man libcap
+man capabilities 
+man libcap
+nano caps.h
+make
+less makefile
+nano makefile
+make logrotate 
+make logrotate
+nano makefile
+make logrotate
+nano makefile
+make systemd 
+nano makefile
+nano dcontrol 
+nano makefile
+make
+make -B
+su -c'make install'
+cd ../web
+su -c 'make install'
+su -c 'make install DEST_DIR=/var/www'
+cd ..
+cd sql
+mysqladmin creat ringTT
+make 
+nano mk-mysql.sh 
+make 
+man install-menu
+man menufile
+mysql
+mysqld start
+mysql.service
+mysql
+service mysql start
+man see
+see .
+mysqldump
+mysql
+mysqladmin creat ringTT
+sudo -c'mysqladmin creat ringTT -p123456'
+su -c'mysqladmin creat ringTT -p123456'
+make DB=ringTT
+man makefile
+nano makefile
+nano mk-mysql.sh 
+make DB=ringTT 
+cd ../web
+cd /var/www
+ls
+nano profiles.php
+su -c'nano profiles.php
+'
+su -c'nano mysql_op.php'
+dpmenu
+pdmenu
+dcontrol up
+/sbin/dcontrol up
+su -c'/sbin/dcontrol up'
+/sbin/dcontrol state
+/sbin/dcontrol up
+/sbin/dcontrol state
+pgrep run
+/sbin/dcontrol flush-logs
+/sbin/dcontrol state
+/sbin/dcontrol up
+/sbin/dcontrol state
+/sbin/dcontrol flush-logs
+/sbin/dcontrol up
+cd /usr/share/doc/menu
+ls
+less README
+dpmenu
+pdmenu
+man dpmenu
+less README
+man pdmenu
+pdmenu
+/sbin/dcontrol state
+sudo /sbin/dcontrol state
+su -c'/sbin/dcontrol state'
+/sbin/dcontrol up
+su -c'/sbin/dcontrol state'
+/sbin/dcontrol state
+systemctl
+shutdown -a now
+powerof
+poweroff

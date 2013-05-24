@@ -1,0 +1,149 @@
+td.bg {
+	background-color : #ffffff;	
+	padding-right: 15px;
+	padding-left: 15px;
+	border-radius: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+	
+
+}
+td.buttons {
+	background-color : #ffffff;	
+	border-radius: 5px 5px 5px 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/*border: 1px solid rgb(0, 0, 0);*/
+	
+
+}
+div.banner{
+	margin: 0px;
+	text-align: left;
+}
+table.main_box {
+/*	max-width: 100%;*/
+	min-width: 40%;
+	margin-bottom: 0px;
+	
+}
+
+td.err_box {
+	border: 2px solid #DE2525;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.3);
+	
+	background-color : #eeeeee;
+	padding: 8px;
+	
+}
+td.main_box {
+	padding-right: 15%;
+	vertical-align: top;	
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 18px;
+    padding-right: 118px;
+}
+table.main {		
+	border-collapse: collapse;
+	width: 100%;
+	border: 0px solid rgb(0, 0, 0);
+}
+table.inboxer {
+    border-radius: 5px 5px 5px 5px;
+	width: 100%;
+}
+td.entry {		
+	border: 1px solid rgb(0, 0, 0);
+	padding-right: 15px;	
+	padding-left: 15px;
+	text-align: centre;
+}
+th.entry {	
+	border: 1px solid rgb(0, 0, 0);
+	padding-right: 15px;	
+	padding-left: 15px;
+	text-align: centre;	
+	font-weight: bold;	
+	background-color : #eeeeee;	
+	
+}
+.profile_name{
+	text-align: centre;
+	
+}
+
+
+tr.entry {		
+	background-color : #ffffff;
+	
+}
+tr.entry:hover {
+	background-color : #eeeeee;
+	
+	
+}
+td.navi_box_menu {	
+	vertical-align: top;
+	background-color: rgb(51,51,51);	
+	border-right: 4px solid rgb(0, 0, 0);
+	/*box-shadow: 0px 7px 20px */
+	box-shadow: 10px 6px 5px 5px rgba(0, 0, 0, 0.3);    
+	padding: 8px;
+    	padding-bottom: 50%;
+}
+#log {
+	border: 1px solid rgb(0, 0, 0);	
+	text-align: center;
+}
+
+#log th {
+	background-color : #eeeeee;
+	font-weight: bold;	
+}
+#log td, tr{
+	border: 1px solid rgb(0, 0, 0);
+}
+
+
+#navi_box {	
+	text-align: center;
+	font-family: "Gotham Rounded A","Gotham Rounded B","proxima-nova-soft",sans-serif;    
+    border-radius: 0px 0px 0px 0px;            
+}
+#navi_box tr{
+	border: 1px solid rgb(0, 0, 0);	
+	vertical-align: top;
+}
+#navi_box td{		
+	padding: 9px 16px;
+	background: none repeat scroll 0% 0% rgb(78, 104, 199);	
+}
+#navi_box td:hover{		
+	padding: 9px 16px;
+	background: none repeat scroll 0% 0% #3151C6;	
+}
+#navi_box a.button{	
+	text-decoration: none;	
+    color: white;    
+    display: inline-block;
+    border: 0px none;
+
+}
+
+body { 
+	
+    margin-top: 0%;
+    margin-bottom: 0%;    
+    /*
+     * #E3DAC9;
+     * #72f0f0;
+     * background-image: url("img/bg.png"); 
+
+    
+    padding-right: 15%;
+    padding-left: 15%;
+    */
+    
+    /*padding: 8px;*/
+}
